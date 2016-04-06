@@ -1,0 +1,368 @@
+<!doctype html>
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+
+	<title>Php Form Builder - PHP Form Class For Bootstrap</title>
+
+	<meta name="description" content="A simple but powerfull class to create forms, validate posted values, send emails or record results to database easily">
+	<meta name="author" content="Gilles Migliori">
+	<meta name="copyright" content="Gilles Migliori">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2015-05-26T00:00:00+02:00">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <link href="../templates/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/documenter.css" media="screen">
+    <link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen">
+
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+</head>
+<body class="documenter-project-phpformbuilder">
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+
+			<li><a href="#overview" title="Overview">Overview</a></li>
+			<li><a href="#quick_start_guide" title="Quick Start Guide">Quick Start Guide</a></li>
+			<li><a href="#features" title="Features">Features</a></li>
+			<li><a href="#changelog" title="Changelog">Changelog</a></li>
+			<li><a href="#source_credits" title="Source &amp; Credits">Source &amp; Credits</a></li>
+
+		</ul>
+		<div id="documenter_copyright">Copyright Gilles Migliori 2015<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v2.0</a>
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover">
+	<h1>Php Form Builder</h1>
+	<h2>PHP Form Class For Bootstrap</h2>
+	<div id="documenter_buttons">
+
+	</div>
+	<hr>
+	<ul>
+	<li>created: 05/08/2014</li>
+	<li>latest update: 10/27/2015</li>
+	<li>by: Gilles Migliori</li>
+
+	<li>email: <a href="mailto:&#103;&#105;&#108;&#108;&#101;&#115;&#46;&#109;&#105;&#103;&#108;&#105;&#111;&#114;&#105;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#103;&#105;&#108;&#108;&#101;&#115;&#46;&#109;&#105;&#103;&#108;&#105;&#111;&#114;&#105;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
+	</ul>
+	<p></p>
+	</section>
+
+	<section id="overview">
+	<div class="page-header"><h3>Overview</h3><hr class="notop"></div>
+<p>
+	<strong>Php Form Builder</strong> is a simple but powerfull class in witch you can create complex forms easily.</p>
+<p>
+	Form is ready to use with <a href="http://getbootstrap.com/">Bootstrap</a>, but can be easily adapted for any framework or be used as standalone.<br>
+	All you need is to match <a href="http://phpformbuilder.creation-site.org/documentation/class-doc/#options-overview" target="_blank">form options</a> with your framework.</p>
+<p>
+	Form generates clean HTML5 markup, with two separates functions to generate CSS and JS code, so you can render them separately (generaly in &lt;head&gt; or just before &lt;/body&gt;).</p>
+<p>
+	Server-side validation can be done on any destination page ; errors are stored in session</p>
+<p>
+	Email sending function : send simple email based on default html/css template and filter posted values, or advanced email with custom template, attached files, cc, bcc, etc.</p>
+<p>
+	Many plugins included (colorpicker, datepicker, timepicker, captcha, word/character counter, file upload, tinyMce, country select, ...), .<br>
+	You can easily add any other external plugin.</p>
+<p>
+	Add any plugin to your form with just one line of code. Plugins configurations are saved, needed js &amp; css files will be automatically called.</p>
+<p>
+	&nbsp;</p>
+<h4 id="overview_how_to_start_">How to start ?</h4>
+<ul>
+	<li>
+		Go to <a href="#quick_start_guide">Quick Start Guide</a> to create your first form</li>
+	<li>
+		Go to <a href="http://phpformbuilder.creation-site.org/documentation/class-doc/#main-functions">PHP Form Builder Documentation</a> to add fields, plugins, customize layout, group inputs, add custom html, ...</li>
+	<li>
+		Go to <a href="http://phpformbuilder.creation-site.org/">Examples</a> to see various prebuilt templates : complete forms including Modal forms, Ajax forms, Step forms, or single fields usage examples.</li>
+</ul>
+<table class="btns-table">
+	<tbody>
+		<tr>
+			<td>
+                <a class="btn btn-primary" href="#quick_start_guide">Quick Start Guide</a>
+				</td>
+			<td>
+				<a class="btn btn-primary" href="http://phpformbuilder.creation-site.org/documentation/class-doc/#main-functions">PHP Form Class For Bootstrap Documentation</a></td>
+			<td>
+				<a class="btn btn-primary" href="http://phpformbuilder.creation-site.org/">Form &amp; Elements Templates</a></td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+</section>
+<section id="quick_start_guide">
+	<div class="page-header"><h3>Quick Start Guide</h3><hr class="notop"></div>
+<ol>
+	<li>
+		Copy <strong>phpformbuilder</strong> folder on your server :<br>
+		<br>
+		<span class="pull-left">phpformbuilder/</span>
+		<p class="clearfix">
+			<span class="str-top">database/</span><span class="comments">* not required if you don't have to connect any db *</span><br>
+			<span class="str-mid"><strong>mailer/</strong></span><span class="comments">* not required if you don't send any email *</span><br>
+			<span class="str-mid"><strong>plugins/</strong></span><span class="comments">* not required if you don't use any plugin *</span><br>
+			<span class="str-mid"><strong>plugins-config/</strong></span><span class="comments">* not required if you don't use any plugin *</span><br>
+			<span class="str-mid"><strong>Validator/</strong></span><span class="comments">* required *</span><br>
+			<span class="str-mid"><strong>Form.php</strong></span><span class="comments">* required *</span><br>
+			<span class="str-bottom">plugins-path.php</span><span class="comments">* not required if you don't use any plugin *</span></p>
+		<p class="bg-warning">
+			plugin/ and plugins-config/ dirs are required only with use of plugins.<br>
+			If your form uses plugins, configure plugins path in <code>plugins-path.php</code>.</p>
+	</li>
+	<li>configure plugins path in <code>plugins-path.php</code></li>
+	<li>
+		<p>
+			Start session and include form class :</p>
+		<pre class="prettyprint lang-prettyprint lang-plain linenums linenums">
+&lt;?php
+use phpformbuilder\Form;
+use phpformbuilder\Validator\Validator;
+
+session_start();
+include_once(&#39;form/Form.php&#39;);	</pre>
+	</li>
+	<li>
+		<p>
+			Instantiate your form :</p>
+		<pre class="prettyprint lang-prettyprint lang-plain linenums linenums">
+$form = new Form(&#39;my-first-form&#39;); // minimal ; default layout will be &#39;horizontal&#39;</pre>
+		<p>
+			or</p>
+		<pre class="prettyprint lang-prettyprint lang-plain linenums linenums">
+$form = new Form(&#39;my-first-form&#39;, &#39;vertical&#39;); // layout can be horizontal | vertical | inline</pre>
+	</li>
+	<li>
+		<p>
+			Add content, for example :</p>
+		<pre class="prettyprint lang-prettyprint lang-plain linenums linenums">
+$form-&gt;startFieldset(&#39;My First Form&#39;);
+$form-&gt;addInput(&#39;text&#39;, &#39;my-input-name&#39;, &#39;&#39;, &#39;Your name&#39;, &#39;required=required&#39;);
+$form-&gt;addTextarea(&#39;my-textarea-name&#39;, &#39;Your message :&#39;, &#39;Your message : &#39;, &#39;cols=30, rows=4&#39;);
+$form-&gt;addBtn(&#39;submit&#39;, &#39;my-btn-name&#39;, 1, &#39;Submit form&#39;, &#39;class=btn btn-primary&#39;);
+$form-&gt;endFieldset();
+$form-&gt;render();</pre>
+	</li>
+	<li>
+		Result :<br>
+		<br>
+		<figure>
+			<img alt="Bootrstrap PhpForm Example" src="assets/images/image_1.jpg"></figure>
+	</li>
+</ol>
+<p>
+	<a class="btn btn-large btn-examples" href="http://phpformbuilder.creation-site.org/">More Examples</a></p>
+</section>
+<section id="features">
+	<div class="page-header"><h3>Features</h3><hr class="notop"></div>
+<ul>
+	<li>
+		Form generation with options for layout (horizontal, vertical, inline).</li>
+	<li>
+		Can build ANY form in ANY situation (simple form, modal, ajax, step form, ...)</li>
+	<li>
+		Bootstrap layouts friendly (rows, cols, input groups, button groups, ...)</li>
+	<li>
+		Accepts any HTML5 form elements, including fieldsets, multiple selects, optgroups, button groups, ... .</li>
+	<li>
+		Accepts any javascript logic (dependant fields, jQuery plugins, Bootstrap js, ...) with no limit.</li>
+	<li>
+		Allows to customize HTML with wrappers, IDs, classes and attributes, Javascript events, custom code anywhere.</li>
+	<li>
+		Default options ready for Bootstrap.</li>
+	<li>
+		Renders separate HTML code, CSS includes code for plugins, JS includes code for plugins and JS Domready code for plugins.</li>
+	<li>
+		Server-side validation, with multilanguage errors gestion (Third part PHP class).</li>
+	<li>
+		XSS, CSRF protected</li>
+	<li>
+		Send posted values by email based on customisable templates.</li>
+	<li>
+		Record posted values into database.</li>
+	<li>
+		Can display HTML code for debug purpose.</li>
+	<li>
+		Powerful integration of any Javascript plugin (jQuery or any other library) : configure the plugin XML file, PHPForms will generate all code for you (CSS includes, JS includes and JS Domready).</li>
+	<li>
+		Can memorize several custom configurations with each plugin (as many as you want), so you can reuse them easily.</li>
+	<li>
+		Ready-to-use jQuery plugins included :
+		<ul>
+			<li>
+				Colorpicker</li>
+			<li>
+				Datepicker</li>
+			<li>
+				Timepicker</li>
+			<li>
+				Captcha</li>
+			<li>
+				word/character counter</li>
+			<li>
+				Fileupload</li>
+			<li>
+				TinyMce</li>
+			<li>
+				Bootstrap Select</li>
+			<li>
+				Country Select (multilanguage with flags)</li>
+		</ul>
+	</li>
+	<li>
+		Many Forms Templates.</li>
+	<li>
+		Single Fields Templates.</li>
+	<li>
+		Complete documentation.</li>
+	<li>
+		Support on Codecanyon, by e-mail or by phone.</li>
+</ul>
+</section>
+<section id="changelog">
+	<div class="page-header"><h3>Changelog</h3><hr class="notop"></div>
+<!-- A publier -->
+    Bug Fix :
+        - fix validation custom error message with 'between' function
+        - fix validation errors with dates + hasSymbol function
+<!--  -->
+<h4 id="changelog_version_131_10_2015_">Version 1.3.1 (10/2015)</h4>
+<pre class="prettyprint lang-prettyprint lang-plain linenums linenums">
+    Bug Fix :
+        - fix reply_to issue in sendAdvancedMail function</pre>
+<h4 id="changelog_version_13_05_2015_">Version 1.3 (05/2015)</h4>
+<pre class="prettyprint lang-prettyprint lang-plain linenums linenums">
+    Improvement :
+        - improve register / clear system
+    New Features :
+        - add Country select plugin
+        - add Bootstrap select plugin
+        - add Passfield plugin
+        - add Icheck plugin</pre>
+<h4 id="changelog_version_127_03_2015_">Version 1.2.7 (03/2015)</h4>
+<pre class="prettyprint lang-prettyprint lang-plain linenums linenums">
+    Bug Fix :
+        - fix word-char-count plugin used on the same page with tinyMce + word-char-count.
+    </pre>
+<h4 id="changelog_version_126_03_2015_">Version 1.2.6 (03/2015)</h4>
+<pre class="prettyprint lang-prettyprint lang-plain linenums linenums">
+    Improvement :
+        - register array fieldnames in session to keep values when validation fails.
+    </pre>
+<h4 id="changelog_version_125_02_2015_">Version 1.2.5 (02/2015)</h4>
+<pre class="prettyprint lang-prettyprint lang-plain linenums linenums">
+    Improvement :
+        - add word-char-count support with tinyMce
+    </pre>
+<h4 id="changelog_version_124_12_2014_">Version 1.2.4 (12/2014)</h4>
+<pre class="prettyprint lang-prettyprint lang-plain linenums linenums">
+    New Features :
+        - add support for select into input groups
+    Improvements :
+        - input groups documentation &amp; examples fully detailed
+    </pre>
+<h4 id="changelog_version_123_12_2014_">Version 1.2.3 (12/2014)</h4>
+<pre class="prettyprint lang-prettyprint lang-plain linenums linenums">
+    New Features :
+        - add database utilities with Myql class
+        - add tinyMce (Rich Text Editor) plugin with responsivefilemanager
+    Improvements :
+        - add debug argument to print css/js includes &amp; js code on screen
+        - support of multiple fileUploads on the same page
+    </pre>
+<h4 id="changelog_version_122_10_2014_">Version 1.2.2 (10/2014)</h4>
+<pre class="prettyprint lang-prettyprint lang-plain linenums linenums">
+    New Feature :
+        - add word / character count plugin
+    Bug Fix :
+        - Fix object context error with php &lt; 5.4
+    </pre>
+<h4 id="changelog_version_121_10_2014_">Version 1.2.1 (10/2014)</h4>
+<pre class="prettyprint lang-prettyprint lang-plain linenums linenums">
+    Updates :
+        - improve email sending with attached files
+        - auto-detect email encoding
+    </pre>
+<h4 id="changelog_version_12_10_2014_">Version 1.2 (10/2014)</h4>
+<pre class="prettyprint lang-prettyprint lang-plain linenums linenums">
+    New Features :
+        - add sendMail function
+        - add sendAdvancedMail function
+        - add groupInputs function
+        - add btnGroupClass option
+
+    Updates :
+        - update fileUpload plugin to last version
+
+    Bugs Fixes :
+        - Fix default checkbox wrapper html
+        - Fix plugin path with only fileUploads
+    </pre>
+<h4 id="changelog_version_11_09_2014_">Version 1.1 (09/2014)</h4>
+<pre class="prettyprint lang-prettyprint lang-plain linenums linenums">
+        Bugs Fixes :
+        - Fix Validator compatibility with 32/64 bit systems
+        - Fix object context error with php &lt; 5.4
+    </pre>
+<h4 id="changelog_version_10_09_2014_">Version 1.0 (09/2014)</h4>
+<pre class="prettyprint lang-prettyprint lang-plain linenums linenums">
+        PSR2 Standard support
+        Check for security vulnerabilities
+        Add documentation
+    </pre>
+</section>
+<section id="source_credits">
+	<div class="page-header"><h3>Source & Credits</h3><hr class="notop"></div>
+<p>
+	Thanks so much to :</p>
+<ul>
+	<li>
+		<a href="https://github.com/blackbelt/php-validation">blackbelt&#39;s php-validation class</a></li>
+	<li>
+		<a href="http://www.phpclasses.org/ultimatemysql">Jeff L. Williams&#39;s Mysql class</a></li>
+	<li>
+		<a href="http://www.responsivefilemanager.com/">http://www.responsivefilemanager.com/</a></li>
+	<li>
+		<a href="http://www.tinymce.com">http://www.tinymce.com</a></li>
+	<li>
+		<a href="http://colpick.com/plugin">http://colpick.com/plugin</a></li>
+	<li>
+		<a href="http://jqueryui.com/datepicker/">http://jqueryui.com/datepicker/</a></li>
+	<li>
+		<a href="https://github.com/jonthornton/jquery-timepicker">https://github.com/jonthornton/jquery-timepicker</a></li>
+	<li>
+		<a href="http://keith-wood.name/realPerson.html">http://keith-wood.name/realPerson.html</a></li>
+	<li>
+		<a href="https://github.com/blueimp/jQuery-File-Upload">https://github.com/blueimp/jQuery-File-Upload</a></li>
+	<li>
+		<a href="https://github.com/PHPMailer/PHPMailer/">https://github.com/PHPMailer/PHPMailer</a></li>
+	<li>
+		<a href="https://github.com/jjriv/emogrifier">https://github.com/jjriv/emogrifier</a></li>
+	<li>
+		<a href="http://silviomoreto.github.io/bootstrap-select/">http://silviomoreto.github.io/bootstrap-select/</a></li>
+	<li>
+		<a href="http://fronteed.com/iCheck/">http://fronteed.com/iCheck/</a></li>
+	<li>
+		<a href="http://antelle.github.io/passfield/index.html">http://antelle.github.io/passfield/index.html</a></li>
+</ul>
+</section>
+
+	</div>
+<script src="assets/js/google-code-prettify/prettify.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/jquery.scrollTo.js"></script>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

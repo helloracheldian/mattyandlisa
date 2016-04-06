@@ -1,0 +1,39 @@
+#registries {
+	background-color: @white;
+	background-image: url('../img/background-1.gif');
+	background-repeat: repeat;	
+	.container {
+		padding: 4em 0;
+		#flowers {
+			width:100%;
+			height:auto;
+		}
+		.beveled-corner-box {
+			padding:2em;
+			
+			.registry-header {
+				text-align: center;
+				line-height: 1.2em;
+				/*==========  Mobile First Method  ==========*/
+				/* XXS */ @media only screen and (min-width : 320px)  {font-size: 3.4vw;}
+				/* XS  */ @media only screen and (min-width : 480px)  {font-size: 2.4vw;}
+				/* SM  */ @media only screen and (min-width : 768px)  {font-size: 2.4vw;}
+				/* MD  */ @media only screen and (min-width : 992px)  {font-size: 2.2vw;}
+				/* LG  */ @media only screen and (min-width : 1200px) {font-size: 1.9vw;}
+			}
+
+			.registry-info {
+				font-size: 1em;
+				text-align: center;
+				line-height: 1.2em;
+				/*==========  Mobile First Method  ==========*/
+				/* XXS */ @media only screen and (min-width : 320px)  {font-size: 2.9vw;}
+				/* XS  */ @media only screen and (min-width : 480px)  {font-size: 1.9vw;}
+				/* SM  */ @media only screen and (min-width : 768px)  {font-size: 1.8vw;}
+				/* MD  */ @media only screen and (min-width : 992px)  {font-size: 1.7vw;}
+				/* LG  */ @media only screen and (min-width : 1200px) {font-size: 1.6vw;}
+			}
+
+		}
+	}
+}

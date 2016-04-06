@@ -1,0 +1,31 @@
+#directions {
+	background-color: @white;
+	background-image: url('../img/background-1.gif');
+	background-repeat: repeat;
+	padding: 2em 0;
+	text-align: left;
+	font-size: 2vw;
+	line-height: 1em;
+	#row2 {margin-top: 1em;}
+	#heading {
+		text-align: left!important;
+		line-height: 1em;
+		font-variant: small-caps;
+		/*==========  Mobile First Method  ==========*/
+		/* XXS */ @media only screen and (min-width : 320px)  {font-size: 3.5vw;}
+		/* XS  */ @media only screen and (min-width : 480px)  {font-size: 2.5vw;}
+		/* SM  */ @media only screen and (min-width : 768px)  {font-size: 2.5vw;}
+		/* MD  */ @media only screen and (min-width : 992px)  {font-size: 2.3vw;}
+		/* LG  */ @media only screen and (min-width : 1200px) {font-size: 2vw;}
+	}
+	p {
+		text-align: left;
+		line-height: 1.2em;
+		/*==========  Mobile First Method  ==========*/
+		/* XXS */ @media only screen and (min-width : 320px)  {font-size: 3vw;}
+		/* XS  */ @media only screen and (min-width : 480px)  {font-size: 2vw;}
+		/* SM  */ @media only screen and (min-width : 768px)  {font-size: 2vw;}
+		/* MD  */ @media only screen and (min-width : 992px)  {font-size: 1.8vw;}
+		/* LG  */ @media only screen and (min-width : 1200px) {font-size: 1.5vw;}
+	}
+}

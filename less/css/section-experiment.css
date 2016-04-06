@@ -1,0 +1,23 @@
+#experiment {
+  height: 100%;
+  height: 100vh;
+  background: url(img/splash.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+#experiment #logo {
+  z-index: 999999;
+  position: absolute;
+  width: 15em;
+  left: 50vw;
+  margin-left: -77px;
+  top: 30vh;
+  position: fixed;
+}
+#experiment a img {
+  transition: all 150ms ease;
+}
+#experiment a img:hover {
+  opacity: 1;
+  transform: translateY(5px) scale(1.1, 1.1);
+  transition: all 300ms ease;
+}

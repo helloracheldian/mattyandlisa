@@ -1,0 +1,116 @@
+<section id="map-section">
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzuo78SYYb2nLunYVodCY-nt7Lc_2ljc8&sensor=false"></script>
+
+	<script type="text/javascript">
+	  // When the window has finished loading create our google map below
+	  google.maps.event.addDomListener(window, 'load', init);
+
+	  function init() {
+	      // Basic options for a simple Google Map
+	      // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+	      var mapOptions = {
+	          // How zoomed in you want the map to start at (always required)
+	          zoom: 17,
+	          scrollwheel: false,
+	          mapTypeControl: false,
+	          streetViewControl: false,
+
+	          // The latitude and longitude to center the map (always required)
+	          center: new google.maps.LatLng(43.654621, -79.365441),
+
+	          // How you would like to style the map. 
+	          styles:[
+	          {
+	          	"featureType": "administrative.neighborhood",
+	          	"elementType": "labels.text",
+	          	"stylers": [
+	          	{
+	          		"hue": "#820ef5"
+	          	}
+	          	]
+	          },
+	          {
+	          	"featureType": "landscape.man_made",
+	          	"elementType": "all",
+	          	"stylers": [
+	          	{
+	          		"color": "#dea5a0"
+	          	},
+	          	{
+	          		"saturation": -50
+	          	},
+	          	{
+	          		"lightness": 32
+	          	}
+	          	]
+	          },
+	          {
+	          	"featureType": "poi.park",
+	          	"elementType": "geometry",
+	          	"stylers": [
+	          	{
+	          		"color": "#b1bb95"
+	          	}
+	          	]
+	          },
+	          {
+	          	"featureType": "road.highway",
+	          	"elementType": "geometry",
+	          	"stylers": [
+	          	{
+	          		"color": "#c65771"
+	          	}
+	          	]
+	          },
+	          {
+	          	"featureType": "road.arterial",
+	          	"elementType": "geometry",
+	          	"stylers": [
+	          	{
+	          		"color": "#f2f0ee"
+	          	}
+	          	]
+	          },
+	          {
+	          	"featureType": "transit.station.airport",
+	          	"elementType": "geometry.fill",
+	          	"stylers": [
+	          	{
+	          		"visibility": "off"
+	          	}
+	          	]
+	          },
+	          {
+	          	"featureType": "water",
+	          	"elementType": "all",
+	          	"stylers": [
+	          	{
+	          		"color": "#c7e3e2"
+	          	}
+	          	]
+	          }
+	          ]
+	        };
+
+	        var mapElement = document.getElementById('map');
+
+	        var map = new google.maps.Map(mapElement, mapOptions);
+
+	      // map marker
+	      var image = 'img/marker2.png';
+	      var marker = new google.maps.Marker({
+	      	position: {lat: 43.655094, lng: -79.366137},
+	      	map: map,
+	      	icon: image,
+	      	title: 'The Berkley Fieldhouse'
+	      });
+	    }
+	</script>
+
+	<div id="map"></div>
+
+<!-- <div class="legend beveled-corner-box" style="position:relative; bottom: -10px; z-index: 999999">
+    <h3>Legend</h3>
+  </div> -->
+
+</section>

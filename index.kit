@@ -1,0 +1,82 @@
+<?php
+session_start();
+
+$errors = isset($_SESSION['errors']) ? $_SESSION['errors'] : '';
+$fields = isset($_SESSION['fields']) ? $_SESSION['fields'] : '';
+
+?>
+
+<!-- @import "_html-variables.kit" -->
+<!-- @import "_slides.kit" -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <!-- @import "components/_head.kit" -->
+    <body>
+
+
+
+        <!-- import "sections/slider.kit" -->
+
+        <!-- import "sections/splash-photo.kit" -->
+
+        <!-- import "sections/experiment.kit" -->
+        <!-- @import "sections/experiment2.kit" -->
+
+        <!-- @import "components/_navbar.kit" -->
+        
+
+        
+
+            <!-- import "sections/home.kit" -->
+
+            <!-- import "sections/about.kit" -->
+
+        <!-- @import "sections/details.kit" -->
+        
+        <!-- import "sections/photo-bg-1.kit" -->
+        
+        
+        
+            <!-- import "sections/info.kit" -->
+
+        <!-- @import "sections/map.kit" -->
+        <!-- @import "sections/directions.kit" -->
+        
+            <!-- import "sections/accomodations.kit" -->
+
+        <!-- @import "sections/photo-bg-2.kit" -->
+
+        <!-- @import "sections/registries.kit" -->
+        
+            <!-- import "sections/quote.kit" -->
+
+            <!-- import "sections/countdown.kit" -->
+
+            <!-- import "sections/timeline.kit" -->
+
+            <!-- import "sections/gallery.kit" -->
+
+            <!-- import "sections/agenda.kit" -->
+
+            <!-- import "sections/faq.kit" -->
+
+            <!-- import "sections/music.kit" -->
+        
+        <!-- @import "sections/photo-bg-3.kit" -->
+
+        <!-- @import "sections/rsvp.kit" -->
+        
+            <!-- import "sections/rsvp-alt.kit" -->
+
+        <!-- @import "sections/outro.kit" -->
+
+
+        <!-- @import "components/_footer-scripts.html" -->
+    </body>
+</html>
+
+<?php
+session_unset();
+session_destroy();
+?>

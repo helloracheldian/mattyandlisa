@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="contact-email.css">
+</head>
+<body>
+    <div id="header">
+        <h1 class="text-center">Phpforms Contact</h1>
+    </div>
+    <div id="content">
+        <h2>
+        <a href="http://phpformbuilder.creation-site.org/documentation/index.html" id="logo" class="pull-left">
+            <img src="http://phpformbuilder.creation-site.org/documentation/class-doc/images/phpforms-small-preview.png" alt="PHP Form Builder logo">
+        </a>
+        New message from PHP Form Builder</h2>
+        <hr>
+        <p class="lead"><strong>{username}</strong> sent you the following message :</p>
+        <div id="msg-content">
+            <p><strong>Subject : </strong>{subject}</p>
+            <p><strong>Message : </strong><span id="message">{message}</span></p>
+            <p><strong>User Phone : </strong>{userphone}</p>
+            <p><strong>User Email : </strong><a href="mailto:{useremail}">{useremail}</a></p>
+            <p><strong>Suscribe to Newsletter : </strong>{newsletter}</p>
+        </div>
+    </div>
+</body>
+</html>

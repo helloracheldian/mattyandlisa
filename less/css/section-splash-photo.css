@@ -1,0 +1,26 @@
+html {
+  height: 100%;
+}
+html body {
+  height: 100%;
+}
+html body .carousel .carousel-inner {
+  height: 100%;
+}
+html body .carousel .carousel-inner .item {
+  height: 100%;
+}
+html body .carousel .carousel-inner .item .fill {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+html body .carousel .carousel-inner .item .carousel-caption {
+  top: 35%;
+  bottom: initial;
+  text-shadow: none;
+}
+html body .carousel .carousel-inner .item .carousel-caption .beveled-corner-box {
+  padding: 60px;
+}

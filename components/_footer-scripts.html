@@ -1,0 +1,99 @@
+<!-- SKROLLR -->
+<!-- <script src="https://prinzhorn.github.io/skrollr/dist/skrollr.min.js"></script> -->
+<script type="text/javascript">
+    // var s = skrollr.init();
+</script>
+
+
+
+
+<!-- AFFIX BOOTSTRAP NAVBAR AT TOP -->
+<script>
+$(document).ready(function() {
+  var navpos = $('#nav').offset();
+  console.log(navpos.top);
+    $(window).bind('scroll', function() {
+      if ($(window).scrollTop() > navpos.top) {
+        $('#nav').addClass('navbar-fixed-top');
+       }
+       else {
+         $('#nav').removeClass('navbar-fixed-top');
+       }
+    });
+});
+</script>
+
+
+
+<!-- SMOOTHSCROLL -->
+<script>
+$(document).ready(function() {
+  $("a.smoothscroll").on("click", function(event){ 
+    $("html, body").animate({
+      scrollTop: $($(this).attr("href")).offset().top + "px"
+    }, {
+      duration: 1500,
+      easing: "swing"
+    });
+    return false;     
+  });
+});
+</script>
+
+
+
+
+<!-- REFRESH WINDOW WHEN RESIZED -->
+<script>
+  // window.onresize = function(){ location.reload(); }
+  // $(window).bind('resize', function(e)
+  // {
+  //   if (window.RT) clearTimeout(window.RT);
+  //   window.RT = setTimeout(function()
+  //   {
+  //     this.location.reload(false); /* false to get page from cache */
+  //   }, 200);
+  // });
+</script>
+
+
+
+
+<!-- AN OLD AFFIX ATTEMPT -->
+<script>
+  // var  nd = $(".navbar.navbar-inverse");
+  // var  nft = "navbar-fixed-top";
+  // var  hdr = $('#myCarousel').height(); 
+
+  // $(window).scroll(function() {
+  //   if( $(this).scrollTop() > hdr ) {
+  //     nd.addClass(nft);
+  //   } else {
+  //     nd.removeClass(nft);
+  //   }
+  // });
+</script>
+
+
+
+
+<!-- AN OLD AFFIX ATTEMPT -->
+<script>
+  // var  nd = $(".navbar.navbar-inverse");
+  // var  nft = "navbar-fixed-top";
+  // var  hdr = $('#splash-photo').height(); 
+
+  // $(window).scroll(function() {
+  //   if( $(this).scrollTop() > hdr ) {
+  //     nd.addClass(nft);
+  //   } else {
+  //     nd.removeClass(nft);
+  //   }
+  // });
+</script>
+
+
+
+
+
+

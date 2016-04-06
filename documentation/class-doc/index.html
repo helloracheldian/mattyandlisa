@@ -1,0 +1,2747 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>PHP Form Class For Bootstrap Documentation</title>
+        <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+		<!-- Bootstrap CSS -->
+		<link href="../../templates/assets/css/bootstrap.min.css" rel="stylesheet">
+		<!-- documentation CSS -->
+        <link href='../assets/css/documenter.css' rel='stylesheet' type='text/css'>
+        <!-- Google font -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <!-- code prettify -->
+        <link rel="stylesheet" href="../assets/js/google-code-prettify/prettify.css" media="screen">
+		<!-- Form Plugins -->
+		<link href="../../phpformbuilder/plugins/colpick/css/colpick.css" rel="stylesheet" media="screen">
+		<link href="../../phpformbuilder/plugins/timepicker/jquery.timepicker.css" rel="stylesheet" media="screen">
+		<link href="../../phpformbuilder/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" media="screen">
+		<link href="../../phpformbuilder/plugins/jQuery-File-Upload/css/jquery.fileupload.css" rel="stylesheet" media="screen">
+		<link href="../../phpformbuilder/plugins/jquery-realperson/jquery.realperson.css" rel="stylesheet" media="screen">
+		<link href="../../phpformbuilder/plugins/jQuery-File-Upload/css/jquery.fileupload.css" rel="stylesheet" media="screen">
+        <link href="../../phpformbuilder/plugins/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" media="screen">
+        <link href="../../phpformbuilder/plugins/countries/world-flags-sprite/stylesheets/flags32.css" rel="stylesheet" media="screen">
+        <link href="../../phpformbuilder/plugins/passfield/dist/css/passfield.min.css" rel="stylesheet" media="screen">
+        <link href="../../phpformbuilder/plugins/icheck/skins/square/green.css" rel="stylesheet" media="screen">
+		<!-- Just for Demo -->
+		<style type="text/css">
+		.row input#captcha {
+			float: right;
+			width: 65%;
+			margin-top: 10px;
+		}
+		.realperson-challenge {
+			width: 23%;
+			margin: 14px 0;
+		}
+		.row .realperson-challenge {
+			float: left;
+		}
+		</style>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body data-spy="scroll" data-target="#navbar">
+		<div id="documenter_sidebar">
+            <nav class="hidden-print" id="navbar">
+                <div id="scroller-wrapper">
+                    <a href="#documenter_cover" id="documenter_logo"></a>
+    				<ul class="nav nav-pills nav-stacked" id="accordion">
+    					<li class="active"><a href="#overview">Overview</a></li>
+    					<li><a href="../index.html#quick_start_guide" target="_blank">Quick Start Guide</a></li>
+    					<li><a href="../../index.php" target="_blank">Templates</a></li>
+    					<li><a data-toggle="collapse" class="collapsible" data-parent="#accordion" href="#collapseOptions">Options<span class="caret"></span></a>
+    						<ul class="nav nav-pills nav-stacked collapse" id="collapseOptions">
+    							<li><a href="#options-overview">Overview</a></li>
+    							<li><a href="#options-default">Default options (Bootstrap)</a></li>
+    							<li><a href="#options-customizing">Customizing for other framework</a></li>
+    						</ul>
+    					</li>
+    					<li><a data-toggle="collapse" class="collapsible" data-parent="#accordion" href="#collapseFunctions">Main functions<span class="caret"></span></a>
+    						<ul class="nav nav-pills nav-stacked collapse" id="collapseFunctions">
+    							<li><a data-toggle="collapse" href="#collapseGeneral"><span class="header">General</span><span class="caret"></span></a>
+    								<ul class="nav nav-pills nav-stacked collapse" id="collapseGeneral">
+                                        <li><a href="#construct">construct</a></li>
+    									<li><a href="#setOptions">setOptions</a></li>
+                                        <li><a href="#setAction">setAction</a></li>
+    									<li><a href="#startFieldset">startFieldset</a></li>
+    									<li><a href="#endFieldset">endFieldset</a></li>
+    									<li><a href="#attr">$attr argument</a></li>
+    								</ul>
+    							</li>
+    							<li><a data-toggle="collapse" href="#collapseElements"><span class="header">Elements</span><span class="caret"></span></a>
+    								<ul class="nav nav-pills nav-stacked collapse" id="collapseElements">
+                                        <li><a href="#addInput">addInput</a></li>
+    									<li><a href="#groupInputs">groupInputs</a></li>
+    									<li><a href="#addTextarea">addTextarea</a></li>
+    									<li><span class="header disabled">- Select -</span>
+    										<ul class="nav nav-pills nav-stacked">
+    											<li><a href="#addOption">addOption</a></li>
+                                                <li><a href="#addSelect">addSelect</a></li>
+    											<li><a href="#addCountrySelect">addCountrySelect</a></li>
+    										</ul>
+    									</li>
+    									<li><span class="header disabled">- Radio Btns -</span>
+    										<ul class="nav nav-pills nav-stacked">
+    											<li><a href="#addRadio">addRadio</a></li>
+    											<li><a href="#printRadioGroup">printRadioGroup</a></li>
+    										</ul>
+    									</li>
+    									<li><span class="header disabled">- Checkboxes -</span>
+    										<ul class="nav nav-pills nav-stacked">
+    											<li><a href="#addCheckbox">addCheckbox</a></li>
+    											<li><a href="#printCheckboxGroup">printCheckboxGroup</a></li>
+    										</ul>
+    									</li>
+    									<li><span class="header disabled">- Buttons -</span>
+    										<ul class="nav nav-pills nav-stacked">
+    											<li><a href="#addBtn">addBtn</a></li>
+    											<li><a href="#printBtnGroup">printBtnGroup</a></li>
+    										</ul>
+    									</li>
+    									<li><span class="header disabled">- Custom HTML -</span>
+    										<ul class="nav nav-pills nav-stacked">
+    											<li><a href="#addHtml">addHtml</a></li>
+    											<li><a href="#addInputWrapper">addInputWrapper</a></li>
+    										</ul>
+    									</li>
+    								</ul>
+    							</li>
+    							<li><a data-toggle="collapse" href="#collapseRendering"><span class="header">Rendering</span><span class="caret"></span></a>
+    								<ul class="nav nav-pills nav-stacked collapse" id="collapseRendering">
+    									<li><a href="#render">render</a></li>
+    									<li><a href="#printIncludes">printIncludes</a></li>
+    									<li><a href="#printJsCode">printJsCode</a></li>
+    								</ul>
+    							</li>
+                                <li><a data-toggle="collapse" href="#collapseEmailSending1"><span class="header">Email sending</span><span class="caret"></span></a>
+                                    <ul class="nav nav-pills nav-stacked collapse" id="collapseEmailSending1">
+                                        <li><a href="#mainFunctionsSendMail">sendMail</a></li>
+                                        <li><a href="#mainFunctionsSendAdvancedMail">sendAdvancedMail</a></li>
+                                        <li><a href="#attachmentsExamples">Attachments examples</a></li>
+                                    </ul>
+                                </li>
+                                <li><a data-toggle="collapse" href="#collapseRegisteringClearingValues"><span class="header">Registering / Clearing values</span><span class="caret"></span></a>
+                                    <ul class="nav nav-pills nav-stacked collapse" id="collapseRegisteringClearingValues">
+                                        <li><a href="#registerValues">registerValues (static)</a></li>
+                                        <li><a href="#mergeValues">mergeValues (static)</a></li>
+                                        <li><a href="#clear">clear (static)</a></li>
+                                    </ul>
+                                </li>
+    						</ul>
+    					</li>
+    					<li><a data-toggle="collapse" class="collapsible" data-parent="#accordion" href="#collapsePlugins">Plugins<span class="caret"></span></a>
+    						<ul class="nav nav-pills nav-stacked collapse" id="collapsePlugins">
+    							<li><a href="#plugins-overview">Overview</a></li>
+    							<li><a href="#addPlugin">Activating a plugin</a></li>
+    							<li><a href="#fileupload">Fileupload plugin</a></li>
+    							<li><a data-toggle="collapse" href="#collapseIncludedPluginsExamples"><span class="header">Included plugins examples</span><span class="caret"></span></a>
+    								<ul class="nav nav-pills nav-stacked collapse" id="collapseIncludedPluginsExamples">
+                                        <li><a href="#tinymce-example">tinyMce</a></li>
+                                        <li><a href="#bootstrap-select-example-redirect">Bootstrap Select</a></li>
+                                        <li><a href="#icheck-example">Icheck</a></li>
+    									<li><a href="#colorpicker-example">Colorpicker</a></li>
+    									<li><a href="#datepicker-example">Datepicker</a></li>
+    									<li><a href="#timepicker-example">Timepicker</a></li>
+                                        <li><a href="#captcha-example">Captcha</a></li>
+    									<li><a href="#passfield-example">Passfield</a></li>
+                                        <li><a href="#fileupload-example">File Upload</a></li>
+                                        <li><a href="#wordcharactercount-example">Word / Character counter</a></li>
+    									<li><a href="#tinymce-word-character-count-example">TinyMce + Word / Character Count example</a></li>
+    								</ul>
+    							</li>
+    							<li><a href="#customizing-plugins">Customizing plugins</a></li>
+    							<li><a href="#adding-your-own-plugins">Adding your own plugins</a></li>
+    						</ul>
+    					</li>
+    					<li><a data-toggle="collapse" class="collapsible" data-parent="#accordion" href="#collapseValidation">Validation<span class="caret"></span></a>
+    						<ul class="nav nav-pills nav-stacked collapse" id="collapseValidation">
+    							<li><a href="#validation-methods">Available methods</a></li>
+    							<li><a href="#validation-examples">Examples</a></li>
+    							<li><a href="#validation-multilanguage">Multilanguage support</a></li>
+    						</ul>
+    					</li>
+                        <li><a data-toggle="collapse" class="collapsible" data-parent="#accordion" href="#collapseEmailSending2">E-mail sending<span class="caret"></span></a>
+                            <ul class="nav nav-pills nav-stacked collapse" id="collapseEmailSending2">
+                                <li><a href="#sendMail">sendMail</a></li>
+                                <li><a href="#sendAdvancedMail">sendAdvanceddMail</a></li>
+                                <li><a href="#attachmentsExamples">Attachments examples</a></li>
+                            </ul>
+                        </li>
+                        <li><a data-toggle="collapse" class="collapsible" data-parent="#accordion" href="#collapseDatabase">Database utilities<span class="caret"></span></a>
+                            <ul class="nav nav-pills nav-stacked collapse" id="collapseDatabase">
+                                <li><a href="#database-main">Main class</a></li>
+                                <li><a href="#database-insert">Insert example</a></li>
+                                <li><a href="#database-update">Update example</a></li>
+                                <li><a href="#database-delete">Delete example</a></li>
+                            </ul>
+                        </li>
+    					<li><a href="#credits">Sources &amp; Credits</a></li>
+    				</ul>
+                </div>
+			</nav>
+		</div>
+		<div id="documenter_content" class="main-content">
+			<section>
+				<h2 id="overview">Overview</h2>
+				<p>Form is a simple but powerfull class in witch you can create complex forms easily.</p>
+				<p>Form is ready to use with <a href="http://getbootstrap.com/">Bootstrap</a>, but can be easily adapted for other frameworks.<br>All you need is to match <a href="#options-overview">form options</a> with your framework. That's all.</p>
+				<p>Form generates clean HTML5 markup, with two separates functions to generate CSS and JS code, so you can render them separately (generaly in &lt;head&gt; or just before &lt;/body&gt;).</p>
+				<p>Server-side validation can be done on any destination page ; errors are stored in session</p>
+                <p>Send your emails with simple or advanced function - detects and replaces posted values in default or custom html/css template. Uses PHPMailer and Emogrifier to inline css.</p>
+                <p>Database class included to easily Insert/Update/Delete elements using posted values.</p>
+				<p>Five plugins are included (<a href="#colorpicker">colorpicker</a>, <a href="#datepicker">datepicker</a>, <a href="#timepicker">timepicker</a>, <a href="#captcha">captcha</a>, <a href="#fileupload">file upload</a>).<br>You can easily add any other external plugin (see <a href="#plugins">plugins</a> section).</p>
+				<p>When you activate a plugin, the needed css and js files will be automaticaly rendered.</p>
+				<p><a href="../../phpformbuilder/" class="btn btn-primary" target="_blank"><span class="glyphicon glyphicon-new-window prepend"></span>Go to Templates</a></p>
+			</section>
+			<section>
+				<h2 id="options-overview">Options</h2>
+				<article>
+					<h4>Overview</h4>
+					<p>Options are defining HTML wrappers and classes.
+						<br>Default options are Bootstrap 3's.
+						<br>Each can be overwritten the way you want to match other framework</p>
+						<p class="highlight">For example, with Bootstrap, each group (label + element) has to be wrapped into a <code>&lt;div class=&quot;form-group&quot;&gt;&lt;/div&gt;</code> and to have a <code>.form-control class</code></p>
+						<p class="highlight">We also need do add <code>.col-sm-x</code> &amp; <code>.control-label</code> to labels, <br>and to wrap elements with <code>&lt;div class=&quot;col-sm-x&quot;&gt;&lt;/div&gt;</code>.</p>
+						<p>All will be easily done with Form options.</p>
+						<p>if needeed, wrappers can contain 2 html elements.<br>
+						This can be done with <var>elementsWrapper</var>, <var>checkboxWrapper</var> and <var>radioWrapper</var>.</p>
+						<p>To add input wrapper, see <a href="#addInputWrapper">addInputWrapper</a> function.</p>
+				</article>
+				<article id="options-default">
+					<h4>Default options (Bootstrap 3's)</h4>
+<pre class="prettyprint linenums">$options = array(
+'formInlineClass'          => 'form-inline',
+'formHorizontalClass'      => 'form-horizontal',
+'formVerticalClass'        => '',
+'elementsWrapper'          => '&lt;div class=&quot;form-group&quot;&gt;&lt;/div&gt;',
+'checkboxWrapper'          => '&lt;div class=&quot;checkbox&quot;&gt;&lt;/div&gt;',
+'radioWrapper'             => '&lt;div class=&quot;radio&quot;&gt;&lt;/div&gt;',
+'wrapElementsIntoLabels'   => false,
+'elementsClass'            => 'form-control',
+'wrapperErrorClass'        => 'has-error',
+'elementsErrorClass'       => '',
+'textErrorClass'           => 'text-danger',
+'horizontalLabelClass'     => 'control-label',
+'horizontalLabelCol'       => 'col-sm-4',
+'horizontalOffsetCol'      => 'col-sm-offset-4',
+'horizontalElementCol'     => 'col-sm-8',
+'inlineCheckboxLabelClass' => 'checkbox-inline',
+'inlineRadioLabelClass'    => 'radio-inline',
+'btnGroupClass'            => 'btn-group',
+'requiredMark'             => '&lt;sup class=&quot;text-danger&quot;&gt;* &lt;/sup&gt;',
+'openDomReady'             => '$(document).ready(function () {',
+'closeDomReady'            => '});'
+);</pre>
+					<p></p>
+					<div class="panel panel-primary">
+					  	<div class="panel-heading">Example of HTML code generated for each option</div>
+							<table class="table table-striped highlight">
+								<tbody>
+									<tr>
+										<td>formInlineClass</td>
+										<td class="gray-light">&lt;form class="<code>form-inline</code>" [...]&gt;</td>
+									</tr>
+									<tr>
+										<td>formHorizontalClass</td>
+										<td class="gray-light">&lt;form class="<code>form-horizontal</code>" [...]&gt;</td>
+									</tr>
+									<tr>
+										<td>formVerticalClass</td>
+										<td class="gray-light">&lt;form class="<code>form-vertical</code>" [...]&gt;</td>
+									</tr>
+									<tr>
+										<td>elementsWrapper</td>
+										<td class="gray-light">
+											<code>&lt;div class="form-group"&gt;</code><br>
+											<span class="indented">[&lt;label&gt; ... &lt;/label&gt;]</span><br>
+											<span class="indented">[&lt;input&gt;]</span><br>
+											<code>&lt;/div&gt;</code>
+										</td>
+									</tr>
+									<tr>
+										<td>checkboxWrapper</td>
+										<td class="gray-light">
+											<code>&lt;div class="checkbox"&gt;</code><br>
+											<span class="indented">[&lt;label&gt;]</span><br>
+											<span class="indented"><span class="indented">[&lt;input type="checkbox"&gt;[text]]</span></span><br>
+											<span class="indented">[&lt;/label&gt;]</span><br>
+											<code>&lt;/div&gt;</code>
+										</td>
+									</tr>
+									<tr>
+										<td>radioWrapper</td>
+										<td class="gray-light">
+											<code>&lt;div class="radio"&gt;</code><br>
+											<span class="indented">[&lt;label&gt;]</span><br>
+											<span class="indented"><span class="indented">[&lt;input type="radio"&gt;]</span></span><br>
+											<span class="indented">[&lt;/label&gt;]</span><br>
+											<code>&lt;/div&gt;</code>
+										</td>
+									</tr>
+									<tr>
+										<td>wrapElementsIntoLabels (if set to <var>true</var>)</td>
+										<td class="gray-light"><code>&lt;label&gt;</code>[input | textarea | ...]<code>&lt;/label&gt;</code>
+										</td>
+									</tr>
+									<tr>
+										<td>elementsClass</td>
+										<td class="gray-light">&lt;input class="<code>form-control</code>" [...]&gt;</td>
+									</tr>
+									<tr>
+										<td>wrapperErrorClass</td>
+										<td class="gray-light">&lt;div class="[form-group] <code>has-error</code>"&gt;</td>
+									</tr>
+									<tr>
+										<td>elementsErrorClass</td>
+										<td class="gray-light">&lt;input class="[form-control] <code>error-class</code>" [...]&gt;</td>
+									</tr>
+									<tr>
+										<td>textErrorClass</td>
+										<td class="gray-light">&lt;p class="<code>text-danger</code>"&gt; ... &lt;/p&gt;</td>
+									</tr>
+									<tr>
+										<td>horizontalLabelClass<span class="text-danger">*</span>,<br>horizontalLabelCol<span class="text-danger">*</span></td>
+										<td class="gray-light">&lt;label class="<code>col-sm-4</code> <code>control-label</code>"&gt;...&lt;/label&gt;</td>
+									</tr>
+									<tr>
+										<td>horizontalOffsetCol<span class="text-danger">*</span></td>
+										<td class="gray-light">
+											// when label is empty, automaticaly offsetting field container<br>
+											&lt;div class="<code>col-sm-offset-4</code> [col-sm-8]"&gt;<br>
+												<span class="indented">[&lt;input&gt;]</span><br>
+											&lt;/div&gt;
+										</td>
+									</tr>
+									<tr>
+										<td>horizontalElementCol<span class="text-danger">*</span></td>
+										<td class="gray-light">
+											&lt;div class="<code>col-sm-8</code>"&gt;<br>
+											<span class="indented">[&lt;input&gt;]</span><br>
+											&lt;/div&gt;
+										</td>
+									</tr>
+									<tr>
+										<td>inlineRadioLabelClass</td>
+										<td class="gray-light">&lt;label class="<code>radio-inline</code>"&gt;...&lt;/label&gt;</td>
+									</tr>
+                                    <tr>
+                                        <td>btnGroupClass</td>
+                                        <td class="gray-light">&lt;div class=&quot;<code>btn-group</code>&quot;&gt;...&lt;/div&gt;</td>
+                                    </tr>
+									<tr>
+										<td>inlineCheckboxLabelClass</td>
+										<td class="gray-light">&lt;label class="<code>checkbox-inline</code>"&gt;...&lt;/label&gt;</td>
+									</tr>
+									<tr>
+										<td>requiredMark</td>
+										<td class="gray-light">
+											// required markup is automaticaly added on required fields<br>
+											&lt;label&gt;my required text<code>&lt;sup class="text-danger"&gt; *&lt;/sup&gt;</code>&lt;/label&gt;
+										</td>
+									</tr>
+									<tr>
+										<td>openDomReady<br><span class="small">(if not using jQuery,<br>changes the code your plugins<br>will be wrapped in)</span></td>
+										<td class="gray-light"><code>$(document).ready(function() {</code></td>
+									</tr>
+									<tr>
+										<td>closeDomReady</td>
+										<td class="gray-light"><code>});</code></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p><span class="text-danger">*</span> appied only in horizontal forms</p>
+				</article>
+				<article id="options-customizing">
+					<h4>Customizing for other framework</h4>
+					<p>For many other frameworks like <a href="http://imperavi.com/kube/">Kube</a> or <a href="http://www.getskeleton.com/">Skeleton</a>, you don't need all these wrappers and classes, but eventualy have to wrap elements with labels (Default form config is to put elements after labels like Bootstrap does).</p>
+					<p>You can do that easily, for example (Kube config) :</p>
+<pre class="prettyprint linenums">$kube_custom_options = array(
+'formInlineClass'          => '',
+'formHorizontalClass'      => 'forms', // default layout
+'formVerticalClass'        => '',
+'elementsWrapper'          => '&lt;p&gt;&lt;/p&gt;',
+'checkboxWrapper'          => '&lt;div class=&quot;forms-inline-list&quot;&gt;&lt;/div&gt;',
+'radioWrapper'             => '&lt;div class=&quot;forms-inline-list&quot;&gt;&lt;/div&gt;',
+'wrapElementsIntoLabels'   => true,
+'elementsClass'            => '',
+'wrapperErrorClass'        => '',
+'elementsErrorClass'       => 'input-error',
+'textErrorClass'           => 'error',
+'horizontalLabelClass'     => '',
+'horizontalLabelCol'       => '',
+'horizontalOffsetCol'      => '',
+'horizontalElementCol'     => '',
+'inlineCheckboxLabelClass' => '',
+'inlineRadioLabelClass'    => '',
+'requiredMark'             => '&lt;span class=&quot;req&quot;&gt;*&lt;/span&gt;',
+'openDomReady'             => '$(document).ready(function() {',
+'closeDomReady'            => '});'
+);
+$form->setOptions($kube_custom_options);
+</pre>
+					<p class="bg-info"><span class="glyphicon glyphicon-ok prepend"></span>If you always use the same framework, maybe the best way is to change default config in form class.</p>
+				</article>
+			</section>
+			<section>
+				<h2 id="main-functions">Main functions</h2>
+				<h3>General</h3>
+                <article id="construct">
+                    <h4>construct</h4>
+<pre class="prettyprint linenums">$form = new Form($form_ID, $layout = 'horizontal', $attr = '');</pre>
+<pre class="prettyprint comments">
+/**
+* Defines the layout (horizontal | vertical | inline).
+* Default is 'horizontal'
+* Catches posted errors
+* Adds hidden field with form ID
+* Sets elements wrappers
+*
+* @param string $form_ID The ID of the form
+* @param string $layout  (Optional) Can be 'horizontal', 'vertical' or 'inline'
+* @param string $attr    (Optional) Can be any HTML input attribute or js event EXCEPT class
+*                        (class is defined in layout param).
+*                        attributes must be listed separated with commas.
+*                        Example : novalidate=true,onclick=alert(\'clicked\');
+*/
+</pre>
+
+
+                </article>
+				<article id="setOptions">
+					<h4>options</h4>
+					<p>Call <code class="highlighted">setOptions</code> only if you change defaults options</p>
+					<p>Go to <a href="#options-overview">Options</a> for more details</p>
+<pre class="prettyprint linenums">$form->setOptions($options);</pre>
+<pre class="prettyprint comments">
+/**
+* Sets form layout options to match your framework
+* @param array $user_options (Optional) An associative array containing the
+*                            options names as keys and values as data.
+*/
+</pre>
+
+
+				</article>
+				<article id="setAction">
+					<h4>Action</h4>
+					<p>Default action is <code>htmlspecialchars($_SERVER["PHP_SELF"])</code><br>(as recommended on <a href="http://www.w3schools.com/php/php_form_validation.asp">http://www.w3schools.com/php/php_form_validation.asp</a>).</p>
+					<p>Call <code class="highlighted">setAction</code> only if you change default action</p>
+<pre class="prettyprint linenums">$form->setAction($url, [$add_get_vars = true]);</pre>
+<pre class="prettyprint comments">
+/**
+* Redefines form action
+*
+* @param boolean $add_get_vars (Optional) if $add_get_vars is set to false,
+*                              url vars will be removed from destination page.
+*                              Example : www.myUrl.php?var=value => www.myUrl.php
+*/
+</pre>
+				</article>
+				<h4 id="startFieldset">Fieldset</h4>
+				<p>Start your fieldset with optional legend.<br>
+				Don't forget to call <code>endFieldset</code> to end your fieldset.</p>
+				<p>You can add several fieldsets on the same form.</p>
+				<article>
+<pre class="prettyprint linenums">$form->startFieldset('legend');</pre>
+<pre class="prettyprint comments">
+/**
+* Starts a fieldset tag.
+* @param string $legend (Optional) Legend of the fieldset.
+*/
+</pre>
+				</article>
+				<article id="endFieldset">
+<pre class="prettyprint linenums">$form->endFieldset();</pre>
+<pre class="prettyprint comments">
+/**
+* Ends a fieldset tag.
+*/
+</pre>
+				</article>
+				<article id="attr">
+				<h4>$attr argument</h4>
+				<p>Several element functions use a <code>$attr</code> argument.</p>
+				<p>The <code>$attr</code> argument accepts <strong>any html attribute</strong> or <strong>javascript event</strong>.</p>
+				<p>Use comma separated values (see examples below).</p>
+				<div class="panel panel-primary">
+					<div class="panel-heading">Examples</div>
+					<div class="panel-body">
+						<div class="code-example">
+<pre class="prettyprint linenums">$form->addInput('text', 'name', '', 'Your name : ', 'id=my-id, placeholder=My Text, required=required');
+
+$form->addInput('password', 'pass', '', 'Your password : ', 'required=required, pattern=(.){7\,15}');
+
+$form->addTextarea('my-textarea', '', 'Your message : ', 'cols=30, rows=4');
+
+$form->addBtn('button', 'myBtnName', 1, 'Cancel', 'class=btn btn-danger, onclick=alert(\'cancelled\');');
+</pre>
+						</div>
+						<div class="result">
+							<form id="attr-form-example" action="index.html#attr" method="post" class="form-horizontal" role="form">
+								<div class="form-group">
+									<label for="name" class="col-sm-4 control-label">Your name <sup class="text-danger">* </sup>: </label>
+									<div class="col-sm-8">
+										<input id="name" name="name" type="text" value="" id="my-id" placeholder="My Text" required="required" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="pass" class="col-sm-4 control-label">Your password <sup class="text-danger">* </sup>: </label>
+									<div class="col-sm-8">
+										<input id="pass" name="pass" type="password" value="" required="required" pattern="(.){7,15}" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="my-textarea" class="col-sm-4 control-label">Your message : </label>
+									<div class="col-sm-8">
+										<textarea id="my-textarea" name="my-textarea" cols="30" rows="4" class="form-control"></textarea>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-offset-4 col-sm-8">
+										<button type="button" name="myBtnName" value="1" class="btn btn-danger" onclick="alert('cancelled');">Cancel</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				</article>
+				<h3>Elements</h3>
+				<article id="addInput">
+					<h4>Input</h4>
+<pre class="prettyprint linenums">$form->addInput($type, $name, [$value, $label, $attr]);</pre>
+<pre class="prettyprint comments">
+/**
+* Adds input to the form
+*
+* @param string $type Accepts all input html5 types except checkbox and radio :
+*				       button, color, date, datetime, datetime-local,
+*				       email, file, hidden, image, month, number, password,
+*				       range, reset, search, submit, tel, text, time, url, week
+* @param string $name The input name
+* @param string $value (Optional) The input default value
+* @param string $label (Optional) The input label
+* @param string $attr (Optional) Can be any HTML input attribute or js event.
+*                                attributes must be listed separated with commas.
+*                                If you don't specify any ID as attr, the ID will be the name of the input.
+*                                Example : class=my-class,placeholder=My Text,onclick=alert(\'clicked\');
+*/
+</pre>
+				</article>
+                <article id="groupInputs">
+                    <h4>Input Groups</h4>
+                    <p>Input Groups allow to have several inputs / selects on the same line in horizontal forms.</p>
+                    <p class="bg-warning"><span class="glyphicon glyphicon-info-sign prepend"></span>Always create your input group BEFORE creating the input elements.</p>
+<pre class="prettyprint linenums">$form->groupInputs($input1, $input2, $input3 = '');</pre>
+<pre class="prettyprint comments">
+/**
+* Allows to group inputs in the same wrapper
+* @param string $input1 The name of the first input of the group
+* @param string $input2 The name of the second input of the group
+* @param string $input3 [optional] The name of the third input of the group
+*/
+</pre>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Input Groups Example</div>
+                    <div class="panel-body">
+                        <div class="code-example">
+<pre class="prettyprint linenums">$form->groupInputs('street', 'zip', 'country');
+$form->setOptions(array('horizontalElementCol' => 'col-sm-3'));
+$form->addInput('text', 'street', '', 'Your adress : ', 'placeholder=street,required=required');
+$form->setOptions(array('horizontalLabelCol' => '', 'horizontalOffsetCol' => '', 'horizontalElementCol' => 'col-sm-2'));
+$form->addInput('text', 'zip', '', '', 'placeholder=zip code,required=required');
+$form->setOptions(array('horizontalElementCol' => 'col-sm-3'));
+$form->addOption('country', '', 'Country');
+$form->addOption('country', 'United States', 'United States');
+$form->addOption('country', 'Canada', 'Canada');
+$form->addOption('country', 'France', 'France');
+$form->addSelect('country', '', '');
+$form->setOptions(array('horizontalLabelCol' => 'col-sm-4', 'horizontalOffsetCol' => 'col-sm-4', 'horizontalElementCol' => 'col-sm-8')); // revert to default options</pre>
+                        </div>
+                       <div class="result">
+                        <form id="input-group-test" action="index.html#groupInputs" method="post" class="form-horizontal" role="form">
+                        <div class="form-group">
+                        <label for="street" class="col-sm-4 control-label">Your adress <sup class="text-danger">* </sup>: </label>
+                        <div class="col-sm-3">
+                        <input id="street" name="street" type="text" value="" placeholder="street" required="required" class="form-control">
+                        </div>
+                        <div class=" col-sm-2">
+                        <input id="zip" name="zip" type="text" value="" placeholder="zip code" required="required" class="form-control">
+                        </div>
+                        <div class=" col-sm-3">
+                        <select id="country" name="country" class="form-control">
+                        <option value="">Country</option>
+                        <option value="United States">United States</option>
+                        <option value="Canada">Canada</option>
+                        <option value="France">France</option>
+                        </select>
+                        </div>
+                        </div>
+                        </form>
+                       </div>
+                    </div>
+                </div>
+                </article>
+				<article id="addTextarea">
+					<h4>Textarea</h4>
+<pre class="prettyprint linenums">$form->addTextarea($name, $value, [$label, $attr]);</pre>
+<pre class="prettyprint comments">
+/**
+* Adds textarea to the form
+* @param string $name The textarea name
+* @param string $value (Optional) The textarea default value
+* @param string $label (Optional) The textarea label
+* @param string $attr (Optional) Can be any HTML input attribute or js event.
+*                                attributes must be listed separated with commas.
+*                                If you don't specify any ID as attr, the ID will be the name of the textarea.
+*                                Example : cols=30, rows=4;.
+*/
+</pre>
+				</article>
+				<h4 id="addOption">Options for Select list</h4>
+				<article>
+				<p class="bg-warning"><span class="glyphicon glyphicon-info-sign prepend"></span>Always add your options BEFORE creating the select element</p>
+				<ol>
+					<li>Add your options</li>
+					<li>Create your select</li>
+				</ol>
+<pre class="prettyprint linenums">$form->addOption($selectName, $value, $txt [, $group_name, $attr]);</pre>
+<pre class="prettyprint comments">
+/**
+* Adds option to the $select_name element
+*
+* @param string $select_name The name of the select element
+* @param string $value The option value
+* @param string $txt The text that will be displayed
+* @param string $group_name (Optional) the optgroup name
+* @param string $attr (Optional) Can be any HTML input attribute or js event.
+*                                attributes must be listed separated with commas.
+*                                If you don't specify any ID as attr, the ID will be the name of the option.
+*                                Example : class=my-class
+*/
+</pre>
+				</article>
+                <h4 id="addSelect">Select list</h4>
+				<article>
+<pre class="prettyprint linenums">$form->addSelect($selectName, $label [, $attr = '', $displayGroupLabels = true]);</pre>
+<div class="bg-info"><p><span class="glyphicon glyphicon-ok prepend"></span>addSelect function plays nice with <a href="#bootstrap-select-example">bootstrap-select plugin</a>.<br>Just add 'selectpicker' class, data-attrs and phpForms will do the job. (<a href="#bootstrap-select-example">See example</a>).</p>
+<p class="bg-warning"><span class="glyphicon glyphicon-warning-sign prepend"></span>Don't forget to <a href="#plugins-overview">call <code>$form->printIncludes('css');</code> and <code>$form->printIncludes('js');</code></a> to add the required css/js files to your page.</p>
+</div>
+<pre class="prettyprint comments">
+/**
+* Adds a select element
+*
+* IMPORTANT : Always add your options BEFORE creating the select element
+*
+* @param string $select_name The name of the select element
+* @param string $label (Optional) The select label
+* @param string $attr (Optional)  Can be any HTML input attribute or js event.
+*                                 attributes must be listed separated with commas.
+*                                 If you don't specify any ID as attr, the ID will be the name of the input.
+*                                 Example : class=my-class
+* @param string $displayGroupLabels (Optional) True or false.
+*                                              Default is true.
+*/
+</pre>
+				<div class="panel panel-primary">
+					<div class="panel-heading">Example with optgroup</div>
+					<div class="panel-body">
+						<div class="code-example">
+<pre class="prettyprint linenums">$form->addOption('select-with-groupnames', 'option-1', 'option 1', 'group 1');
+$form->addOption('select-with-groupnames', 'option-2', 'option 2', 'group 1', 'selected=selected');
+$form->addOption('select-with-groupnames', 'option-3', 'option 3', 'group 1');
+$form->addOption('select-with-groupnames', 'option-4', 'option 4', 'group 2');
+$form->addOption('select-with-groupnames', 'option-5', 'option 5', 'group 2');
+$form->addSelect('select-with-groupnames', 'Select please : ', '');</pre>
+						</div>
+					   <div class="result">
+					   	<form id="select-test" action="index.html#addSelect" method="post" class="form-horizontal" role="form">
+					   	<div><input name="test" type="hidden" value="1" class="form-control"></div>
+					   	<div class="form-group">
+					   	<label for="select-with-groupnames" class="col-sm-4 control-label">Select please : </label>
+					   	<div class="col-sm-8">
+					   	<select id="select-with-groupnames" name="select-with-groupnames" class="form-control">
+					   	<optgroup label="group 1">
+					   	<option value="option-1">option 1</option>
+					   	<option value="option-2" selected="selected">option 2</option>
+					   	<option value="option-3">option 3</option>
+					   	</optgroup>
+					   	<optgroup label="group 2">
+					   	<option value="option-4">option 4</option>
+					   	<option value="option-5">option 5</option>
+					   	</optgroup>
+					   	</select>
+					   	</div>
+					   	</div>
+					   	</form>
+					   </div>
+					</div>
+				</div>
+				<div class="panel panel-primary">
+					<div class="panel-heading">Example with multiple selections</div>
+					<div class="panel-body">
+					   <div class="code-example">
+<pre class="prettyprint linenums">for ($i=1; $i < 11; $i++) {
+$form->addOption('myMultipleSelectName[]', $i, 'option ' . $i);
+}
+$form->addSelect('myMultipleSelectName[]', 'Select please :<br>(multiple selections)', 'multiple=multiple');</pre>
+						</div>
+					   <div class="result">
+					   	<form id="select-test-2" action="index.html#addSelect" method="post" class="form-horizontal"  role="form">
+					   	<div><input name="select-test-2" type="hidden" value="1"  class="form-control"></div>
+					   	<div class="form-group">
+					   	<label for="myMultipleSelectName" class="col-sm-4 control-label">Select please :<br>(multiple selections)</label>
+					   	<div class="col-sm-8">
+					   	<select id="myMultipleSelectName" name="myMultipleSelectName[]" multiple="multiple" class="form-control">
+					   	<option value="1" >option 1</option>
+					   	<option value="2" >option 2</option>
+					   	<option value="3" >option 3</option>
+					   	<option value="4" >option 4</option>
+					   	<option value="5" >option 5</option>
+					   	<option value="6" >option 6</option>
+					   	<option value="7" >option 7</option>
+					   	<option value="8" >option 8</option>
+					   	<option value="9" >option 9</option>
+					   	<option value="10" >option 10</option>
+					   	</select>
+					   	</div>
+					   	</div>
+					   	</form>
+					   </div>
+					</div>
+				</div>
+                <div class="panel panel-primary" id="bootstrap-select-example">
+                    <div class="panel-heading">Bootstrap-select plugin Example</div>
+                    <div class="panel-body">
+                       <div class="code-example">
+<pre class="prettyprint linenums">$form->addHtml('&lt;span class=&quot;help-block&quot;&gt;2 Arrows max.&lt;/span&gt;', 'bootstrap-select-example', 'after');
+$form->addOption('bootstrap-select-example', 'arrow-left', 'arrow left', 'Arrows', 'data-icon=glyphicon-arrow-left');
+$form->addOption('bootstrap-select-example', 'arrow-right', 'arrow right', 'Arrows', 'data-icon=glyphicon-arrow-right');
+$form->addOption('bootstrap-select-example', 'arrow-down', 'arrow down', 'Arrows', 'data-icon=glyphicon-arrow-down');
+$form->addOption('bootstrap-select-example', 'arrow-up', 'arrow up', 'Arrows', 'data-icon=glyphicon-arrow-up');
+$form->addOption('bootstrap-select-example', 'circle-arrow-left', 'circle arrow left', 'Circle Arrows', 'data-icon=glyphicon-circle-arrow-left');
+$form->addOption('bootstrap-select-example', 'circle-arrow-right', 'circle arrow right', 'Circle Arrows', 'data-icon=glyphicon-circle-arrow-right');
+$form->addOption('bootstrap-select-example', 'circle-arrow-down', 'circle arrow down', 'Circle Arrows', 'data-icon=glyphicon-circle-arrow-down');
+$form->addOption('bootstrap-select-example', 'circle-arrow-up', 'circle arrow up', 'Circle Arrows', 'data-icon=glyphicon-circle-arrow-up');
+$form->addSelect('bootstrap-select-example', 'Choose : ', 'class=selectpicker, data-live-search=true, multiple=multiple, data-max-options=2, required=required');</pre>
+                        </div>
+                       <div class="result">
+                        <form id="bootstrap-select-example" action="index.html#addSelect" method="post" class="form-horizontal"  role="form">
+                        <div><input name="bootstrap-select-example" type="hidden" value="1"  class="form-control"></div>
+                        <div class="form-group">
+                        <label for="bootstrap-select-example" class="col-sm-4 control-label">Choose <sup class="text-danger">* </sup>: </label>
+                        <div class="col-sm-8">
+                        <select id="bootstrap-select-example" name="bootstrap-select-example" class="selectpicker form-control" data-live-search="true" multiple="multiple" data-max-options="2" required="required">
+                        <optgroup label="Arrows">
+                        <option value="arrow-left" data-icon="glyphicon-arrow-left">arrow left</option>
+                        <option value="arrow-right" data-icon="glyphicon-arrow-right">arrow right</option>
+                        <option value="arrow-down" data-icon="glyphicon-arrow-down">arrow down</option>
+                        <option value="arrow-up" data-icon="glyphicon-arrow-up">arrow up</option>
+                        </optgroup>
+                        <optgroup label="Circle Arrows">
+                        <option value="circle-arrow-left" data-icon="glyphicon-circle-arrow-left">circle arrow left</option>
+                        <option value="circle-arrow-right" data-icon="glyphicon-circle-arrow-right">circle arrow right</option>
+                        <option value="circle-arrow-down" data-icon="glyphicon-circle-arrow-down">circle arrow down</option>
+                        <option value="circle-arrow-up" data-icon="glyphicon-circle-arrow-up">circle arrow up</option>
+                        </optgroup>
+                        </select>
+                        <span class="help-block">2 Arrows max.</span>
+                        </div>
+                        </div>
+                        </form>
+                       </div>
+                    </div>
+                </div>
+				</article>
+                <h4 id="addCountrySelect">Country Select list</h4>
+                <article>
+                <p class="bg-warning"><span class="glyphicon glyphicon-info-sign prepend"></span>Always add your options BEFORE creating the select element</p>
+                <p class="bg-warning"><span class="glyphicon glyphicon-info-sign prepend"></span>Country Select uses the <a href="#bootstrap-select">bootstrap-select plugin</a>, which requires <a href="http://getbootstrap.com/javascript/#dropdowns">Bootstrap's dropdown</a> in your bootstrap.min.js</p>
+<pre class="prettyprint linenums">$form->addCountrySelect($select_name, $label = '', $attr = '', $user_options = array());</pre>
+<pre class="prettyprint comments">
+/**
+* adds a country select list with flags
+* @param array  $select_name
+* @param string $label        (Optional) The select label
+* @param string $attr         (Optional)  Can be any HTML input attribute or js event.
+*                             attributes must be listed separated with commas.
+*                             If you don't specify any ID as attr, the ID will be the name of the input.
+*                             Example : class=my-class
+* @param array  $user_options (Optional) :
+*                             lang            : MUST correspond to one subfolder of [PLUGINS_DIR]countries/country-list/country/cldr/
+*                             *** for example 'en', or 'fr_FR'              Default : 'en'
+*                             flags           : true or false.              Default : true
+*                             *** displays flags into option list
+*                             flag_size       : 16 or 32                    Default : 32
+*                             return_value    : 'name' or 'code'            Default : 'name'
+*                             *** type of the value that will be returned
+*                             show_tick       : true or false
+*                             *** shows a checkmark beside selected options Default : true
+*                             live_search     : true or false               Default : true
+*/
+</pre>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Country select Example</div>
+                    <div class="panel-body">
+                        <div class="code-example">
+<pre class="prettyprint linenums">if(!isset($_SESSION['your-form-id']['country'])) {
+	$_SESSION['your-form-id']['country'] = 'France'; // default country value
+}
+$form->addCountrySelect('country', 'country : ');</pre>
+                        </div>
+                       <div class="result">
+                        <form id="select-test" action="index.html#addSelect" method="post" class="form-horizontal" role="form">
+                        <div><input name="test" type="hidden" value="1" class="form-control"></div>
+                        <div class="form-group">
+                        <label for="country" class="col-sm-4 control-label">country : </label>
+                        <div class="col-sm-8">
+                        <select name="country" id="country" class="selectpicker form-control f32 show-tick" data-live-search="true">
+                        <option value="Afghanistan" class="flag af">Afghanistan</option>
+                        <option value="Albania" class="flag al">Albania</option>
+                        <option value="Algeria" class="flag dz">Algeria</option>
+                        <option value="American Samoa" class="flag as">American Samoa</option>
+                        <option value="Andorra" class="flag ad">Andorra</option>
+                        <option value="Angola" class="flag ao">Angola</option>
+                        <option value="Anguilla" class="flag ai">Anguilla</option>
+                        <option value="Antarctica" class="flag aq">Antarctica</option>
+                        <option value="Antigua and Barbuda" class="flag ag">Antigua and Barbuda</option>
+                        <option value="Argentina" class="flag ar">Argentina</option>
+                        <option value="Armenia" class="flag am">Armenia</option>
+                        <option value="Aruba" class="flag aw">Aruba</option>
+                        <option value="Australia" class="flag au">Australia</option>
+                        <option value="Austria" class="flag at">Austria</option>
+                        <option value="Azerbaijan" class="flag az">Azerbaijan</option>
+                        <option value="Bahamas" class="flag bs">Bahamas</option>
+                        <option value="Bahrain" class="flag bh">Bahrain</option>
+                        <option value="Bangladesh" class="flag bd">Bangladesh</option>
+                        <option value="Barbados" class="flag bb">Barbados</option>
+                        <option value="Belarus" class="flag by">Belarus</option>
+                        <option value="Belgium" class="flag be">Belgium</option>
+                        <option value="Belize" class="flag bz">Belize</option>
+                        <option value="Benin" class="flag bj">Benin</option>
+                        <option value="Bermuda" class="flag bm">Bermuda</option>
+                        <option value="Bhutan" class="flag bt">Bhutan</option>
+                        <option value="Bolivia" class="flag bo">Bolivia</option>
+                        <option value="Bosnia and Herzegovina" class="flag ba">Bosnia and Herzegovina</option>
+                        <option value="Botswana" class="flag bw">Botswana</option>
+                        <option value="Bouvet Island" class="flag bv">Bouvet Island</option>
+                        <option value="Brazil" class="flag br">Brazil</option>
+                        <option value="British Antarctic Territory" class="flag bq">British Antarctic Territory</option>
+                        <option value="British Indian Ocean Territory" class="flag io">British Indian Ocean Territory</option>
+                        <option value="British Virgin Islands" class="flag vg">British Virgin Islands</option>
+                        <option value="Brunei" class="flag bn">Brunei</option>
+                        <option value="Bulgaria" class="flag bg">Bulgaria</option>
+                        <option value="Burkina Faso" class="flag bf">Burkina Faso</option>
+                        <option value="Burundi" class="flag bi">Burundi</option>
+                        <option value="Cambodia" class="flag kh">Cambodia</option>
+                        <option value="Cameroon" class="flag cm">Cameroon</option>
+                        <option value="Canada" class="flag ca">Canada</option>
+                        <option value="Canton and Enderbury Islands" class="flag ct">Canton and Enderbury Islands</option>
+                        <option value="Cape Verde" class="flag cv">Cape Verde</option>
+                        <option value="Cayman Islands" class="flag ky">Cayman Islands</option>
+                        <option value="Central African Republic" class="flag cf">Central African Republic</option>
+                        <option value="Chad" class="flag td">Chad</option>
+                        <option value="Chile" class="flag cl">Chile</option>
+                        <option value="China" class="flag cn">China</option>
+                        <option value="Christmas Island" class="flag cx">Christmas Island</option>
+                        <option value="Cocos [Keeling] Islands" class="flag cc">Cocos [Keeling] Islands</option>
+                        <option value="Colombia" class="flag co">Colombia</option>
+                        <option value="Comoros" class="flag km">Comoros</option>
+                        <option value="Congo - Brazzaville" class="flag cg">Congo - Brazzaville</option>
+                        <option value="Congo - Kinshasa" class="flag cd">Congo - Kinshasa</option>
+                        <option value="Cook Islands" class="flag ck">Cook Islands</option>
+                        <option value="Costa Rica" class="flag cr">Costa Rica</option>
+                        <option value="Croatia" class="flag hr">Croatia</option>
+                        <option value="Cuba" class="flag cu">Cuba</option>
+                        <option value="Cyprus" class="flag cy">Cyprus</option>
+                        <option value="Czech Republic" class="flag cz">Czech Republic</option>
+                        <option value="Côte d’Ivoire" class="flag ci">Côte d’Ivoire</option>
+                        <option value="Denmark" class="flag dk">Denmark</option>
+                        <option value="Djibouti" class="flag dj">Djibouti</option>
+                        <option value="Dominica" class="flag dm">Dominica</option>
+                        <option value="Dominican Republic" class="flag do">Dominican Republic</option>
+                        <option value="Dronning Maud Land" class="flag nq">Dronning Maud Land</option>
+                        <option value="East Germany" class="flag dd">East Germany</option>
+                        <option value="Ecuador" class="flag ec">Ecuador</option>
+                        <option value="Egypt" class="flag eg">Egypt</option>
+                        <option value="El Salvador" class="flag sv">El Salvador</option>
+                        <option value="Equatorial Guinea" class="flag gq">Equatorial Guinea</option>
+                        <option value="Eritrea" class="flag er">Eritrea</option>
+                        <option value="Estonia" class="flag ee">Estonia</option>
+                        <option value="Ethiopia" class="flag et">Ethiopia</option>
+                        <option value="Falkland Islands" class="flag fk">Falkland Islands</option>
+                        <option value="Faroe Islands" class="flag fo">Faroe Islands</option>
+                        <option value="Fiji" class="flag fj">Fiji</option>
+                        <option value="Finland" class="flag fi">Finland</option>
+                        <option value="France" class="flag fr" selected="selected">France</option>
+                        <option value="French Guiana" class="flag gf">French Guiana</option>
+                        <option value="French Polynesia" class="flag pf">French Polynesia</option>
+                        <option value="French Southern Territories" class="flag tf">French Southern Territories</option>
+                        <option value="French Southern and Antarctic Territories" class="flag fq">French Southern and Antarctic Territories</option>
+                        <option value="Gabon" class="flag ga">Gabon</option>
+                        <option value="Gambia" class="flag gm">Gambia</option>
+                        <option value="Georgia" class="flag ge">Georgia</option>
+                        <option value="Germany" class="flag de">Germany</option>
+                        <option value="Ghana" class="flag gh">Ghana</option>
+                        <option value="Gibraltar" class="flag gi">Gibraltar</option>
+                        <option value="Greece" class="flag gr">Greece</option>
+                        <option value="Greenland" class="flag gl">Greenland</option>
+                        <option value="Grenada" class="flag gd">Grenada</option>
+                        <option value="Guadeloupe" class="flag gp">Guadeloupe</option>
+                        <option value="Guam" class="flag gu">Guam</option>
+                        <option value="Guatemala" class="flag gt">Guatemala</option>
+                        <option value="Guernsey" class="flag gg">Guernsey</option>
+                        <option value="Guinea" class="flag gn">Guinea</option>
+                        <option value="Guinea-Bissau" class="flag gw">Guinea-Bissau</option>
+                        <option value="Guyana" class="flag gy">Guyana</option>
+                        <option value="Haiti" class="flag ht">Haiti</option>
+                        <option value="Heard Island and McDonald Islands" class="flag hm">Heard Island and McDonald Islands</option>
+                        <option value="Honduras" class="flag hn">Honduras</option>
+                        <option value="Hong Kong SAR China" class="flag hk">Hong Kong SAR China</option>
+                        <option value="Hungary" class="flag hu">Hungary</option>
+                        <option value="Iceland" class="flag is">Iceland</option>
+                        <option value="India" class="flag in">India</option>
+                        <option value="Indonesia" class="flag id">Indonesia</option>
+                        <option value="Iran" class="flag ir">Iran</option>
+                        <option value="Iraq" class="flag iq">Iraq</option>
+                        <option value="Ireland" class="flag ie">Ireland</option>
+                        <option value="Isle of Man" class="flag im">Isle of Man</option>
+                        <option value="Israel" class="flag il">Israel</option>
+                        <option value="Italy" class="flag it">Italy</option>
+                        <option value="Jamaica" class="flag jm">Jamaica</option>
+                        <option value="Japan" class="flag jp">Japan</option>
+                        <option value="Jersey" class="flag je">Jersey</option>
+                        <option value="Johnston Island" class="flag jt">Johnston Island</option>
+                        <option value="Jordan" class="flag jo">Jordan</option>
+                        <option value="Kazakhstan" class="flag kz">Kazakhstan</option>
+                        <option value="Kenya" class="flag ke">Kenya</option>
+                        <option value="Kiribati" class="flag ki">Kiribati</option>
+                        <option value="Kuwait" class="flag kw">Kuwait</option>
+                        <option value="Kyrgyzstan" class="flag kg">Kyrgyzstan</option>
+                        <option value="Laos" class="flag la">Laos</option>
+                        <option value="Latvia" class="flag lv">Latvia</option>
+                        <option value="Lebanon" class="flag lb">Lebanon</option>
+                        <option value="Lesotho" class="flag ls">Lesotho</option>
+                        <option value="Liberia" class="flag lr">Liberia</option>
+                        <option value="Libya" class="flag ly">Libya</option>
+                        <option value="Liechtenstein" class="flag li">Liechtenstein</option>
+                        <option value="Lithuania" class="flag lt">Lithuania</option>
+                        <option value="Luxembourg" class="flag lu">Luxembourg</option>
+                        <option value="Macau SAR China" class="flag mo">Macau SAR China</option>
+                        <option value="Macedonia" class="flag mk">Macedonia</option>
+                        <option value="Madagascar" class="flag mg">Madagascar</option>
+                        <option value="Malawi" class="flag mw">Malawi</option>
+                        <option value="Malaysia" class="flag my">Malaysia</option>
+                        <option value="Maldives" class="flag mv">Maldives</option>
+                        <option value="Mali" class="flag ml">Mali</option>
+                        <option value="Malta" class="flag mt">Malta</option>
+                        <option value="Marshall Islands" class="flag mh">Marshall Islands</option>
+                        <option value="Martinique" class="flag mq">Martinique</option>
+                        <option value="Mauritania" class="flag mr">Mauritania</option>
+                        <option value="Mauritius" class="flag mu">Mauritius</option>
+                        <option value="Mayotte" class="flag yt">Mayotte</option>
+                        <option value="Metropolitan France" class="flag fx">Metropolitan France</option>
+                        <option value="Mexico" class="flag mx">Mexico</option>
+                        <option value="Micronesia" class="flag fm">Micronesia</option>
+                        <option value="Midway Islands" class="flag mi">Midway Islands</option>
+                        <option value="Moldova" class="flag md">Moldova</option>
+                        <option value="Monaco" class="flag mc">Monaco</option>
+                        <option value="Mongolia" class="flag mn">Mongolia</option>
+                        <option value="Montenegro" class="flag me">Montenegro</option>
+                        <option value="Montserrat" class="flag ms">Montserrat</option>
+                        <option value="Morocco" class="flag ma">Morocco</option>
+                        <option value="Mozambique" class="flag mz">Mozambique</option>
+                        <option value="Myanmar [Burma]" class="flag mm">Myanmar [Burma]</option>
+                        <option value="Namibia" class="flag na">Namibia</option>
+                        <option value="Nauru" class="flag nr">Nauru</option>
+                        <option value="Nepal" class="flag np">Nepal</option>
+                        <option value="Netherlands" class="flag nl">Netherlands</option>
+                        <option value="Netherlands Antilles" class="flag an">Netherlands Antilles</option>
+                        <option value="Neutral Zone" class="flag nt">Neutral Zone</option>
+                        <option value="New Caledonia" class="flag nc">New Caledonia</option>
+                        <option value="New Zealand" class="flag nz">New Zealand</option>
+                        <option value="Nicaragua" class="flag ni">Nicaragua</option>
+                        <option value="Niger" class="flag ne">Niger</option>
+                        <option value="Nigeria" class="flag ng">Nigeria</option>
+                        <option value="Niue" class="flag nu">Niue</option>
+                        <option value="Norfolk Island" class="flag nf">Norfolk Island</option>
+                        <option value="North Korea" class="flag kp">North Korea</option>
+                        <option value="North Vietnam" class="flag vd">North Vietnam</option>
+                        <option value="Northern Mariana Islands" class="flag mp">Northern Mariana Islands</option>
+                        <option value="Norway" class="flag no">Norway</option>
+                        <option value="Oman" class="flag om">Oman</option>
+                        <option value="Pacific Islands Trust Territory" class="flag pc">Pacific Islands Trust Territory</option>
+                        <option value="Pakistan" class="flag pk">Pakistan</option>
+                        <option value="Palau" class="flag pw">Palau</option>
+                        <option value="Palestinian Territories" class="flag ps">Palestinian Territories</option>
+                        <option value="Panama" class="flag pa">Panama</option>
+                        <option value="Panama Canal Zone" class="flag pz">Panama Canal Zone</option>
+                        <option value="Papua New Guinea" class="flag pg">Papua New Guinea</option>
+                        <option value="Paraguay" class="flag py">Paraguay</option>
+                        <option value="People's Democratic Republic of Yemen" class="flag yd">People's Democratic Republic of Yemen</option>
+                        <option value="Peru" class="flag pe">Peru</option>
+                        <option value="Philippines" class="flag ph">Philippines</option>
+                        <option value="Pitcairn Islands" class="flag pn">Pitcairn Islands</option>
+                        <option value="Poland" class="flag pl">Poland</option>
+                        <option value="Portugal" class="flag pt">Portugal</option>
+                        <option value="Puerto Rico" class="flag pr">Puerto Rico</option>
+                        <option value="Qatar" class="flag qa">Qatar</option>
+                        <option value="Romania" class="flag ro">Romania</option>
+                        <option value="Russia" class="flag ru">Russia</option>
+                        <option value="Rwanda" class="flag rw">Rwanda</option>
+                        <option value="Réunion" class="flag re">Réunion</option>
+                        <option value="Saint Barthélemy" class="flag bl">Saint Barthélemy</option>
+                        <option value="Saint Helena" class="flag sh">Saint Helena</option>
+                        <option value="Saint Kitts and Nevis" class="flag kn">Saint Kitts and Nevis</option>
+                        <option value="Saint Lucia" class="flag lc">Saint Lucia</option>
+                        <option value="Saint Martin" class="flag mf">Saint Martin</option>
+                        <option value="Saint Pierre and Miquelon" class="flag pm">Saint Pierre and Miquelon</option>
+                        <option value="Saint Vincent and the Grenadines" class="flag vc">Saint Vincent and the Grenadines</option>
+                        <option value="Samoa" class="flag ws">Samoa</option>
+                        <option value="San Marino" class="flag sm">San Marino</option>
+                        <option value="Saudi Arabia" class="flag sa">Saudi Arabia</option>
+                        <option value="Senegal" class="flag sn">Senegal</option>
+                        <option value="Serbia" class="flag rs">Serbia</option>
+                        <option value="Serbia and Montenegro" class="flag cs">Serbia and Montenegro</option>
+                        <option value="Seychelles" class="flag sc">Seychelles</option>
+                        <option value="Sierra Leone" class="flag sl">Sierra Leone</option>
+                        <option value="Singapore" class="flag sg">Singapore</option>
+                        <option value="Slovakia" class="flag sk">Slovakia</option>
+                        <option value="Slovenia" class="flag si">Slovenia</option>
+                        <option value="Solomon Islands" class="flag sb">Solomon Islands</option>
+                        <option value="Somalia" class="flag so">Somalia</option>
+                        <option value="South Africa" class="flag za">South Africa</option>
+                        <option value="South Georgia and the South Sandwich Islands" class="flag gs">South Georgia and the South Sandwich Islands</option>
+                        <option value="South Korea" class="flag kr">South Korea</option>
+                        <option value="Spain" class="flag es">Spain</option>
+                        <option value="Sri Lanka" class="flag lk">Sri Lanka</option>
+                        <option value="Sudan" class="flag sd">Sudan</option>
+                        <option value="Suriname" class="flag sr">Suriname</option>
+                        <option value="Svalbard and Jan Mayen" class="flag sj">Svalbard and Jan Mayen</option>
+                        <option value="Swaziland" class="flag sz">Swaziland</option>
+                        <option value="Sweden" class="flag se">Sweden</option>
+                        <option value="Switzerland" class="flag ch">Switzerland</option>
+                        <option value="Syria" class="flag sy">Syria</option>
+                        <option value="São Tomé and Príncipe" class="flag st">São Tomé and Príncipe</option>
+                        <option value="Taiwan" class="flag tw">Taiwan</option>
+                        <option value="Tajikistan" class="flag tj">Tajikistan</option>
+                        <option value="Tanzania" class="flag tz">Tanzania</option>
+                        <option value="Thailand" class="flag th">Thailand</option>
+                        <option value="Timor-Leste" class="flag tl">Timor-Leste</option>
+                        <option value="Togo" class="flag tg">Togo</option>
+                        <option value="Tokelau" class="flag tk">Tokelau</option>
+                        <option value="Tonga" class="flag to">Tonga</option>
+                        <option value="Trinidad and Tobago" class="flag tt">Trinidad and Tobago</option>
+                        <option value="Tunisia" class="flag tn">Tunisia</option>
+                        <option value="Turkey" class="flag tr">Turkey</option>
+                        <option value="Turkmenistan" class="flag tm">Turkmenistan</option>
+                        <option value="Turks and Caicos Islands" class="flag tc">Turks and Caicos Islands</option>
+                        <option value="Tuvalu" class="flag tv">Tuvalu</option>
+                        <option value="U.S. Minor Outlying Islands" class="flag um">U.S. Minor Outlying Islands</option>
+                        <option value="U.S. Miscellaneous Pacific Islands" class="flag pu">U.S. Miscellaneous Pacific Islands</option>
+                        <option value="U.S. Virgin Islands" class="flag vi">U.S. Virgin Islands</option>
+                        <option value="Uganda" class="flag ug">Uganda</option>
+                        <option value="Ukraine" class="flag ua">Ukraine</option>
+                        <option value="Union of Soviet Socialist Republics" class="flag su">Union of Soviet Socialist Republics</option>
+                        <option value="United Arab Emirates" class="flag ae">United Arab Emirates</option>
+                        <option value="United Kingdom" class="flag gb">United Kingdom</option>
+                        <option value="United States" class="flag us">United States</option>
+                        <option value="Unknown or Invalid Region" class="flag zz">Unknown or Invalid Region</option>
+                        <option value="Uruguay" class="flag uy">Uruguay</option>
+                        <option value="Uzbekistan" class="flag uz">Uzbekistan</option>
+                        <option value="Vanuatu" class="flag vu">Vanuatu</option>
+                        <option value="Vatican City" class="flag va">Vatican City</option>
+                        <option value="Venezuela" class="flag ve">Venezuela</option>
+                        <option value="Vietnam" class="flag vn">Vietnam</option>
+                        <option value="Wake Island" class="flag wk">Wake Island</option>
+                        <option value="Wallis and Futuna" class="flag wf">Wallis and Futuna</option>
+                        <option value="Western Sahara" class="flag eh">Western Sahara</option>
+                        <option value="Yemen" class="flag ye">Yemen</option>
+                        <option value="Zambia" class="flag zm">Zambia</option>
+                        <option value="Zimbabwe" class="flag zw">Zimbabwe</option>
+                        <option value="Åland Islands" class="flag ax">Åland Islands</option>
+                        </select>
+                        </div>
+                        </div>
+                        </form>
+                       </div>
+                    </div>
+                </div>
+                </article>
+				<h4 id="addRadio">Radio Btns</h4>
+				<article>
+				<ol>
+					<li>Add your radio buttons</li>
+					<li>Call printRadioGroup</li>
+				</ol>
+<pre class="prettyprint linenums">$form->addRadio($group_name, $label, $value, $attr = '');</pre>
+<pre class="prettyprint comments">
+/**
+* Adds radio button to $group_name element
+*
+* @param string $group_name The radio button groupname
+* @param string $label The radio button label
+* @param string $value The radio button value
+* @param string $attr  (Optional) Can be any HTML input attribute or js event.
+*                      attributes must be listed separated with commas.
+*                      Example : checked=checked
+*/
+</pre>
+				</article>
+				<article id="printRadioGroup">
+<pre class="prettyprint linenums">$form->printRadioGroup($group_name, $label [, $inline = true, $attr = '']);</pre>
+<pre class="prettyprint comments">
+/**
+* Prints radio buttons group.
+*
+* @param string $group_name The radio button group name
+* @param string $label (Optional) The radio buttons group label
+* @param string $inline (Optional) True or false.
+*                                  Default is true.
+* @param string $attr (Optional) Can be any HTML input attribute or js event.
+*						attributes must be listed separated with commas.
+*						If you don't specify any ID as attr, the ID will be the name of the input.
+*						Example : class=my-class
+*/
+</pre>
+					<div class="panel panel-primary">
+						<div class="panel-heading">Example</div>
+						<div class="panel-body">
+						   <div class="code-example">
+<pre class="prettyprint linenums">$form->addRadio('myRadioBtnGroup', 'choice one', 'value 1');
+$form->addRadio('myRadioBtnGroup', 'choice two', 'value 2', 'checked=checked');
+$form->addRadio('myRadioBtnGroup', 'choice three', 'value 3');
+$form->printRadioGroup('myRadioBtnGroup', true, 'required=required');</pre>
+						   </div>
+						   <div class="result">
+						   	<form id="radio-test" action="index.html#add-radio" method="post" class="form-horizontal"  role="form">
+						   	<div><input name="radio-test" type="hidden" value="1"  class="form-control"></div>
+						   	<div class="form-group">
+						   	<label class="col-sm-4 control-label">Choose one please <sup class="text-danger">* </sup>: </label>
+						   	<div class="col-sm-8">
+						   	<label class="radio-inline"><input type="radio" id="myRadioBtnGroup_0" name="myRadioBtnGroup" value="value 1">choice one</label>
+						   	<label class="radio-inline"><input type="radio" id="myRadioBtnGroup_1" name="myRadioBtnGroup" value="value 2" checked="checked">choice two</label>
+						   	<label class="radio-inline"><input type="radio" id="myRadioBtnGroup_2" name="myRadioBtnGroup" value="value 3">choice three</label>
+						   	</div>
+						   	</div>
+						   	</form>
+						   </div>
+						</div>
+					</div>
+				</article>
+				<h4 id="addCheckbox">Checkboxes</h4>
+				<article>
+				<ol>
+					<li>Add your checkboxes</li>
+					<li>Call printCheckboxGroup</li>
+				</ol>
+<pre class="prettyprint linenums">$form->addCheckbox($group_name, $label, $name, $value, $attr = '');</pre>
+<pre class="prettyprint comments">
+/**
+* Adds checkbox to $group_name
+*
+* @param string $group_name The checkbox button groupname
+* @param string $label The checkbox label
+* @param string $value The checkbox value
+* @param string $attr  (Optional) Can be any HTML input attribute or js event.
+*                      attributes must be listed separated with commas.
+*                      Example : checked=checked
+*/
+</pre>
+				</article>
+				<article id="printCheckboxGroup">
+<pre class="prettyprint linenums">$form->printCheckboxGroup($group_name, $label [, $inline = true, $attr = '']);</pre>
+<pre class="prettyprint comments">
+/**
+* Prints checkbox group.
+*
+* @param string $var (Optional) description
+*
+* @param string $group_name The checkbox button group name
+* @param string $label (Optional) The checkbox group label
+* @param string $inline (Optional) True or false.
+*                                  Default is true.
+* @param string $attr (Optional) Can be any HTML input attribute or js event.
+*						attributes must be listed separated with commas.
+*						If you don't specify any ID as attr, the ID will be the name of the input.
+*						Example : class=my-class
+*/
+</pre>
+				<div class="panel panel-primary">
+					<div class="panel-heading">Example</div>
+					<div class="panel-body">
+					   <div class="code-example">
+<pre class="prettyprint linenums">$form->addCheckbox('myCheckboxGroup', 'choice one', 'choice-1', 'value 1');
+$form->addCheckbox('myCheckboxGroup', 'choice two', 'choice-2', 'value 2', 'checked=checked');
+$form->addCheckbox('myCheckboxGroup', 'choice three', 'choice-3', 'value 3', 'checked=checked');
+$form->printCheckboxGroup('myCheckboxGroup', 'Check please : ', true, 'required=required');
+$form->render();
+</pre>
+					   </div>
+					   <div class="result">
+					   	<form id="checkbox-test" action="/modelehtml5/DOCS/form/documentation/ex-to-delete.php" method="post" class="form-horizontal"  role="form">
+					   	<div><input name="checkbox-test" type="hidden" value="1"  class="form-control"></div>
+					   	<div class="form-group">
+					   	<label class="col-sm-4 control-label">Check please <sup class="text-danger">* </sup>: </label>
+					   	<div class="col-sm-8">
+					   	<label class="checkbox-inline"><input type="checkbox" id="choice-1" name="choice-1" value="value 1">choice one</label>
+					   	<label class="checkbox-inline"><input type="checkbox" id="choice-2" name="choice-2" value="value 2" checked="checked">choice two</label>
+					   	<label class="checkbox-inline"><input type="checkbox" id="choice-3" name="choice-3" value="value 3" checked="checked">choice three</label>
+					   	</div>
+					   	</div>
+					   	</form>
+					   </div>
+					</div>
+				</div>
+				</article>
+				<h4 id="addBtn">Buttons</h4>
+				<p>For a <strong>single button</strong>, just call <code class="highlight">addBtn</code> and leave <code class="highlight">$btnGroupName</code> empty.</p>
+				<p>For <strong>button group</strong>, call <code class="highlight">addBtn</code> for each button, give a name to <code class="highlight">$btnGroupName</code>, then call <code class="highlight">printBtnGroup</code></p>
+				<article>
+<pre class="prettyprint linenums">$form->addBtn($type, $name, $value, $text [, $attr = '', $btnGroupName = '']);</pre>
+<pre class="prettyprint comments">
+/**
+* Adds button to the form
+*
+* If $btnGroupName is empty, the button will be automaticaly displayed.
+* Otherwise, you'll have to call printBtnGroup to display your btnGroup.
+*
+* @param string $type The html button type
+* @param string $name The button name
+* @param string $value The button value
+* @param string $text The button text
+* @param string $attr (Optional) Can be any HTML input attribute or js event.
+*						          attributes must be listed separated with commas.
+*						          If you don't specify any ID as attr, the ID will be the name of the input.
+*						          Example : class=my-class,onclick=alert(\'clicked\');
+* @param string $btnGroupName (Optional) If you want to group several buttons, group them then call printBtnGroup.
+*
+*/
+</pre>
+				</article>
+				<article id="printBtnGroup">
+<pre class="prettyprint linenums">$form->printBtnGroup($btnGroupName);</pre>
+<pre class="prettyprint comments">
+/**
+* Prints buttons group.
+*
+* @param string $btnGroupName The buttons group name
+* @param string $label (Optional) The buttons group label
+*
+*/
+</pre>
+				<div class="panel panel-primary">
+					<div class="panel-heading">Single button example</div>
+					<div class="panel-body">
+					   <div class="code-example">
+					   	<pre class="prettyprint linenums">$form->addBtn('submit', 'myBtnName', 1, 'Submit form', 'class=btn btn-primary');</pre>
+					   </div>
+					   <div class="result">
+						   <div class="form-group">
+						   <div class="col-sm-offset-4 col-sm-8">
+						   <button type="submit" name="myBtnName" value="1" class="btn btn-primary">Submit form</button>
+						   </div>
+						   </div>
+					   </div>
+					</div>
+				</div>
+				<div class="panel panel-primary">
+					<div class="panel-heading">Button group example</div>
+					<div class="panel-body">
+					   <div class="code-example">
+<pre class="prettyprint linenums">$form->addBtn('submit', 'mySubmitBtnName', 1, 'Submit form', 'class=btn btn-primary', 'myBtnGroup');
+$form->addBtn('button', 'myCancelBtnName', 0, 'Cancel', 'class=btn btn-danger, onclick=alert(\'cancelled\');', 'myBtnGroup');
+$form->printBtnGroup('myBtnGroup');</pre>
+					   </div>
+					   <div class="result">
+					   	<div class="form-group">
+					   	<div class="col-sm-offset-4 col-sm-8">
+					   	<button type="submit" name="mySubmitBtnName" value="1" class="btn btn-primary">Submit form</button>
+					   	<button type="button" name="myCancelBtnName" value="" class="btn btn-danger" onclick="alert('cancelled');">Cancel</button>
+					   	</div>
+					   	</div>
+					   </div>
+					</div>
+				</div>
+				</article>
+				<h4 id="addHtml">Custom HTML</h4>
+				<article>
+				<p>You can add some html code at any place you want when creating your form.</p>
+				<p>This way, you can :</p>
+				<ul>
+					<li><a href="#html-between-elements">Add HTML between elements</a></li>
+					<li><a href="#html-prepend-append">Prepend or append HTML to elements</a><br>(useful to <strong>add icons</strong> or <strong>help text</strong> for example)</li>
+					<li><a href="#addInputWrapper">Wrap elements with tags</a></li>
+				</ul>
+				<p class="bg-warning"><span class="glyphicon glyphicon-info-sign prepend"></span>When your HTML is linked to an element, always call <code>addHtml</code> BEFORE creating the element
+				<p>For details, see examples below</p>
+<pre class="prettyprint linenums">$form->addHtml($html [, $element_name = '', $pos = 'after']);</pre>
+<pre class="prettyprint comments">
+/**
+* Adds HTML code at any place of the form
+*
+* @param string $html The html code to add.
+* @param string $element_name (Optional) If not empty, the html code will be inserted.
+*                                        just before or after the element.
+* @param string $pos (Optional) If $element_name is not empty, defines the position
+*                               of the inserted html code.
+*                               Values can be 'before' or 'after'.
+*/
+</pre>
+				<div class="panel panel-primary">
+					<div class="panel-heading" id="html-between-elements">Add HTML between elements</div>
+					<div class="panel-body">
+					   <div class="code-example">
+<pre class="prettyprint linenums">$form->addInput('text', 'name', '', 'Enter your name : ');
+$form->addHtml('&lt;div class=&quot;alert alert-success&quot;&gt;&lt;p&gt;Your e-mail adress is needed please&lt;/p&gt;&lt;/div&gt;');
+$form->addInput('text', 'email', '', 'Enter your e-mail : ');</pre>
+					   </div>
+					   <div class="result">
+					   	<form id="html-test" action="index.html#addHtml" method="post" class="form-horizontal"  role="form">
+					   	<div class="form-group">
+					   	<label for="name" class="col-sm-4 control-label">Enter your name : </label>
+					   	<div class="col-sm-8">
+					   	<input id="name" name="name" type="text" value=""  class="form-control">
+					   	</div>
+					   	</div>
+					   	<p class="alert alert-success">Your e-mail adress is needed please</p>
+					   	<div class="form-group">
+					   	<label for="email" class="col-sm-4 control-label">Enter your e-mail : </label>
+					   	<div class="col-sm-8">
+					   	<input id="email" name="email" type="text" value=""  class="form-control">
+					   	</div>
+					   	</div>
+					   </form>
+					   </div>
+					</div>
+				</div>
+				<div class="panel panel-primary">
+					<div class="panel-heading" id="html-prepend-append">Prepend or append HTML to elements<br>(needs also <a href="#addInputWrapper">addInputWrapper</a>)</div>
+					<div class="panel-body">
+					   <div class="code-example">
+<pre class="prettyprint linenums">$form-&gt;addInputWrapper(&#039;&lt;div class=&quot;input-group&quot;&gt;&lt;/div&gt;&#039;, &#039;phone-input&#039;);
+$form-&gt;addHtml(&#039;&lt;div class=&quot;input-group-addon&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-earphone&quot;&gt;&lt;/span&gt;&lt;/div&gt;&#039;, &#039;phone-input&#039;, &#039;before&#039;);
+$form-&gt;addInput(&#039;text&#039;, &#039;phone-input&#039;, &#039;&#039;, &#039;Your phone : &#039;);
+$form-&gt;addInputWrapper(&#039;&lt;div class=&quot;input-group&quot;&gt;&lt;/div&gt;&#039;, &#039;email-input&#039;);
+$form-&gt;addHtml(&#039;&lt;div class=&quot;input-group-addon&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-envelope&quot;&gt;&lt;/span&gt;&lt;/div&gt;&#039;, &#039;email-input&#039;, &#039;after&#039;);
+$form-&gt;addInput(&#039;text&#039;, &#039;email-input&#039;, &#039;&#039;, &#039;Your e-mail : &#039;);</pre>
+					   </div>
+					   <div class="result">
+					   	<form id="custom-html-test" action="/modelehtml5/DOCS/form/documentation/ex-to-delete.php" method="post" class="form-horizontal"  role="form">
+					   	<div><input name="custom-html-test" type="hidden" value="1"  class="form-control"></div>
+					   	<div class="form-group">
+					   	<label for="phone-input" class="col-sm-4 control-label">Your phone : </label>
+					   	<div class="col-sm-8">
+					   	<div class="input-group"><div class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></div>
+					   	<input id="phone-input" name="phone-input" type="text" value=""  class="form-control">
+					   	</div></div>
+					   	</div>
+					   	<div class="form-group">
+					   	<label for="email-input" class="col-sm-4 control-label">Your e-mail : </label>
+					   	<div class="col-sm-8">
+					   	<div class="input-group"><input id="email-input" name="email-input" type="text" value=""  class="form-control">
+					   	<div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
+					   	</div></div>
+					   	</div>
+					   	</form>
+					   </div>
+					</div>
+				</div>
+				</article>
+				<article id="addInputWrapper">
+				<h4>Custom html with input wrapper</h4>
+				<p class="bg-warning"><span class="glyphicon glyphicon-info-sign prepend"></span>wrapper can be one or two html elements</p>
+<pre class="prettyprint linenums">$form->addInputWrapper($html, $element_name);</pre>
+<pre class="prettyprint comments">
+/**
+* Wraps the element with html code.
+*
+* @param string $html The html code to wrap the element with.
+*                     The html tag must be opened and closed.
+*                     Example : &lt;div class=&quot;my-class&quot;&gt;&lt;/div&gt;
+* @param string $element_name The form element to wrap.
+*/
+</pre>
+				<div class="panel panel-primary">
+					<div class="panel-heading">Example</div>
+					<div class="panel-body">
+					   <div class="code-example">
+<pre class="prettyprint linenums">$form-&gt;addInputWrapper(&#039;&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-lg-4&quot;&gt;&lt;/div&gt;&lt;/div&gt;&#039;, &#039;myInputLg4&#039;);
+$form-&gt;addInput(&#039;text&#039;, &#039;myInputLg4&#039;, &#039;&#039;, &#039;Input wrapped with col-lg-4 : &#039; );</pre>
+					   </div>
+					   <div class="result">
+					   	<form id="addInputWrapper-test" action="index.html#addInputWrapper" method="post" class="form-horizontal"  role="form">
+					   	<div><input name="addInputWrapper-test" type="hidden" value="1"  class="form-control"></div>
+					   	<div class="form-group">
+					   	<label for="myInputLg4" class="col-sm-4 control-label">Input wrapped with col-lg-4 : </label>
+					   	<div class="col-sm-8">
+					   	<div class="row">
+					   	<div class="col-lg-4">
+					   	<input id="myInputLg4" name="myInputLg4" type="text" value=""  class="form-control">
+					   	</div>
+					   	</div>
+					   	</div>
+					   	</div>
+					   	</form>
+					   </div>
+					</div>
+				</div>
+				</article>
+				<h3 id="render">Render</h3>
+                <p>Renders the form.</p>
+                <p>Set <code>$debug</code> to <code>true</code> if you wants to display HTML code</p>
+				<article>
+<pre class="prettyprint linenums">$form->render([$debug = false]);</pre>
+<pre class="prettyprint comments">
+/**
+* Renders the html code of the form.
+*
+* @param string $debug (Optional) True or false.
+*                                 If true, the html code will be displayed
+*
+*/
+</pre>
+				</article>
+				<article id="printIncludes">
+					<h4>Print plugins includes</h4>
+					<p>Call <code>printIncludes</code> to render html code to include css or js files needed by plugins</p>
+					<p>Allows you to call css/js files at the right places (generaly css inside your <code>&lt;head&gt;&lt;/head&gt;</code> section, and js just before <code>&lt;/body&gt;</code>.</p>
+					<p class="bg-warning"><span class="glyphicon glyphicon-info-sign prepend"></span>If your form contains no plugin, no need to call this function.</p>
+<pre class="prettyprint linenums">$form->printIncludes($type, $debug = false);</pre>
+<pre class="prettyprint comments">
+/**
+* Gets and tests plugins absolute path (PLUGINS_DIR).
+* Prints html code to include css or js files needed by plugins.
+*
+* @param string $type value : 'css' or 'js'
+* @param string $debug (Optional) True or false.
+*                                 If true, the code will be only displayed on screen
+*
+*
+*/
+</pre>
+				<div class="panel panel-primary">
+					<div class="panel-heading">Example with colorpicker plugin</div>
+					<div class="panel-body">
+					   <div class="code-example">
+<pre class="prettyprint linenums">$form->addInput('text', 'my-colorpicker', '', 'ColorPicker : ');
+$form->addPlugin('colorpicker', '#my-colorpicker');
+$form->printIncludes('css');</pre>
+					   </div>
+					   <div class="result">
+<pre class="prettyprint linenums">&lt;link href=&quot;../../phpformbuilder/plugins/colpick/css/colpick.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;</pre>
+					   </div>
+					   <hr>
+					   <div class="code-example">
+<pre class="prettyprint linenums">$form->addInput('text', 'my-colorpicker', '', 'ColorPicker : ');
+$form->addPlugin('colorpicker', '#my-colorpicker');
+$form->printIncludes('js');</pre>
+					   </div>
+					   <div class="result">
+<pre class="prettyprint linenums">&lt;script src=&quot;../../phpformbuilder/plugins/colpick/js/colpick.js&quot;&gt;&lt;/script&gt;</pre>
+					   </div>
+					</div>
+				</div>
+				</article>
+				<article id="printJsCode">
+				<h4>Print plugins JS code</h4>
+				<p>Prints the JS code generated by the plugin.</p>
+				<p class="bg-warning"><span class="glyphicon glyphicon-info-sign prepend"></span>If your form contains no plugin, no need to call this function.</p>
+<pre class="prettyprint linenums">$form->printJsCode($debug = false);</pre>
+<pre class="prettyprint comments">
+/**
+* Prints js code generated by plugins.
+*
+* @param string $debug (Optional) True or false.
+*                                 If true, the code will be only displayed on screen
+*/
+</pre>
+				<div class="panel panel-primary">
+					<div class="panel-heading">Example with colorpicker plugin</div>
+					<div class="panel-body">
+					   <div class="code-example">
+<pre class="prettyprint linenums">$form->addInput('text', 'my-colorpicker', '', 'ColorPicker : ');
+$form->addPlugin('colorpicker', '#my-colorpicker');
+$form->printJsCode();</pre>
+					   </div>
+					   <div class="result">
+<pre class="prettyprint linenums">&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function() {
+$(&quot;#my-colorpicker&quot;).colpick({
+onSubmit:function(hsb,hex,rgb,el) {
+	$(el).val(&#039;#&#039;+hex);
+	$(el).colpickHide();
+}
+});
+});
+&lt;/script&gt;</pre>
+					   </div>
+					</div>
+				</div>
+				</article>
+                <h3 id="mainFunctionsSendMail">E-mail Sending</h3>
+                <h4>sendMail function</h4>
+                <pre class="prettyprint linenums">$sent_message = Form::sendMail($from_email, $adress, $subject, $filter_values);</pre>
+                <p class="bg-primary">Please see details at <a href="#sendMail">E-MAIL SENDING</a></p>
+                <h4 id="mainFunctionsSendAdvancedMail">sendAdvancedMail function</h4>
+                <pre class="prettyprint linenums">$sent_message = Form::sendAdvancedMail($options);</pre>
+                <p class="bg-primary">Please see details at <a href="#sendAdvancedMail">E-MAIL SENDING</a></p>
+                <article id="registerValues">
+                    <h3>Registering / Clearing values</h3>
+                    <h4>registerValues (static function)</h4>
+                    <p class="bg-info"><span class="glyphicon glyphicon-ok prepend"></span>When you instantiate a form, it will automatically store corresponding posted values in session unless you called <a href="#clear">clear function</a> before creating your form.</p>
+                    <p>You can call <code>Form::registerValues('form-id')</code> manually at any time.</p>
+                    <pre class="prettyprint linenums">Form::registerValues('form-id');</pre>
+<pre class="prettyprint comments">/**
+     * register posted values in session
+     * @param string $form_ID
+     */
+</pre>
+                </article>
+                <article id="mergeValues">
+                    <h4>mergeValues (static function)</h4>
+                    <p class="bg-info"><span class="glyphicon glyphicon-ok prepend"> mergeValues is used to merge previously registered values in a single array.<br>Usefull for step forms to send all steps values by email or store into database for example.</span></p>
+                    <pre class="prettyprint linenums">Form::mergeValues(array('step-form-1', 'step-form-2', 'step-form-3'));</pre>
+<pre class="prettyprint comments">/**
+     /**
+     * merge previously registered session vars => values of each registered form
+     * @param  array $forms_array array of forms IDs to merge
+     * @return array pairs of names => values
+     *                           ex : $values[$field_name] = $value
+     */
+</pre>
+                </article>
+                <article id="clear">
+                    <h4>clear (static function)</h4>
+                    <p>Clears the corresponding previously registered values from session.</p>
+                    <pre class="prettyprint linenums">Form::clear('form-id');</pre>
+                </article>
+            </section>
+			<section>
+				<h2 id="plugins">Plugins</h2>
+				<article id="plugins-overview">
+					<h3>Overview</h3>
+					<div class="bg-warning"><p><span class="glyphicon glyphicon-info-sign prepend"></span><strong>For any plugin, you'll allways have to follow these 4 steps :</strong></p>
+						<ol>
+							<li>Call <code>addPlugin</code> function</li>
+							<li>Then create the corresponding element (exept for fileupload)</li>
+							<li>Call <code>$form->printIncludes('css');</code> in your <code>&lt;head&gt;</code> section</li>
+							<li>Call <code>$form->printIncludes('js');</code> then <code>$form->printJsCode();</code> just before <code>&lt;/body&gt;</code></li>
+						</ol>
+					</div>
+					<p></p>
+					<p class="bg-warning"><span class="glyphicon glyphicon-info-sign prepend"></span>Don't forget to configure plugins path in <code>plugins-path.php</code>.</p>
+					<p></p>
+					<p>Form includes the folowing third part jQuery plugins :</p>
+					<ul>
+                        <li>bootstrap-select (<a href="http://silviomoreto.github.io/bootstrap-select/">http://silviomoreto.github.io/bootstrap-select/</a>),</li>
+                        <li>tinymce (<a href="http://www.tinymce.com/">http://www.tinymce.com/</a>),</li>
+						<li>colorpicker (<a href="http://colpick.com/plugin">http://colpick.com/plugin</a>),</li>
+						<li>datepicker (<a href="http://jqueryui.com/datepicker/">http://jqueryui.com/datepicker/</a>),</li>
+						<li>timepicker (<a href="https://github.com/jonthornton/jquery-timepicker">https://github.com/jonthornton/jquery-timepicker</a>),</li>
+						<li>captcha (<a href="http://keith-wood.name/realPerson.html">http://keith-wood.name/realPerson.html</a>),</li>
+                        <li>fileupload (<a href="https://github.com/blueimp/jQuery-File-Upload">https://github.com/blueimp/jQuery-File-Upload</a>)</li>
+						<li>word-character-count (custom plugin for phpForms)</li>
+					</ul>
+					<p>Plugins are located in <code>plugin/</code> dir.</p>
+					<p>Plugins config are respective XML files in <code>plugins-config/</code> dir.</p>
+					<p>You can easily :</p>
+					<ul>
+						<li><a href="#addPlugin">Add any plugin to your form</a>,<br></li>
+						<li><a href="#customizing-plugins">Customize and store several plugin configs for further use</a>,<br></li>
+						<li><a href="#adding-your-own-plugins">Add your own plugins</a>.</li>
+					</ul>
+				</article>
+				<article id="addPlugin">
+					<h3>Activating a plugin</h3>
+					<p>Just call the <code>addPlugin</code> function</p>
+					<div class="bg-warning"><p><span class="glyphicon glyphicon-info-sign prepend"></span>Don't forget to call <code>$form->printIncludes('css');</code> in your <code>&lt;head&gt;</code> section<br>And <code>$form->printIncludes('js');</code> then <code>$form->printJsCode();</code> just before <code>&lt;/body&gt;</code></p>
+					</div>
+					<p></p>
+					<p class="bg-warning"><span class="glyphicon glyphicon-info-sign prepend"></span>Don't forget to configure plugins path in <code>plugins-path.php</code>.</p>
+					<p></p>
+					<p>For default config, simply use <code>addPlugin($plugin_name, $selector)</code></p>
+					<p>To use custom config, you'll have to specify <code>$js_content</code> and eventualy <code>$js_replacements</code>. See <a href="#customizing-plugins">Customizing Plugins</a>.</p>
+					<p class="bg-warning"><span class="glyphicon glyphicon-info-sign prepend"></span>file upload is a little bit different, see <a href="#fileupload">File Upload</a> section.</p>
+<pre class="prettyprint linenums">$form->addPlugin($plugin_name, $selector, [$js_content = 'default', $js_replacements = ''])</pre>
+<pre class="prettyprint comments">
+/**
+* Adds a javascript plugin to the selected field(s)
+* @param string $plugin_name The name of the plugin,
+*                            must be the name of the xml file
+*                            in plugins-config dir
+*                            without extension.
+*                            Example : colorpicker
+* @param string $selector The jQuery style selector.
+*                         Examples : #colorpicker
+*                                    .colorpicker
+* @param string $js_content (Optional) The xml node where your plugin code is
+*                                      in plugins-config/[your-plugin.xml] file
+* @param array $js_replacements (Optional) An associative array containing
+*                                          the strings to search as keys
+*                                          and replacement values as data.
+*                                          Strings will be replaced with data
+*                                          in &lt;js_code&gt; xml node of your
+*                                          plugins-config/[your-plugin.xml] file.
+*/
+</pre>
+				</article>
+				<article id="fileupload">
+					<h3>File Upload</h3>
+					<p>To create a fileupload element, call <code>addFileUpload</code> with the folowing arguments :</p>
+					<dl class="dl-horizontal">
+						<dt><var>$type</var> :</dt>
+						<dd>The type of the input, usualy 'file'.</dd>
+						<dt><var>$name</var> : </dt>
+						<dd>The input name</dd>
+						<dt><var>$value</var> : </dt>
+						<dd>The input value (usualy leave empty)</dd>
+						<dt><var>$label</var> : </dt>
+						<dd>The input label</dd>
+						<dt><var>$attr</var> : </dt>
+						<dd>Can be any HTML input attribute or js event.</dd>
+						<dt><var>$fileUpload_config</var> : </dt>
+						<dd>An associative array containing :
+							<dl class="dl-horizontal">
+								<dt>'xml' =></dt>
+								<dd>The xml node where your plugin code is in<br>plugins-config/fileupload.xml</dd>
+								<dt>'uploader' =></dt>
+								<dd>The php uploader file in<br>plugins/jQuery-File-Upload/server/php/ folder</dd>
+								<dt>'btn-text' =></dt>
+								<dd>The text of the upload button</dd>
+								<dt>'max-number-of-files' =></dt>
+								<dd>The max number of files to upload</dd>
+							</dl>
+						</dd>
+					</dl>
+					<hr>
+					<p>Default values for <var>$fileUpload_config</var> are : </p>
+					<dl class="dl-horizontal">
+						<dt>'xml' =></dt>
+						<dd>'default'</dd>
+						<dt>'uploader' =></dt>
+						<dd>'defaultFileUpload.php'</dd>
+						<dt>'btn-text' =></dt>
+						<dd>'Select files...'</dd>
+						<dt>'max-number-of-files' =></dt>
+						<dd>1</dd>
+					</dl>
+					<p>File Upload is supplied with two ready configs :</p>
+					<ul>
+						<li>default (defaultFileUpload.php)</li>
+						<li>images (imageFileUpload.php)</li>
+					</ul>
+					<p class="bg-warning"><span class="glyphicon glyphicon-info-sign prepend"></span>You can configure destination folder, file restrictions, Thumbnails and images sizes in the<br>form/plugins/jQuery-File-Upload/server/php/[YourFileUploadHandler].php</p>
+<pre class="prettyprint linenums">$form->addFileUpload($type, $name, [$value = '', $label = '', $attr = '', $fileUpload_config = ''])</pre>
+<pre class="prettyprint comments">
+/**
+* Creates an input with fileupload plugin.
+*
+* The fileupload plugin generates complete html, js and css code.
+* You'll just have to call printIncludes('css') and printIncludes('js')
+* where you wants to put your css/js codes (generaly in &lt;head&gt; and just before &lt;/body&gt;).
+*
+* @param string $type The node of the plugins-config/fileupload.xml file where is your code.
+*                     For example : 'default' or 'images'
+* @param string $name The upload field name.
+*                     Use an array (ex : name[]) to allow multiple files upload
+* @param string $value (Optional) The input default value
+* @param string $label (Optional) The input label
+* @param string $attr (Optional) Can be any HTML input attribute or js event.
+* @param array $fileUpload_config (Optional) An associative array containing :
+*                                            'xml'                 => The xml node where your plugin code is
+*                                                                     in plugins-config/fileupload.xml,
+*                                            'uploader'            => The php uploader file in
+*                                                                     plugins/jQuery-File-Upload/server/php/ folder
+*                                            'btn-text'            => The text of the upload button,
+*                                            'max-number-of-files' => The max number of files to upload
+*
+*/
+</pre>
+				</article>
+				<h3 id="tinymce-example">Included plugins examples</h3>
+                <article>
+                <h4>tinyMce - <small><a href="http://www.tinymce.com/">http://www.tinymce.com/</a></small></h4>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">tinyMce example</div>
+                        <div class="panel-body">
+                           <div class="code-example">
+<pre class="prettyprint linenums">$form->addTextarea('content', '', 'tinymce : ', 'cols=100, rows=20, class=tinyMce');
+$form->addPlugin('tinymce', '#content');</pre>
+                           </div>
+                           <div class="result">
+                           <form id="tinymce-example-form" action="#" method="post" enctype="multipart/form-data" class="form-horizontal"  role="form">
+                           <div class="form-group">
+                           <label for="content" class="col-sm-4 control-label">tinymce : </label>
+                           <div class="col-sm-8">
+                           <input id="content" name="content" type="text" value="" class="form-control">
+                           </div>
+                           </div>
+                           </form>
+                           </div>
+                        </div>
+                    </div>
+                </article>
+                <article id="bootstrap-select-example-redirect">
+                    <h4>Bootstrap Select - <small><a href="http://silviomoreto.github.io/bootstrap-select/">http://silviomoreto.github.io/bootstrap-select/</a></small></h4>
+                    <p>The Bootstrap Select is used directly with addSelect with data-attributes. No need to call <code>$form->addPlugin()</code> function.</p>
+                    <p>See <a href="#addSelect">addSelect</a> function, <a href="#bootstrap-select-example">Bootstrap-select plugin Example</a></p>
+                </article>
+				<article id="colorpicker-example">
+					<h4>Colorpicker - <small><a href="http://colpick.com/plugin">http://colpick.com/plugin</a></small></h4>
+					<div class="panel panel-primary">
+						<div class="panel-heading">Colorpicker example</div>
+						<div class="panel-body">
+						   <div class="code-example">
+<pre class="prettyprint linenums">$form->addInput('text', 'defaultColorPicker', '', 'ColorPicker : ');
+$form->addPlugin('colorpicker', '#defaultColorPicker');</pre>
+						   </div>
+						   <div class="result">
+						   <form id="colorpicker-example-form" action="#" method="post" enctype="multipart/form-data" class="form-horizontal"  role="form">
+						   <div class="form-group">
+						   <label for="defaultColorPicker" class="col-sm-4 control-label">ColorPicker : </label>
+						   <div class="col-sm-8">
+						   <input id="defaultColorPicker" name="defaultColorPicker" type="text" value=""  class="form-control">
+						   </div>
+						   </div>
+						   </form>
+						   </div>
+						</div>
+					</div>
+				</article>
+                <article id="icheck-example">
+                    <h4>Icheck - <small><a href="http://fronteed.com/iCheck/">http://fronteed.com/iCheck/</a></small></h4>
+                        <p class="lead">Arguments : Array()</p>
+                        <dl>
+                            <dt>'%theme%' : </dt>
+                            <dd>theme from plugins/icheck/skins/<br>(flat, futurico, line, minimal, polaris, square)</dd>
+                        </dl>
+                        <dl>
+                            <dt>'%color%' : </dt>
+                            <dd>color from plugins/icheck/skins/[theme]/<br>(aero, blue, flat, green, grey, orange, pink, purple, red, yellow)</dd>
+                        </dl>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Icheck</div>
+                        <div class="panel-body">
+                           <div class="code-example">
+<pre class="prettyprint linenums">$form->addPlugin('icheck', 'input', 'default', array('%theme%' => 'square', '%color%' => 'green'));
+$form->addRadio('human-or-robot', 'I\'m a human', 1);
+$form->addRadio('human-or-robot', 'I\'m a robot', 0);
+$form->printRadioGroup('human-or-robot', 'Are you a human or a robot ?', false, 'required=required');</pre>
+                           </div>
+                           <div class="result">
+                           <form id="icheck-example-form" action="#" method="post" class="form-horizontal"  role="form">
+                           <div class="form-group">
+                           <label class="col-sm-4 control-label">Are you a human or a robot ?<sup class="text-danger">* </sup></label>
+                           <div class="col-sm-8">
+                           <div class="radio">
+                           <label><input type="radio" id="human-or-robot_0" name="human-or-robot" value="1" required="">I'm a human</label>
+                           </div>
+                           <div class="radio">
+                           <label><input type="radio" id="human-or-robot_1" name="human-or-robot" value="0" required="">I'm a robot</label>
+                           </div>
+                           </div>
+                           </div>
+                           </form>
+                           </div>
+                        </div>
+                    </div>
+                </article>
+				<article id="datepicker-example">
+					<h4>Datepicker - <small><a href="http://jqueryui.com/datepicker/">http://jqueryui.com/datepicker/</a></small></h4>
+					<div class="panel panel-primary">
+						<div class="panel-heading">Datepicker example</div>
+						<div class="panel-body">
+						   <div class="code-example">
+<pre class="prettyprint linenums">$form->addInput('text', 'myDatePicker', '', 'DatePicker : ');
+$form->addPlugin('datepicker', '#myDatePicker');</pre>
+						   </div>
+						   <div class="result">
+						   <form id="datepicker-example-form" action="#" method="post" enctype="multipart/form-data" class="form-horizontal"  role="form">
+						   <div class="form-group">
+						   <label for="myDatePicker" class="col-sm-4 control-label">DatePicker : </label>
+						   <div class="col-sm-8">
+						   <input id="myDatePicker" name="myDatePicker" type="text" value=""  class="form-control">
+						   </div>
+						   </div>
+						   </form>
+						   </div>
+						</div>
+					</div>
+				</article>
+				<article id="timepicker-example">
+					<h4>Timepicker - <small><a href="https://github.com/jonthornton/jquery-timepicker">https://github.com/jonthornton/jquery-timepicker</a></small></h4>
+					<div class="panel panel-primary">
+						<div class="panel-heading">Timepicker example</div>
+						<div class="panel-body">
+						   <div class="code-example">
+<pre class="prettyprint linenums">$form->addInput('text', 'myTimePicker', '', 'TimePicker : ');
+$form->addPlugin('timepicker', '#myTimePicker');</pre>
+						   </div>
+						   <div class="result">
+						   <form id="timepicker-example-form" action="#" method="post" enctype="multipart/form-data" class="form-horizontal"  role="form">
+						   <div class="form-group">
+						   <label for="myTimePicker" class="col-sm-4 control-label">TimePicker : </label>
+						   <div class="col-sm-8">
+						   <input id="myTimePicker" name="myTimePicker" type="text" value=""  class="form-control">
+						   </div>
+						   </div>
+						   </form>
+						   </div>
+						</div>
+					</div>
+				</article>
+				<article id="captcha-example">
+					<h4>Captcha - <small><a href="http://keith-wood.name/realPerson.html">http://keith-wood.name/realPerson.html</a></small></h4>
+					<div class="panel panel-primary">
+						<div class="panel-heading">Captcha example</div>
+						<div class="panel-body">
+						   <div class="code-example">
+<pre class="prettyprint linenums">$form->addInput('text', 'captcha', '', 'Type the characters please :', 'size=15');
+$form->addPlugin('captcha', '#captcha', 'default');</pre>
+						   </div>
+						   <div class="result">
+						   <form id="captcha-example-form" action="#" method="post" enctype="multipart/form-data" class="form-horizontal"  role="form">
+						   <div class="form-group">
+						   <label for="captcha" class="col-sm-4 control-label">Type the characters please :</label>
+						   <div class="col-sm-8">
+						   <input id="captcha" name="captcha" type="text" value="" size="15" class="form-control">
+						   </div>
+						   </div>
+						   </form>
+						   </div>
+						</div>
+					</div>
+				</article>
+                <article id="passfield-example">
+                    <h4>Passfield - <small><a href="http://antelle.github.io/passfield/index.html">http://antelle.github.io/passfield/index.html</a></small></h4>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Passfield example</div>
+                        <div class="panel-body">
+                           <div class="code-example">
+<pre class="prettyprint linenums">$form->addPlugin('passfield', '#user-password', 'lower-upper-min6');
+$form->addHtml('&lt;span class=&quot;help-block&quot;&gt;password must contain lowercase + uppercase letters and be 6 characters long&lt;/span&gt;', 'user-password', 'after');
+$form->addInput('password', 'user-password', '', 'password', 'required=required');</pre>
+                           </div>
+                           <div class="result">
+                           <form id="passfield-example-form" action="#" method="post" enctype="multipart/form-data" class="form-horizontal"  role="form">
+                           <div class="form-group">
+                           <label for="user-password" class="col-sm-4 control-label">Password :</label>
+                           <div class="col-sm-8">
+                           <input id="user-password" name="user-password" type="password" value="" size="15" class="form-control">
+                           </div>
+                           </div>
+                           </form>
+                           </div>
+                        </div>
+                    </div>
+                    <p>Pre-configured patterns :</p>
+                    <ul>
+                        <li><strong>default</strong> : password must contain lowercase letters + numbers and be 8 characters long<br><strong>pattern validation</strong> : <pre class="prettyprint linenums">$validator->hasLowercase()->hasNumber()->minLength(8)->validate('user-password');</pre></li>
+                        <li><strong>lower-upper-min8</strong> : password must contain lowercase + uppercase letters and be 8 characters long<br><strong>pattern validation</strong> : <pre class="prettyprint linenums">$validator->hasLowercase()->hasUppercase()->minLength(8)->validate('user-password');</pre></li>
+                        <li><strong>lower-upper-number-min8</strong> : password must contain lowercase + uppercase letters + numbers and be 8 characters long<br><strong>pattern validation</strong> : <pre class="prettyprint linenums">$validator->hasLowercase()->hasUppercase()->hasNumber()->minLength(8)->validate('user-password');</pre></li>
+                        <li><strong>lower-upper-number-symbol-min8</strong> : password must contain lowercase + uppercase letters + numbers + symbols and be 8 characters long<br><strong>pattern validation</strong> : <pre class="prettyprint linenums">$validator->hasLowercase()->hasUppercase()->hasNumber()->hasSymbol()->minLength(8)->validate('user-password');</pre></li>
+                    </ul>
+                    <p class="bg-info"><span class="glyphicon glyphicon-ok prepend"></span>You can easily add your own patterns into <code>phpformbuilder/plugins-config/passfield.xml</code>.<br>A pattern generator is available at <a href="http://antelle.github.io/passfield/demo.html">http://antelle.github.io/passfield/demo.html</a></p>
+                </article>
+				<article id="fileupload-example">
+					<h4>FileUpload - <small><a href="https://github.com/blueimp/jQuery-File-Upload">https://github.com/blueimp/jQuery-File-Upload</a></small></h4>
+					<div class="panel panel-primary">
+						<div class="panel-heading">File Upload example (uploads 2 images maxi and creates 3 thumbnails for each)</div>
+						<div class="panel-body">
+						   <div class="code-example">
+<pre class="prettyprint linenums">$fileUpload_config = array(
+'xml'                 => 'images',
+'uploader'            => 'imageFileUpload.php',
+'btn-text'            => 'Browse ...',
+'max-number-of-files' => 2
+);
+$form->addFileUpload('file', 'files[]', '', 'FileUpload : ', 'id=myFileUpload', $fileUpload_config);
+
+/* Put this line in &lt;head&gt; section */
+
+$form->printIncludes('css');
+
+/* Put the 2 following lines just before &lt;/body&gt; */
+
+$form->printIncludes('js');
+$form->printJsCode();</pre>
+						   </div>
+						   <div class="result">
+							<form id="fileupload-test" action="/modelehtml5/DOCS/form/documentation/ex-to-delete.php" method="post" enctype="multipart/form-data" class="form-horizontal"  role="form">
+								<div><input name="fileupload-test" type="hidden" value="1"  class="form-control"></div>
+								<div class="form-group">
+									<label for="fileupload-test" class="col-sm-4 control-label">FileUpload : </label>
+									<div class="col-sm-8">
+										<div id="files-result"></div>
+										<div class="row fileupload-buttonbar">
+											<div class="col-lg-7">
+												<span class="btn btn-success fileinput-button">
+													<i class="glyphicon glyphicon-plus"></i>
+													<span>Browse ...</span>
+													<input id="fileupload-test" type="file" name="files[]">
+												</span>
+												<span class="fileupload-process"></span>
+											</div>
+											<div class="col-lg-5 fileupload-progress fade">
+												<div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+													<div class="progress-bar progress-bar-success" style="width:0%;"></div>
+												</div>
+												<div class="progress-extended">&nbsp;</div>
+											</div>
+										</div>
+										<table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
+									</div>
+								</div>
+							</form>
+						   </div>
+						</div>
+					</div>
+				</article>
+                <article id="wordcharactercount-example">
+                    <h4>Word / Character Count</h4>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Word / Character Count example</div>
+                        <div class="panel-body">
+                           <div class="code-example">
+<pre class="prettyprint linenums">$form->addTextarea('message', '', 'Your message : ', 'cols=30, rows=4, required=required');
+$form->addPlugin('word-character-count', '#message', 'default', array('%maxAuthorized%' =&gt; 100));</pre>
+                           </div>
+                           <div class="result">
+                             <form id="wordcharactercount-example-form" action="#" method="post" enctype="multipart/form-data" class="form-horizontal"  role="form">
+                                 <div class="form-group">
+                                     <label for="message" class="col-sm-4 control-label">Your message <sup class="text-danger">* </sup>: </label>
+                                     <div class="col-sm-8">
+                                         <textarea id="message" name="message" cols="30" rows="4" required="required" class="form-control"></textarea>
+                                     </div>
+                                 </div>
+                             </form>
+                         </div>
+                        </div>
+                    </div>
+                    <p>Pre-built configs are : </p>
+                    <dl class="dl-horizontal">
+                        <dt>default</dt>
+                        <dd>words + characters count</dd>
+                        <dt>word</dt>
+                        <dd>word count only</dd>
+                        <dt>character</dt>
+                        <dd>character count only</dd>
+                    </dl>
+                </article>
+                <article id="tinymce-word-character-count-example">
+                    <h4>TinyMce + Word / Character Count example</h4>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">TinyMce + Word / Character Count example</div>
+                        <div class="panel-body">
+                           <div class="code-example">
+<pre class="prettyprint linenums">$form->addTextarea('content-tinymce', '', 'tinymce : ', 'cols=100, rows=20, class=tinyMce');
+$form->addPlugin('tinymce', '#content-tinymce', 'word_char_count', array('%maxAuthorized%' => 200));</pre>
+                           </div>
+                           <div class="result">
+                             <form id="tinymcewordcharactercount-example-form" action="#" method="post" enctype="multipart/form-data" class="form-horizontal"  role="form">
+                                 <div class="form-group">
+                                     <label for="content-tinymce" class="col-sm-4 control-label">Your message <sup class="text-danger">* </sup>: </label>
+                                     <div class="col-sm-8">
+                                         <textarea id="content-word-char-count" name="content-word-char-count" cols="100" rows="20" class="tinyMce form-control"></textarea>
+                                     </div>
+                                 </div>
+                             </form>
+                         </div>
+                        </div>
+                    </div>
+                    <p>Pre-built configs are : </p>
+                    <dl class="dl-horizontal">
+                        <dt>default</dt>
+                        <dd>words + characters count</dd>
+                        <dt>word</dt>
+                        <dd>word count only</dd>
+                        <dt>character</dt>
+                        <dd>character count only</dd>
+                    </dl>
+                </article>
+				<article id="customizing-plugins">
+					<h3>Customizing plugins</h3>
+					<p>Each plugin has it's own XML configuration file in <code>plugins-config</code> directory.</p>
+					<p>The XML structure is allways the same : </p>
+<pre class="prettyprint linenums">&lt;root&gt;
+&lt;default&gt;
+&lt;includes&gt;
+&lt;css&gt;
+&lt;file&gt;../../phpformbuilder/plugins/[plugin dir]/[plugin].css&lt;/file&gt;
+&lt;/css&gt;
+&lt;js&gt;
+&lt;file&gt;../../phpformbuilder/plugins/[plugin dir]/[plugin].js&lt;/file&gt;
+&lt;/js&gt;
+&lt;/includes&gt;
+&lt;js_code&gt;
+&lt;![CDATA[
+$(&quot;%selector%&quot;).[function]();
+]]&gt;
+&lt;/js_code&gt;
+&lt;/default&gt;
+&lt;/root&gt;</pre>
+					<p>The <code>addPlugin</code> function has 4 arguments : <var>$plugin_name</var>, <var>$selector</var>, <var>$js_content</var> and <var>$js_replacements</var></p>
+					<p><var>$js_content</var> indicates the XML node you targets. (default value : '<var>default</var>').</p>
+					<p><var>$selector</var> will replace <var>&quot;%selector%&quot;</var> in XML.</p>
+					<h4>To customize your plugin :</h4>
+					<ol>
+						<li>Copy the <code>&lt;default&gt;</code> node structure and give it a name<br>(for example, replace '<var>&lt;default&gt;</var>' with '<var>&lt;custom&gt;</var>')</li>
+						<li>if the <code>&lt;includes&gt;</code> node has no need to be modified, delete it from your structure :<br>default's include node will be used instead.</li>
+						<li>Enter your js code in <code>&lt;js_code&gt;</code> node</li>
+						<li>If you need others replacements than &quot;%selector%&quot; in your js code, use custom markup like %my-value% in XML, than define them in <var>$js_replacements</var> when you call <code>addPlugin.</code>.</li>
+					</ol>
+					<div class="panel panel-primary">
+					<div class="panel-heading">Customizing plugin example</div>
+					<div class="panel-body">
+					   <div class="code-example">
+<pre class="prettyprint linenums">$js_replacements = array('%my-value%' => 'replacement-text');
+$form->addPlugin('captcha', '$captcha', 'custom', $js_replacements);</pre>
+					   </div>
+					</div>
+				</div>
+				</article>
+				<article id="adding-your-own-plugins">
+					<h3>Adding your own plugins</h3>
+					<p>Very simple !</p>
+					<ol>
+						<li>Upload your plugin in <code>plugin</code> dir.</li>
+						<li>Create an XML file with the name of your plugin in <code>plugins-config</code> dir,<br>using the tree described in <a href="#customizing-plugins">Customizing Plugins</a> section</li>
+						<li>Call your plugin with <a href="#addPlugin"><code>addPlugin</code></a> function</li>
+					</ol>
+				</article>
+			</section>
+			<section>
+				<h2 id="validation-methods">Validation</h2>
+                <div class="bg-info">
+                <p><span class="glyphicon glyphicon-info-sign prepend"></span>To validate array, use the <strong>dot syntax</strong>.<br><br>Example : <code>&lt;select name=&quot;my-field[]&quot; multiple=&quot;multiple&quot;&gt;</code></p>
+<pre class="prettyprint linenums">$validator->required()->validate('my-field.0');
+
+/* if at least 2 values must be selected : */
+
+$validator->required()->validate(array('my-field.0', 'my-field.1'));</pre>
+                </div>
+				<p>The validation is done with <a href="https://github.com/blackbelt/php-validation">blackbelt's php-validation class</a>.</p>
+				<p>Complete documentation at <a href="https://github.com/blackbelt/php-validation">https://github.com/blackbelt/php-validation</a>.</p>
+				<p>I just added these features :</p>
+				<ul>
+					<li>Captcha validation support for the <a href="#captcha-example">included captcha plugin</a></li>
+					<li><a href="#validation-multilanguage">Multilanguage support</a></li>
+                    <li>Patterns validation for the <a href="#passfield-example">included passfield plugin</a> :
+                        <ul>
+                            <li>$validator->hasLowercase()->validate($field_name);</li>
+                            <li>$validator->hasUppercase()->validate($field_name);</li>
+                            <li>$validator->hasNumber()->validate($field_name);</li>
+                            <li>$validator->hasSymbol()->validate($field_name);</li>
+                            <li>$validator->hasPattern('/custom_regex/')->validate($field_name);</li>
+                        </ul>
+                    </li>
+				</ul>
+				<h3>Available methods : </h3>
+				<ul>
+					<li>
+					<strong>captcha(<em>$field, $message = null</em>)</strong> - Added to validate included captcha plugin.</li>
+					<li>
+					<strong>required(<em>$message = null</em>)</strong> - The field value is required.</li>
+					<li>
+					<strong>email(<em>$message = null</em>)</strong> - The field value must be a valid email address string.</li>
+					<li>
+					<strong>float(<em>$message = null</em>)</strong> - The field value must be a float.</li>
+					<li>
+					<strong>integer(<em>$message = null</em>)</strong> - The field value must be an integer.</li>
+					<li>
+					<strong>digits(<em>$message = null</em>)</strong> - The field value must be a digit (integer with no upper bounds).</li>
+					<li>
+					<strong>min(<em>$limit, $include = TRUE, $message = null</em>)</strong> - The field value must be greater than $limit (numeric). $include defines if the value can be equal to the limit.</li>
+					<li>
+					<strong>max(<em>$limit, $include = TRUE, $message = null</em>)</strong> - The field value must be less than $limit (numeric). $include defines if the value can be equal to the limit.</li>
+					<li>
+					<strong>between(<em>$min, $max, $include = TRUE, $message = null</em>)</strong> - The field value must be between $min and $max (numeric). $include defines if the value can be equal to $min and $max.</li>
+					<li>
+					<strong>minLength(<em>$length, $message = null</em>)</strong> - The field value must be greater than or equal to $length characters.</li>
+					<li>
+					<strong>maxLength(<em>$length, $message = null</em>)</strong> - The field value must be less than or equal to $length characters.</li>
+					<li>
+					<strong>length(<em>$length, $message = null</em>)</strong> - The field must be $length characters long.</li>
+					<li>
+					<strong>matches(<em>$field, $label, $message = null</em>)</strong> - One field matches another one (i.e. password matching)</li>
+					<li>
+					<strong>notMatches(<em>$field, $label, $message = null</em>)</strong> - The field value must not match the value of $field.</li>
+					<li>
+					<strong>startsWith(<em>$sub, $message = null</em>)</strong> - The field must start with $sub as a string.</li>
+					<li>
+					<strong>notStartsWith(<em>$sub, $message = null</em>)</strong> - The field must not start with $sub as a string.</li>
+					<li>
+					<strong>endsWith(<em>$sub, $message = null</em>)</strong> - THe field must end with $sub as a string.</li>
+					<li>
+					<strong>notEndsWith(<em>$sub, $message = null</em>)</strong> - The field must not end with $sub as a string.</li>
+					<li>
+					<strong>ip(<em>$message = null</em>)</strong> - The field value is a valid IP, determined using filter_var.</li>
+					<li>
+					<strong>url(<em>$message = null</em>)</strong> - The field value is a valid URL, determined using filter_var.</li>
+					<li>
+					<strong>date(<em>$message = null</em>)</strong> - The field value is a valid date, can be of any format accepted by DateTime()</li>
+					<li>
+					<strong>minDate(<em>$date, $format, $message = null</em>)</strong> - The date must be greater than $date. $format must be of a format on the page <a href="http://php.net/manual/en/datetime.createfromformat.php">http://php.net/manual/en/datetime.createfromformat.php</a>
+					</li>
+					<li>
+					<strong>maxDate(<em>$date, $format, $message = null</em>)</strong> - The date must be less than $date. $format must be of a format on the page <a href="http://php.net/manual/en/datetime.createfromformat.php">http://php.net/manual/en/datetime.createfromformat.php</a>
+					</li>
+					<li>
+					<strong>ccnum(<em>$message = null</em>)</strong> - The field value must be a valid credit card number.</li>
+					<li>
+					<strong>oneOf(<em>$allowed, $message = null</em>)</strong> - The field value must be one of the $allowed values. $allowed can be either an array or a comma-separated list of values. If comma separated, do not include spaces unless intended for matching.</li>
+					<li>
+					<strong>callback(<em>$callback, $message = '', $params = array()</em>)</strong> - Define your own custom callback validation function. $callback must pass an is_callable() check. $params can be any value, or an array if multiple parameters must be passed.</li>
+				</ul>
+				<h3 id="validation-examples">Validation examples</h3>
+				<div class="panel panel-primary">
+					<div class="panel-heading">Validation examples code</div>
+					<div class="panel-body">
+                        <h3>Main validation code</h3>
+					   <div class="code-example">
+<pre class="prettyprint linenums">if ($_SERVER["REQUEST_METHOD"] == "POST") {
+include_once('../Validator/Validator.php');
+include_once('../Validator/Exception.php');
+$validator = new Validator($_POST);
+$required = array('username', 'useremail', 'userphone', 'message'); // required fields
+foreach ($required as $required) {
+$validator->required()->validate($required);
+}
+$validator->email()->validate('email-field-name');
+
+// add custom message if you want :
+
+$validator->integer('You must enter a number')->validate('number-field-name');
+
+$validator->captcha('captcha')->validate('captcha-field-name');
+
+// check for errors
+if ($validator->hasErrors()) {
+$_SESSION['errors']['my-form-id'] = $validator->getAllErrors();
+}
+}</pre>
+					   </div>
+                       <hr>
+                       <h3>Checkboxes validation</h3>
+                       <p>If we want at least one checked :</p>
+                       <div class="code-example">
+<pre class="prettyprint linenums">$form->addCheckbox('chk_group', 'check 1', 'check-1', 1);
+$form->addCheckbox('chk_group', 'check 2', 'check-2', 2);
+$form->addCheckbox('chk_group', 'check 3', 'check-3', 3);
+$form->printCheckboxGroup('chk_group', 'check one : ');
+
+/* Validation : */
+
+if(!isset($_POST['check-1']) && !isset($_POST['check-2']) && !isset($_POST['check-3'])) {
+
+/* if none posted, we register error */
+
+$validator->required('check at least one checkbox please')->validate('chk_group');
+}
+</pre>
+                       </div>
+                       <hr>
+                       <h3>Radio validation</h3>
+                       <div class="code-example">
+<pre class="prettyprint linenums">$form->addRadio('rating', 'Good', 'Good');
+$form->addRadio('rating', 'Fair', 'Fair');
+$form->addRadio('rating', 'Poor', 'Poor');
+$form->printRadioGroup('rating', 'Rate please : ', false, 'required=required');
+
+/* Validation : */
+
+$validator->required('Please rate')->validate('rating');
+</pre>
+                       </div>
+                       <hr>
+                       <h3>Multiple select validation</h3>
+                       <div class="code-example">
+<pre class="prettyprint linenums">$form->addOption('product-choice[]', 'Books', 'Books');
+$form->addOption('product-choice[]', 'Music', 'Music');
+$form->addOption('product-choice[]', 'Photos', 'Photos');
+$form->addSelect('product-choice[]', 'What products are you interested in ?<br><small>(multiple choices)</small>', 'required=required, multiple=multiple, style=min-height:130px');
+
+/* Validation : */
+
+$validator->required('Please choose one or several product(s)')->validate('product-choice.0');
+</pre>
+                       </div>
+					</div>
+				</div>
+				<h3 id="validation-multilanguage">Validation multilanguage support</h3>
+				<p>Default language is 'en' (English).</p>
+				<p>If you need other language support :
+				<ol>
+				 	<li>Add your language to <code>form/Validator/Validator.php</code> => <code>_getDefaultMessage($rule, $args = null)</code></li>
+				 	<li>instantiate with your language as second argument : <br><pre class="prettyprint linenums">$validator = new Validator($_POST, 'fr');</pre></li>
+				 </ol>
+			</section>
+            <section>
+                <h2 id="sendMail">E-mail Sending</h2>
+                <p>2 ways to send posted values by email :</p>
+                <ul>
+                    <li>sendMail function for simple emails with default template</li>
+                    <li>sendAdvancedMail function  for advanced mails with attached files, cc, bcc, ... and/or custom template</li>
+                </ul>
+                <article>
+                <h4>sendMail function</h4>
+                <pre class="prettyprint linenums">$sent_message = Form::sendMail($from_email, $adress, $subject, $filter_values);</pre>
+<pre class="prettyprint comments">
+/**
+* Simplest way to send email with posted values
+*
+* Detects posted values to send ; removes unwanted values ($filter_values)
+* Tests and secures values to prevent attacks (phpmailer/extras/htmlfilter.php => HTMLFilter)
+* Creates an automatic html table with vars/values based on default template
+* (phpformbuilder/mailer/email-templates/basic-template.[html|css])
+* Merges html/css to inline style
+* Sends email and catches errors
+*
+* @param string $from_email    e-mail adress of the sender
+* @param string $adress        e-mail adress destination
+* @param string $subject       e-mail subject
+* @param string $filter_values posted values you don't want to include in the e-mail,
+*                              separated with commas
+*
+* @return string success or error message
+*/
+</pre>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Example</div>
+                    <div class="panel-body">
+                       <div class="code-example">
+<pre class="prettyprint linenums">$from_email = 'contact@codecanyon.creation-site.org';
+$adress = 'john.doe@gmail.com';
+$subject = 'contact from my site';
+$filter_values = 'my-contact-form, captcha, submit-btn, captchaHash';
+$sent_message = Form::sendMail($from_email, $adress, $subject, $filter_values);
+echo $sent_message;</pre>
+                       </div>
+                       <div class="result">
+                        <p class="alert alert-success">Your message has been successfully sent !</p>
+                       </div>
+                    </div>
+                </div>
+                </article>
+                <article id="sendAdvancedMail">
+                <h4>sendAdvancedMail function</h4>
+                <pre class="prettyprint linenums">$sent_message = Form::sendAdvancedMail($options);</pre>
+<pre class="prettyprint comments">
+/**
+* Advanced way to send email with posted values
+*
+* Tests and secures values to prevent attacks (phpmailer/extras/htmlfilter.php => HTMLFilter)
+* Uses custom html/css template and replaces {fields} in template with posted values
+* OR Creates an automatic html table with vars/values based on default template
+* (phpformbuilder/mailer/email-templates/basic-template.[html|css])
+* Merges html/css to inline style
+* Sends email and catches errors
+* @param  array  $options
+*                         from_name [optional]            : the name of the sender
+*                         from_email                      : the email of the sender
+*                         reply_to [optional]             : the email for reply
+*                         adress                          : the email destination(s), separated with commas
+*                         cc [optional]                   : the email(s) of copies to send, separated with commas
+*                         bcc [optional]                  : the email(s) of blind copies to send, separated with commas
+*                         subject                         : The email subject
+*                         attachments [optional]          : file(s) to attach : separated with commas, or array (see details inside function)
+*                         html_template [optional]        : url of the html template to use
+*                         css_template [optional]         : url of the css template to use
+*                         filter_values [optional]        : if html_template leaved empty, posted values you don't want to include in the e-mail based on the default template
+*                         custom_replacements [optional]  : array to replace shortcodes in email template. ex : array('mytext' => 'Hello !') will replace {mytext} with Hello !
+*                         sent_message [optional]         : message to display when email is sent
+*                         display_errors [optional]       : displays sending errors
+* @return string sent_message          success or error message to display on the page
+*/
+</pre>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Example</div>
+                    <div class="panel-body">
+                       <div class="code-example">
+<pre class="prettyprint linenums">$options = array(
+'from_email'     =>  'contact@codecanyon.creation-site.org',
+<span class="gray-lighter">'from_name'      =>  'phpformbuilder', // optional</span>
+<span class="gray-lighter">'reply_to'       =>  'contact@codecanyon.creation-site.org', // optional</span>
+'adress'         =>  'john.doe@gmail.com',
+<span class="gray-lighter">'cc'             =>  'john.doe@free.fr', // optional</span>
+<span class="gray-lighter">'bcc'            =>  'john.doe@hotmail.com, john.doe@wanadoo.com', // optional</span>
+'subject'        =>  'contact from PHP Form Builder',
+<span class="gray-lighter">'attachments'    =>  'img/wallacegromit.jpg', // optional</span>
+<span class="gray-lighter">'html_template'  => '../mailer/email-templates/contact-email.html', // optional</span>
+<span class="gray-lighter">'css_template'   => '../mailer/email-templates/contact-email.css', // optional</span>
+<span class="gray-lighter">'filter_values'  => '', // optional</span>
+<span class="gray-lighter">'sent_message'   => &#039;&lt;p class=&quot;alert alert-success&quot;&gt;Your message has been successfully sent !&lt;/p&gt;&#039;, // optional</span>
+<span class="gray-lighter">'display_errors' => true // optional, default false</span>
+);
+$sent_message = Form::sendAdvancedMail($options);</pre>
+                       </div>
+                       <div class="result">
+                        <p class="alert alert-success">Your message has been successfully sent !</p>
+                       </div>
+                    </div>
+                </div>
+                <article id="attachmentsExamples">
+                    <h4>Attachments Examples</h4>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Examples using FileUpload plugin</div>
+                        <div class="panel-body">
+                            <div class="bg-info">
+                                <p><span class="glyphicon glyphicon-info-sign prepend"></span>The upload path is configured in<br>phpformbuilder/plugins/jQuery-File-Upload/server/php/[YourFileUploadHandler].php.<br><br>The uploaded filename is sent using hidden field, for example <code>$_POST['files']</code>.</p>
+                            </div>
+                            <p></p>
+                            <p><strong>Single file :</strong></p>
+<pre class="prettyprint linenums">$path = rtrim($_SERVER['DOCUMENT_ROOT'], DIRECTORY_SEPARATOR) . '/phpformbuilder/images/uploads/';
+$options = array(
+[...]
+'attachments'    =>  $path . $_POST['files'][0]
+);
+$msg = Form::sendAdvancedMail($options);</pre>
+                            <p><strong>Multiple files separated with commas :</strong></p>
+<pre class="prettyprint linenums">
+$attachments = $path . $_POST['files'][0] . ',' . $path . $_POST['files'][1];
+$options = array(
+[...]
+'attachments'    => $attachments,
+[...]
+);
+$msg = Form::sendAdvancedMail($options);</pre>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Examples using input type="file"</div>
+                        <div class="panel-body">
+                            <p><strong>Single file :</strong></p>
+<pre class="prettyprint linenums">$form->addInput('file', 'myFile', '', 'file : ');
+
+$attachments = array(
+array(
+'file_path' => $_FILES['myFile']['tmp_name'],
+'file_name' => $_FILES['myFile']['name']
+)
+);
+$options = array(
+[...]
+'attachments'    => $attachments,
+[...]
+);
+$msg = Form::sendAdvancedMail($options);</pre>
+                            <p><strong>Multiple files :</strong></p>
+<pre class="prettyprint linenums">$form->addInput('file', 'myFile', '', 'file : ');
+$form->addInput('file', 'mySecondFile', '', 'file : ');
+
+$attachments = array(
+array(
+'file_path' => $_FILES['myFile']['tmp_name'],
+'file_name' => $_FILES['myFile']['name']
+),
+array(
+'file_path' => $_FILES['mySecondFile']['tmp_name'],
+'file_name' => $_FILES['mySecondFile']['name']
+)
+);
+$options = array(
+[...]
+'attachments'    => $attachments,
+[...]
+);
+$msg = Form::sendAdvancedMail($options);</pre>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section>
+                <h2 id="database-main">Database Utilities</h2>
+                <p><a href="http://www.phpclasses.org/ultimatemysql">Jeff L. Williams&#39;s Mysql class</a> is in <code>database</code> folder.</p>
+                <p><strong>Complete Mysql class doc</strong> with <strong>examples queries</strong> is in <code>phpformbuilder/documentation/mysql-class-doc/</code></p>
+                <div class="bg-primary">
+                    <p>Just configure your localhost/production access in <code>phpformbuilder/database/db-connect.php</code>, and you're ready to connect.</p>
+                </div>
+                <article id="database-insert">
+                    <h3>Examples</h3>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Database Insert Example</div>
+                        <div class="panel-body">
+<pre class="prettyprint linenums">use phpformbuilder\database\Mysql;
+
+require_once 'phpformbuilder/database/db-connect.php';
+require_once 'phpformbuilder/database/Mysql.php';
+
+$db = new Mysql();
+$insert['ID'] = Mysql::SQLValue('');
+$insert['username'] = Mysql::SQLValue($_POST['username']);
+$insert['useremail'] = Mysql::SQLValue($_POST['useremail']);
+$insert['userphone'] = Mysql::SQLValue($_POST['userphone']);
+if (!$db->insertRow('YOUR_TABLE', $insert)) {
+$msg = &#039;&lt;p class=&quot;alert alert-danger&quot;&gt;&#039; . $db-&gt;error() . &#039;&lt;br&gt;&#039; . $db-&gt;getLastSql() . &#039;&lt;/p&gt;&#039; . &quot; \n&quot;;
+} else {
+$msg = &#039;&lt;p class=&quot;alert alert-success&quot;&gt;1 row inserted !&lt;/p&gt;&#039; . &quot; \n&quot;;
+}
+echo $msg;</pre>
+                        </div>
+                    </div>
+                </article>
+                <article id="database-update">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Database Update Example</div>
+                        <div class="panel-body">
+<pre class="prettyprint linenums">use phpformbuilder\database\Mysql;
+
+require_once 'phpformbuilder/database/db-connect.php';
+require_once 'phpformbuilder/database/Mysql.php';
+
+$db = new Mysql();
+$filter['ID'] = Mysql::sqlValue($_POST['ID'], Mysql::SQLVALUE_NUMBER);
+$update['username'] = Mysql::SQLValue($_POST['username']);
+$update['useremail'] = Mysql::SQLValue($_POST['useremail']);
+$update['userphone'] = Mysql::SQLValue($_POST['userphone']);
+if (!$db->UpdateRows('YOUR_TABLE', $update, $filter)) {
+$msg = &#039;&lt;p class=&quot;alert alert-danger&quot;&gt;&#039; . $db-&gt;error() . &#039;&lt;br&gt;&#039; . $db-&gt;getLastSql() . &#039;&lt;/p&gt;&#039; . &quot; \n&quot;;
+} else {
+$msg = &#039;&lt;p class=&quot;alert alert-success&quot;&gt;Database updated successfully !&lt;/p&gt;&#039; . &quot; \n&quot;;
+}
+echo $msg;</pre>
+                        </div>
+                    </div>
+                </article>
+                <article id="database-delete">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Database Delete Example</div>
+                        <div class="panel-body">
+<pre class="prettyprint linenums">use phpformbuilder\database\Mysql;
+
+require_once 'phpformbuilder/database/db-connect.php';
+require_once 'phpformbuilder/database/Mysql.php';
+
+$db = new Mysql();
+$filter["ID"] = Mysql::sqlValue($_POST['ID'], Mysql::SQLVALUE_NUMBER);
+if (!$db->deleteRows('YOUR_TABLE', $filter)) {
+$msg = &#039;&lt;p class=&quot;alert alert-danger&quot;&gt;&#039; . $db-&gt;error() . &#039;&lt;br&gt;&#039; . $db-&gt;getLastSql() . &#039;&lt;/p&gt;&#039; . &quot; \n&quot;;
+} else {
+$msg = &#039;&lt;p class=&quot;alert alert-success&quot;&gt;1 row deleted successfully !&lt;/p&gt;&#039; . &quot; \n&quot;;
+}
+echo $msg;</pre>
+                        </div>
+                    </div>
+                </article>
+            </section>
+			<section>
+				<h2 id="credits">Sources &amp; Credits</h2>
+				<p>
+                    Thanks so much to :</p>
+                <ul>
+                    <li>
+                        <a href="https://github.com/blackbelt/php-validation">blackbelt&#39;s php-validation class</a></li>
+                    <li>
+                        <a href="http://www.phpclasses.org/ultimatemysql">Jeff L. Williams&#39;s Mysql class</a></li>
+                    <li>
+                        <a href="http://www.responsivefilemanager.com/">http://www.responsivefilemanager.com/</a></li>
+                    <li>
+                        <a href="http://www.tinymce.com">http://www.tinymce.com</a></li>
+                    <li>
+                        <a href="http://colpick.com/plugin">http://colpick.com/plugin</a></li>
+                    <li>
+                        <a href="http://jqueryui.com/datepicker/">http://jqueryui.com/datepicker/</a></li>
+                    <li>
+                        <a href="https://github.com/jonthornton/jquery-timepicker">https://github.com/jonthornton/jquery-timepicker</a></li>
+                    <li>
+                        <a href="http://keith-wood.name/realPerson.html">http://keith-wood.name/realPerson.html</a></li>
+                    <li>
+                        <a href="https://github.com/blueimp/jQuery-File-Upload">https://github.com/blueimp/jQuery-File-Upload</a></li>
+                    <li>
+                        <a href="https://github.com/PHPMailer/PHPMailer/">https://github.com/PHPMailer/PHPMailer</a></li>
+                    <li>
+                        <a href="https://github.com/jjriv/emogrifier">https://github.com/jjriv/emogrifier</a></li>
+                    <li>
+                        <a href="http://silviomoreto.github.io/bootstrap-select/">http://silviomoreto.github.io/bootstrap-select/</a></li>
+                    <li>
+                        <a href="http://fronteed.com/iCheck/">http://fronteed.com/iCheck/</a></li>
+                    <li>
+                        <a href="http://antelle.github.io/passfield/index.html">http://antelle.github.io/passfield/index.html</a></li>
+                </ul>
+			</section>
+		</div>
+		<!-- jQuery -->
+		<script src="../assets/js/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="../assets/js/bootstrap.min.js"></script>
+        <!-- Google Prettify -->
+        <script src="../assets/js/google-code-prettify/prettify.js"></script>
+        <!-- Iscroll -->
+        <script src="js/iscroll.js"></script>
+        <!-- Form plugins -->
+        <script src="../../phpformbuilder/plugins/tinymce/jquery.tinymce.min.js"></script>
+		<script src="../../phpformbuilder/plugins/colpick/js/colpick.js"></script>
+		<script src="../../phpformbuilder/plugins/timepicker/jquery.timepicker.min.js"></script>
+		<script src="../../phpformbuilder/plugins/jquery-ui/jquery-ui.min.js"></script>
+		<script src="../../phpformbuilder/plugins/jquery-realperson/jquery.plugin.min.js"></script>
+        <script src="../../phpformbuilder/plugins/jquery-realperson/jquery.realperson.min.js"></script>
+        <script src="../../phpformbuilder/plugins/word-character-count/jquery.word-character-count.js"></script>
+		<script src="../../phpformbuilder/plugins/word-character-count/jquery.word-character-count-tinymce.js"></script>
+		<script src="../../phpformbuilder/plugins/jQuery-File-Upload/js/vendor/jquery.ui.widget.js"></script>
+		<script src="../../phpformbuilder/plugins/jQuery-File-Upload/js/jquery.iframe-transport.js"></script>
+		<script src="../../phpformbuilder/plugins/jQuery-File-Upload/js/jquery.fileupload.js"></script>
+		<script src="../../phpformbuilder/plugins/jQuery-File-Upload/js/tmpl.min.js"></script>
+		<script src="../../phpformbuilder/plugins/jQuery-File-Upload/js/load-image.min.js"></script>
+		<script src="../../phpformbuilder/plugins/jQuery-File-Upload/js/canvas-to-blob.min.js"></script>
+		<script src="../../phpformbuilder/plugins/jQuery-File-Upload/js/jquery.fileupload-process.js"></script>
+		<script src="../../phpformbuilder/plugins/jQuery-File-Upload/js/jquery.fileupload-image.js"></script>
+		<script src="../../phpformbuilder/plugins/jQuery-File-Upload/js/jquery.fileupload-validate.js"></script>
+        <script src="../../phpformbuilder/plugins/jQuery-File-Upload/js/jquery.fileupload-ui.js"></script>
+		<script src="../../phpformbuilder/plugins/bootstrap-select/dist/js/bootstrap-select.js"></script>
+        <script src="../../phpformbuilder/plugins/passfield/dist/js/passfield.min.js"></script>
+        <script src="../../phpformbuilder/plugins/icheck/icheck.min.js"></script>
+		<script type="text/javascript">
+		var lastCollapsibleOpened = '';
+        var myScroll;
+			$(document).ready(function() {
+                //handle external links (new window)
+                $('a[href^=http]').bind('click',function(){
+                    window.open($(this).attr('href'));
+                    return false;
+                });
+                // nav scroller
+                myScroll = new IScroll('#navbar', { mouseWheel: true });
+                document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+                // make code pretty
+                window.prettyPrint && prettyPrint();
+                // accordion collapse
+				$("a.collapsible").on('click', function() {
+					if(lastCollapsibleOpened !== '') {
+						$(".collapse").each(function() {
+							if('#' + $(this).attr('id') == lastCollapsibleOpened) {
+								$(this).collapse('hide');
+							}
+						});
+					}
+					var target = $(event.target);
+					lastCollapsibleOpened = target.attr('href');
+				});
+                // scrollspy smoothscroll
+                $("#navbar a[href^='#']").not('[data-toggle="collapse"]').on('click', function(e) {
+                   e.preventDefault();
+                   var hash = this.hash;
+                   $('html, body').animate({
+                       scrollTop: ($(hash).offset().top)
+                     }, 500, function(){
+                       window.location.hash = hash;
+                     });
+
+                });
+                if (typeof(base_url) == "undefined") {
+                    var base_url = location.protocol + '//' + location.host + '/';
+                }
+                $("#content").tinymce({
+
+                    script_url : base_url + 'phpformbuilder/plugins/tinymce/tinymce.min.js',
+                    document_base_url: base_url,
+                    relative_urls: false,
+                    theme: "modern",
+                    language: 'fr_FR',
+                    element_format: "html",
+                    // content_css : "/css/bootstrap.css, /css/main.css",
+                    // menubar: "edit view insert table tools",
+                    plugins: [
+                        "advlist autolink autoresize charmap code codemirror contextmenu fullscreen link lists paste preview table visualblocks textcolor charmap media image responsivefilemanager"
+                    ],
+                    codemirror: {
+                        indentOnInit: true, // Whether or not to indent code on init.
+                        path: 'CodeMirror', // Path to CodeMirror distribution
+                        config: {           // CodeMirror config object
+                           mode: 'application/x-httpd-php' //,
+                           // lineNumbers: false
+                        },
+                        jsFiles: [          // Additional JS files to load
+                           'mode/php/php.js'
+                        ]
+                    },
+                    entity_encoding : "raw",
+                    contextmenu: "link image inserttable | cell row column deletetable",
+                    toolbar: "undo redo | styleselect | bold italic | fontsizeselect | alignleft aligncenter alignright alignjustify | bullist numlist | link image preview | removeformat formats", // add 'responsivefilemanager' to add 'insert file' button
+                    schema: "html5",
+                    /* responsivefilemanager (configure /phpformbuilder/plugins/filemanager/config/config.php) */
+                    external_filemanager_path: base_url + "/phpformbuilder/plugins/filemanager/",
+                    filemanager_title: "Responsive Filemanager" ,
+                    external_plugins: { "filemanager" : base_url + "/phpformbuilder/plugins/filemanager/plugin.min.js"},
+                    /* END responsivefilemanager */
+                    image_advtab: true
+                });
+
+                <!-- IMPORTANT : the code below prevents a bug (impossible focus in plugins fields) with tinyMce in Bootstrap modal -->
+
+                $(document).on('focusin', function(e) {
+                    if ($(event.target).closest(".mce-window").length) {
+                        e.stopImmediatePropagation();
+                    }
+                });
+                $('input[name="human-or-robot"]').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                    radioClass: 'iradio_square-green'
+                });
+                $("#content-word-char-count").tinymce({
+                    init_instance_callback : function(editor) {
+
+                        /* word-character-count init */
+
+                        $('iframe').contents().find('.mce-content-body').wordCharCountTinyMce("#content-word-char-count", {'maxAuthorized': 200});
+                    },
+                    script_url : base_url + 'phpformbuilder/plugins/tinymce/tinymce.min.js',
+                    document_base_url: base_url,
+                    relative_urls: false,
+                    theme: "modern",
+                    language: 'fr_FR',
+                    element_format: "html",
+                    // content_css : "/css/bootstrap.css, /css/main.css",
+                    // menubar: "edit view insert table tools",
+                    plugins: [
+                        "advlist autolink autoresize charmap code codemirror contextmenu fullscreen link lists paste preview table visualblocks textcolor charmap media image responsivefilemanager"
+                    ],
+                    codemirror: {
+                        indentOnInit: true, // Whether or not to indent code on init.
+                        path: 'CodeMirror', // Path to CodeMirror distribution
+                        config: {           // CodeMirror config object
+                           mode: 'application/x-httpd-php' //,
+                           // lineNumbers: false
+                        },
+                        jsFiles: [          // Additional JS files to load
+                           'mode/php/php.js'
+                        ]
+                    },
+                    entity_encoding : "raw",
+                    contextmenu: "link image inserttable | cell row column deletetable",
+                    toolbar: "undo redo | styleselect | bold italic | fontsizeselect | alignleft aligncenter alignright alignjustify | bullist numlist | link image preview | removeformat formats", // add 'responsivefilemanager' to add 'insert file' button
+                    schema: "html5",
+                    /* responsivefilemanager (configure /phpformbuilder/plugins/filemanager/config/config.php) */
+                    external_filemanager_path: base_url + "/phpformbuilder/plugins/filemanager/",
+                    filemanager_title: "Responsive Filemanager" ,
+                    external_plugins: { "filemanager" : base_url + "/phpformbuilder/plugins/filemanager/plugin.min.js"},
+                    /* END responsivefilemanager */
+                    image_advtab: true
+                });
+				$("#defaultColorPicker").colpick({
+					onSubmit:function(hsb,hex,rgb,el) {
+						$(el).val('#'+hex);
+						$(el).colpickHide();
+					}
+				});
+				$("#myCustomColorPicker").colpick({
+					colorScheme:'dark',
+					layout:'rgbhex',
+					color:'ff8800',
+					onSubmit:function(hsb,hex,rgb,el) {
+						$(el).val('you choosed #'+hex).css('color', '#'+hex);
+						$(el).colpickHide();
+					}
+				});
+				$("#myTimePicker").timepicker();
+				$("#myDatePicker").datepicker();
+				$("#captcha").realperson({
+					length: 6,
+					regenerate:'Click to change',
+					dot: '#'
+				});
+                $('#message').wordCharCount({'maxAuthorized': 200});
+                $("#user-password").wrap('<div id="#user-password-wrap">').passField({
+                    pattern: "abcdeF"
+                });
+			});
+		</script>
+	<script id="template-upload" type="text/x-tmpl">
+		{% for (var i=0, file; file=o.files[i]; i++) { %}
+		<tr class="template-upload fade">
+			<td>
+				<span class="preview"></span>
+			</td>
+			<td>
+				<p class="name">{%=file.name%}</p>
+				<strong class="error text-danger"></strong>
+			</td>
+			<td>
+				<p class="size">Processing...</p>
+				<div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-bar progress-bar-success" style="width:0%;"></div></div>
+			</td>
+			<td>
+				{% if (!i && !o.options.autoUpload) { %}
+				<button class="btn btn-primary start" disabled>
+					<i class="glyphicon glyphicon-upload"></i>
+					<span>Start</span>
+				</button>
+				{% } %}
+				{% if (!i) { %}
+				<button class="btn btn-warning cancel">
+					<i class="glyphicon glyphicon-ban-circle"></i>
+					<span>Cancel</span>
+				</button>
+				{% } %}
+			</td>
+		</tr>
+		{% } %}
+	</script>
+	<!-- The template to display files available for download -->
+	<script id="template-download" type="text/x-tmpl">
+		{% for (var i=0, file; file=o.files[i]; i++) { %}
+		<tr class="template-download fade">
+			<td>
+				<input type="hidden" name="file-upload[]" value="{%=file.name%}">
+				<span class="preview">
+					{% if (file.thumbnailUrl) { %}
+					<a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery><img src="{%=file.thumbnailUrl%}"></a>
+					{% } %}
+				</span>
+			</td>
+			<td>
+				<p class="name">
+					{% if (file.url) { %}
+					<a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" {%=file.thumbnailUrl?'data-gallery':''%}>{%=file.name%}</a>
+					{% } else { %}
+					<span>{%=file.name%}</span>
+					{% } %}
+				</p>
+				{% if (file.error) { %}
+				<div><span class="label label-danger">Error</span> {%=file.error%}</div>
+				{% } %}
+			</td>
+			<td>
+				<span class="size">{%=o.formatFileSize(file.size)%}</span>
+			</td>
+			<td>
+				{% if (file.deleteUrl) { %}
+				{%
+					var deleteUrl = file.deleteUrl;
+					deleteUrl = deleteUrl.replace('?file', 'imageFileUpload.php?file');
+					%}
+					<button class="btn btn-danger delete" data-type="{%=file.deleteType%}" data-url="{%=deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+						<i class="glyphicon glyphicon-trash"></i>
+						<span>Delete</span>
+					</button>
+					{% } else { %}
+					<button class="btn btn-warning cancel">
+						<i class="glyphicon glyphicon-ban-circle"></i>
+						<span>Cancel</span>
+					</button>
+					{% } %}
+				</td>
+			</tr>
+			{% } %}
+		</script>
+		<script>
+			$(function () {
+				'use strict';
+
+			    // Initialize the jQuery File Upload widget:
+			    $('#fileupload-test').fileupload({
+			    	url: '../../phpformbuilder/plugins/jQuery-File-Upload/server/php/imageFileUpload.php',
+			    	maxNumberOfFiles: 2
+			    });
+			});
+		</script>
+	</body>
+</html>
