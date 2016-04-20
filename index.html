@@ -10,19 +10,11 @@ $fields = isset($_SESSION['fields']) ? $_SESSION['fields'] : '';
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- ============ LOCATIONS INVOLVED ============ -->
+
+
+
+
 
 
 
@@ -154,7 +146,7 @@ $fields = isset($_SESSION['fields']) ? $_SESSION['fields'] : '';
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Lisa &amp; Matty | 07.31.16</title>
 
   <!-- Custom styles -->
 <link rel="stylesheet" href="css/all-styles.css">
@@ -217,18 +209,19 @@ catch(e){window.attachEvent("onload", $buo_f)}
         <!-- import "sections/slider.kit" -->
 
         <!-- import "sections/splash-photo.kit" -->
-
+        
         <!-- import "sections/experiment.kit" -->
-        <section id="experiment2">
-  <div class="wrap">
-    <div id="logo">
-      <a href="#details" class="smoothscroll">
-        <img class="center-block img-responsive" src="img/logo-600w.png">
-      </a>
-    </div>
+
+        <!-- import "sections/experiment2.kit" -->
+
+    <section id="first">
+
+  <div id="logo" style="padding: 50px 0">
+    <a href="#details" class="smoothscroll" style="opacity:1; cursor: crosshair;"><img class="center-block img-responsive" src="img/invite_front.png"></a>
   </div>
+
 </section>
-        <div class="nav-wrapper" style="height:51px;">
+    <div class="nav-wrapper" style="height:51px;">
   <nav id="nav" class="navbar navbar-inverse" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -238,22 +231,15 @@ catch(e){window.attachEvent("onload", $buo_f)}
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <!-- <a class="navbar-brand-centered" href="#">
-          <img src="http://placehold.it/200x50&text=@1x" srcset="http://placehold.it/200x50&text=@1x 1x, http://placehold.it/400x100&text=@2x 2x" alt="image" width="200" height="50">  
-        </a> -->
+        
       </div>
       <div class="collapse navbar-collapse" id="navbar-brand-centered">
         <ul class="nav nav-justified">
-        <!-- <ul class="nav navbar-nav"> -->
-          <li><a class="smoothscroll" href="#details">Details</a></li>
-          <li><a class="smoothscroll" href="#directions">Directions</a></li>
-          <li><a class="smoothscroll hidden-xs" href="#"><span class="secret">hidden</span></a></li>          
-          
-       <!--  </ul> -->
-        <!--  <ul class="nav navbar-nav navbar-right"> -->
-          
-          <li><a class="smoothscroll" href="#registries">Registry</a></li>
-          <li><a class="smoothscroll" href="#rsvp">RSVP</a></li>           
+          <li><a class="smoothscroll" href="#details">details</a></li>
+          <li><a class="smoothscroll" href="#directions">directions</a></li>
+          <li><a class="smoothscroll" href="#accommodations">accommodations</a></li>          
+          <li><a class="smoothscroll" href="#registries">registry</a></li>
+          <li><a class="smoothscroll" href="#rsvp">rsvp</a></li>           
         </ul>
       </div>
     </div>
@@ -266,71 +252,50 @@ catch(e){window.attachEvent("onload", $buo_f)}
 <script>
   // init controller
   var controller = new ScrollMagic.Controller();
-</script>        
+</script>      
 
-        
+        <!-- import "sections/home.kit" -->
 
-            <!-- import "sections/home.kit" -->
+        <!-- import "sections/about.kit" -->
 
-            <!-- import "sections/about.kit" -->
-
-        <section id="details" class="section full_width">
-	<div class="container-fluid">
+    <section id="details" class="section full_width">
+	<div class="container">
 		<div class="row">
 
-			<!-- <span class="flowers-left"></span><span class="flowers-right"></span> -->
-
-
-
 			<div class="col-md-12">
-
-				<!-- Desktop Flowers -->
-				<div class="hidden-xs">
-					<img class="flowers-desktop-left" src="img/2left.svg">
-					<img class="flowers-desktop-right" src="img/2right.svg">
-				</div>
-
-				<!-- Mobile Flowers -->
-				<div class="visible-xs">
-					<img class="flowers-mobile-top-left" src="img/mobile_2_topleft.svg">
-					<img class="flowers-mobile-top-right" src="img/mobile_2_topright.svg">
-					<img class="flowers-mobile-bottom-left" src="img/mobile_2_bottomleft.svg">
-					<img class="flowers-mobile-bottom-right" src="img/mobile_2_bottomright.svg">
-				</div>
-
+				<img class="center-block img-responsive topimg" src="img/flowerbunch.png">
 				<p class="details-intro">
-									</p>
+					Together <span class="icon-with-01"></span> their families,				</p>
 				<h4 id="the-couple">
-					 &amp; 				</h4>
+					Lisa Rosenberg &amp; Matthew Jeronimo				</h4>
 				<p class="details-intro">
-									</p>
-				<p id="wedding-date-long-form" class="text-smallcaps">
-					              
+					happily invite you to celebrate their marriage!				</p>
+				<img class="center-block img-responsive divider" src="img/divider.png">
+				<p id="wedding-date">
+					July 31, 2016              
 				</p>
-				<p id="occasion-start" class="text-uppercase">
-								</p>
+				<p id="occasion-start">
+				at five o'clock in the evening				</p>
 
 				<p id="ceremony-venue">
-					<br>
-						   
+					<span class="icon-at"></span>
+					Baypony Farm</p>
+				<p id="ceremony-address">	
+					33140 SW Ladd Hill Road <br/> Wilsonville, Oregon	   
 				</p>
-				<p id="details-heading">
-					The details
-				</p>
-				<p id="ceremony-start">
-					 Vows
-				</p>
-				<p id="reception-start-time">
-					 Cocktail Hour
-				</p>
-				<p id="reception-dinner-start-time">
-					 Dinner &amp; Dancing
-				</p>
-
+				
 				<p id="details-outro">
-									</p>
+					dinner &amp; dancing to follow				</p>
+				<img class="center-block img-responsive divider" src="img/divider2.png">
 
-
+				<p id="secondary-text">
+					please join us for brunch				</p>
+				<p id="secondary-info">
+					monday, august 1st at 11am<br/>
+					portland city grill<br/>
+					#11 5th avenue, portland<br/>
+				</p>
+				<img class="center-block img-responsive btmimg" src="img/flower.png">
 			</div>
 
 		</div>
@@ -338,13 +303,10 @@ catch(e){window.attachEvent("onload", $buo_f)}
 </section>           
         <!-- import "sections/photo-bg-1.kit" -->
         
-        
-        
-            <!-- import "sections/info.kit" -->
+        <!-- import "sections/info.kit" -->
 
-        <section id="map-section">
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzuo78SYYb2nLunYVodCY-nt7Lc_2ljc8&sensor=false"></script>
-
+    <section id="map-section">
+ 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzuo78SYYb2nLunYVodCY-nt7Lc_2ljc8&sensor=false"></script>
 	<script type="text/javascript">
 	  // When the window has finished loading create our google map below
 	  google.maps.event.addDomListener(window, 'load', init);
@@ -354,13 +316,13 @@ catch(e){window.attachEvent("onload", $buo_f)}
 	      // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
 	      var mapOptions = {
 	          // How zoomed in you want the map to start at (always required)
-	          zoom: 17,
+	          zoom: 13,
 	          scrollwheel: false,
 	          mapTypeControl: false,
 	          streetViewControl: false,
 
 	          // The latitude and longitude to center the map (always required)
-	          center: new google.maps.LatLng(43.654621, -79.365441),
+	          center: new google.maps.LatLng(45.299842, -122.773706),
 
 	          // How you would like to style the map. 
 	          styles:[
@@ -369,7 +331,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 	          	"elementType": "labels.text",
 	          	"stylers": [
 	          	{
-	          		"hue": "#820ef5"
+	          		"hue": "#31464b"
 	          	}
 	          	]
 	          },
@@ -378,7 +340,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 	          	"elementType": "all",
 	          	"stylers": [
 	          	{
-	          		"color": "#dea5a0"
+	          		"color": "#f7a41b"
 	          	},
 	          	{
 	          		"saturation": -50
@@ -393,7 +355,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 	          	"elementType": "geometry",
 	          	"stylers": [
 	          	{
-	          		"color": "#b1bb95"
+	          		"color": "#b4b97e"
 	          	}
 	          	]
 	          },
@@ -402,7 +364,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 	          	"elementType": "geometry",
 	          	"stylers": [
 	          	{
-	          		"color": "#c65771"
+	          		"color": "#fdbe10"
 	          	}
 	          	]
 	          },
@@ -411,7 +373,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 	          	"elementType": "geometry",
 	          	"stylers": [
 	          	{
-	          		"color": "#f2f0ee"
+	          		"color": "#000"
 	          	}
 	          	]
 	          },
@@ -429,10 +391,21 @@ catch(e){window.attachEvent("onload", $buo_f)}
 	          	"elementType": "all",
 	          	"stylers": [
 	          	{
-	          		"color": "#c7e3e2"
+	          		"color": "#9db6b6"
 	          	}
 	          	]
-	          }
+	          },
+
+			  {
+			  	"featureType":"poi.business",
+			  	"elementType":"geometry.fill",
+			  	"stylers":[
+			  	{
+			  		"color":"#b4b97e"
+			  	}
+			  	]
+			  }
+
 	          ]
 	        };
 
@@ -441,31 +414,117 @@ catch(e){window.attachEvent("onload", $buo_f)}
 	        var map = new google.maps.Map(mapElement, mapOptions);
 
 	      // map marker
-	      var image = 'img/marker2.png';
+	      var image = 'img/barn.png';
 	      var marker = new google.maps.Marker({
-	      	position: {lat: 43.655094, lng: -79.366137},
+	      	position: {lat: 45.279798, lng: -122.85549},
 	      	map: map,
 	      	icon: image,
-	      	title: 'The Berkley Fieldhouse'
+	      	title: 'Baypony Farm'
 	      });
 	    }
 	</script>
 
 	<div id="map"></div>
-
-<!-- <div class="legend beveled-corner-box" style="position:relative; bottom: -10px; z-index: 999999">
-    <h3>Legend</h3>
-  </div> -->
-
-</section>        <section id="directions">
+</section>        
+    <section id="directions">
 	<div class="container">
 	    <div class="row">
+	    	<div class="col-xs-12">
+	    		<p id="heading">Directions</p>
+			</div>
+	        <div class="col-xs-12">
+	            <p class="directions-intro">Wilsonville is about 19 miles (30 km) South of Portland, OR and 29 miles North of Salem, OR.  The wedding will be at 33140 SW Ladd Hill Road, Wilsonville, OR. </p>
+	            <hr>
+	        </div>
+	    </div>    
+	    <div id="row2" class="row">
+	        <div class="col-sm-4">
+	            <p id="heading-sm">From I-5, heading south, from Portland:</p>
+	            <ul>
+					<li>
+						<p>Exit the freeway at the Wilsonville exit #283</p>
+					</li>
+					<li>
+						<p>Turn right onto Wilsonville Road</p>
+					</li>
+					<li>
+						<p>Go about 5.5 miles (8.8 km) to Ladd Hill Road</p>
+					</li>
+					<li>
+						<p>Turn right on to Ladd Hill Road</p>
+					</li>
+					<li>
+						<p>Go about one mile (1.6 km) up the hill and the house will be on the right</p>
+					</li>
+				</ul>
+	        </div>
+	        <div class="col-sm-4">
+	            <p id="heading-sm">From I-5, heading north, from Salem:</p>
+	        	<ul>
+	        		<li>
+	        			<p>Exit the freeway at the Wilsonville exit #283</p>
+	        		</li>
+	        		<li>
+	        			<p>Turn left onto Wilsonville Road</p>
+	        		</li>
+	        		<li>
+	        			<p>Go about 5.5 miles (8.8 km) to Ladd Hill Road</p>
+	        		</li>
+	        		<li>
+	        			<p>Turn right on to Ladd Hill Road</p>
+	        		</li>
+	        		<li>
+	        			<p>Go about one mile (1.6 km) up the hill and the house will be on the right</p>
+	        		</li>
+	        	</ul>
+	        </div>
+	        <div class="col-sm-4">
+	            <p id="heading-sm">From downtown Newberg:</p>
+	           	<ul>
+	        		<li>
+	        			<p>Head east on 1st St</p>
+	        		</li>
+	        		<li>
+	        			<p>Stay right and continue on to OR-219 South; the road will bend to the right</p>
+	        		</li>
+	        		<li>
+	        			<p>Turn left on Springbrook</p>
+	        		</li>
+	        		<li>
+	        			<p>Turn at the first right, which will be Wilsonville Road</p>
+	        		</li>
+	        		<li>
+	        			<p> Head about 7.5 miles down Wilsonville Road and turn left at Ladd Hill Road</p>
+	        		</li>
+	        		<li>
+	        			<p>Go about one mile (1.6 km) up the hill and the house will be on the right</p>
+	        		</li>  		
+	        	</ul>
+	        </div>
+	    </div>
+		<div id="row3" class="row">
+			<div class="col-xs-12">
+	            <p class="directions-outro">The mailbox, with the house number, is on the left side of the street and the house is directly across. There will be decorations and signs to help you find the place and people to assist with parking once you get there.</p>
+	            <hr>
+	            <p class="directions-notes">NOTE: If you’re using a GPS and it directs you to turn on Edminston Road, please follow the above directions instead. Edminston intersects Ladd Hill Road at point where Ladd Hill Road makes a 90 degree angle and many people get confused and take the wrong turn when going this way.</p>
+	        </div>
+		</div>
+	</div>
+</section> 
+
+        
+    <section id="accommodations" class="section container">
+<div class="container">
+	    <div class="row">
+	    	<div class="col-xs-12">
+	    		<p id="heading">Accommodations</p>
+			</div>
 	        <div class="col-sm-6">
-	            <p id="heading">Transit</p>
+	            <!-- <p id="heading-sm">Transit</p> -->
 	            <p></p>
 	        </div>
 	        <div class="col-sm-6">
-	            <p id="heading">Driving</p>
+	            <!-- <p id="heading-sm">Driving</p> -->
 	            <p></p>
 	        </div>
 	    </div>
@@ -476,50 +535,43 @@ catch(e){window.attachEvent("onload", $buo_f)}
 	        </div>
 	    </div>-->
 	</div>
-</section>         
-            <!-- import "sections/accomodations.kit" -->
-
-        <section id="photo-bg-2" class="section full_width">
 </section>
-        <section id="registries">
+        <!-- import "sections/photo-bg-2.kit" -->
+
+    <section id="registries">
 	<div class="container">
 		<div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 ">
-				<img id="flowers" class="center-block" src="img/4center_fo.svg">
+				<!-- <img id="flowers" class="center-block" src="img/4center_fo.svg"> -->
 					
-				<div class="beveled-corner-box">
+				
 					<p class="registry-header">
-											</p>
+						gift registry					</p>
 					<p class="registry-info">
-												<a href="" target="_blank"></a>. 
-						<br/>Our registry number is .
-
-
-
-						<a href="" target="_blank"></a><a href="" target="_blank"></a>
+						while your presence is the only gift we need, if you'd like to help us celebrate, we are registered at						<a href="" target="_blank">place one</a>,
+						<a href="" target="_blank">place two</a>, and 
+						<a href="" target="_blank">place three</a>.
 					</p>
-				</div>
+				
 			
 			</div>
 		</div>
 	</div>
 </section>        
-            <!-- import "sections/quote.kit" -->
+        <!-- import "sections/quote.kit" -->
 
-            <!-- import "sections/countdown.kit" -->
+        <!-- import "sections/countdown.kit" -->
 
-            <!-- import "sections/timeline.kit" -->
+        <!-- import "sections/timeline.kit" -->
 
-            <!-- import "sections/gallery.kit" -->
+        <!-- import "sections/gallery.kit" -->
 
-            <!-- import "sections/agenda.kit" -->
+        <!-- import "sections/agenda.kit" -->
 
-            <!-- import "sections/faq.kit" -->
-
-            <!-- import "sections/music.kit" -->
+        <!-- import "sections/music.kit" -->
         
-        <section id="photo-bg-3" class="section full_width">
-</section>
-        <section id="rsvp">
+        <!-- import "sections/photo-bg-3.kit" -->
+
+    <section id="rsvp">
 	<div class="container">
 		<div class="row">
 
@@ -530,7 +582,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 					<form class="" name="sentMessage" action="sendmail.php" method="post">
 						<div id="flower-row" class="row">
 							<div class="col-xs-6 col-xs-offset-3 col-sm-8 col-sm-offset-2">
-								<img class="img-responsive" id="don" src="img/rsvp.svg">
+								<!-- <img class="img-responsive" id="don" src="img/rsvp.svg"> -->
 							</div>
 						</div>
 
@@ -682,9 +734,32 @@ catch(e){window.attachEvent("onload", $buo_f)}
 
 
         
-            <!-- import "sections/rsvp-alt.kit" -->
+        <!-- import "sections/rsvp-alt.kit" -->
 
-        <section id="outro" class="section container">
+    <section id="faq" class="section container">
+<div class="container">
+	    <div class="row">
+	    	<div class="col-xs-12">
+	    		<p id="heading">FAQ</p>
+			</div>
+	        <div class="col-sm-6">
+	            <!-- <p id="heading-sm">Transit</p> -->
+	            <p></p>
+	        </div>
+	        <div class="col-sm-6">
+	            <!-- <p id="heading-sm">Driving</p> -->
+	            <p></p>
+	        </div>
+	    </div>
+		<!--<div id="row2" class="row">
+	        <div class="col-xs-12">
+	            <p id="heading">Parking</p>
+	            <p></p>
+	        </div>
+	    </div>-->
+	</div>
+</section>
+    <section id="outro" class="section container">
   <div class="col-md-4 col-sm-6">
 
 	<div class="beveled-corner-box">
@@ -696,8 +771,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 
   </div>
 </section>
-
-        <!-- SKROLLR -->
+    <!-- SKROLLR -->
 <!-- <script src="https://prinzhorn.github.io/skrollr/dist/skrollr.min.js"></script> -->
 <script type="text/javascript">
     // var s = skrollr.init();

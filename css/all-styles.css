@@ -1072,7 +1072,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "nexarustsans-book", Arial, Helvetica, sans-serif;
+  font-family: "ariadnesans-regular", Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -1087,12 +1087,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #2c523c;
+  color: #4e686c;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #112018;
+  color: #2e3d40;
   text-decoration: underline;
 }
 a:focus {
@@ -3104,25 +3104,25 @@ fieldset[disabled] .btn-default.focus {
   background-color: #333;
 }
 .btn-primary {
-  color: #2c523c;
+  color: #4e686c;
   background-color: #fffffe;
   border-color: #fffffe;
 }
 .btn-primary:focus,
 .btn-primary.focus {
-  color: #2c523c;
+  color: #4e686c;
   background-color: #ffffcb;
   border-color: #ffff7f;
 }
 .btn-primary:hover {
-  color: #2c523c;
+  color: #4e686c;
   background-color: #ffffcb;
   border-color: #ffffc1;
 }
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-  color: #2c523c;
+  color: #4e686c;
   background-color: #ffffcb;
   border-color: #ffffc1;
 }
@@ -3135,7 +3135,7 @@ fieldset[disabled] .btn-default.focus {
 .btn-primary:active.focus,
 .btn-primary.active.focus,
 .open > .dropdown-toggle.btn-primary.focus {
-  color: #2c523c;
+  color: #4e686c;
   background-color: #ffffa7;
   border-color: #ffff7f;
 }
@@ -3158,7 +3158,7 @@ fieldset[disabled] .btn-primary.focus {
 }
 .btn-primary .badge {
   color: #fffffe;
-  background-color: #2c523c;
+  background-color: #4e686c;
 }
 .btn-success {
   color: #fff;
@@ -3389,7 +3389,7 @@ fieldset[disabled] .btn-danger.focus {
   background-color: #fff;
 }
 .btn-link {
-  color: #2c523c;
+  color: #4e686c;
   font-weight: normal;
   border-radius: 0;
 }
@@ -3410,7 +3410,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #112018;
+  color: #2e3d40;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -3990,7 +3990,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #2c523c;
+  border-color: #4e686c;
 }
 .nav .nav-divider {
   height: 1px;
@@ -4727,7 +4727,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 6px 12px;
   line-height: 1.42857143;
   text-decoration: none;
-  color: #2c523c;
+  color: #4e686c;
   background-color: #fff;
   border: 1px solid #ddd;
   margin-left: -1px;
@@ -4748,7 +4748,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > a:focus,
 .pagination > li > span:focus {
   z-index: 2;
-  color: #112018;
+  color: #2e3d40;
   background-color: #eeeeee;
   border-color: #ddd;
 }
@@ -4946,7 +4946,7 @@ a.badge:focus {
 }
 .list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #2c523c;
+  color: #4e686c;
   background-color: #fff;
 }
 .list-group-item > .badge {
@@ -5021,7 +5021,7 @@ a.badge:focus {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #2c523c;
+  border-color: #4e686c;
 }
 .thumbnail .caption {
   padding: 9px;
@@ -5984,7 +5984,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "nexarustsans-book", Arial, Helvetica, sans-serif;
+  font-family: "ariadnesans-regular", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6102,7 +6102,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "nexarustsans-book", Arial, Helvetica, sans-serif;
+  font-family: "ariadnesans-regular", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -8832,18 +8832,47 @@ button.close {
   content: "\f295";
 }
 @font-face {
-  font-family: 'nexarustsans-book';
-  src: url('../fonts/nexarustsans-book-webfont.eot');
+  font-family: 'ariadnesans-condensed';
+  src: url('../fonts/ariadnesans-condensed-webfont.eot');
   /* IE9 Compat Modes */
-  src: url('../fonts/nexarustsans-book-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/nexarustsans-book-webfont.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/nexarustsans-book-webfont.woff') format('woff'), /* Pretty Modern Browsers */ url('../fonts/nexarustsans-book-webfont.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/nexarustsans-book-webfont.svg#nexarustsans-book-webfont') format('svg');
+  src: url('../fonts/ariadnesans-condensed-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/ariadnesans-condensed-webfont.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/ariadnesans-condensed-webfont.woff') format('woff'), /* Pretty Modern Browsers */ url('../fonts/ariadnesans-condensed-webfont.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/ariadnesans-condensed-webfont.svg#ariadnesans-condensed-webfont') format('svg');
   /* Legacy iOS */
 }
 @font-face {
-  font-family: 'jacquesfrancois-regular';
-  src: url('../fonts/jacquesfrancois-regular-webfont.eot');
+  font-family: 'ariadnesans-regular';
+  src: url('../fonts/ariadnesans-regular-webfont.eot');
   /* IE9 Compat Modes */
-  src: url('../fonts/jacquesfrancois-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/jacquesfrancois-regular-webfont.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/jacquesfrancois-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */ url('../fonts/jacquesfrancois-regular-webfont.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/jacquesfrancois-regular-webfont.svg#jacquesfrancois-regular-webfont') format('svg');
+  src: url('../fonts/ariadnesans-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/ariadnesans-regular-webfont.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/ariadnesans-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */ url('../fonts/ariadnesans-regular-webfont.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/ariadnesans-regular-webfont.svg#ariadnesans-cregularwebfont') format('svg');
   /* Legacy iOS */
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot');
+  src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf') format('truetype'), url('../fonts/icomoon.woff') format('woff'), url('../fonts/icomoon.svg?#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-at:before {
+  content: "\e900";
+}
+.icon-to:before {
+  content: "\e901";
+}
+.icon-with-01:before {
+  content: "\e902";
 }
 html,
 body {
@@ -8873,14 +8902,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "nexarustsans-book", Arial, Helvetica, sans-serif;
-  color: #2c523c;
+  font-family: "ariadnesans-regular", Arial, Helvetica, sans-serif;
+  color: #4e686c;
 }
 p,
 label {
-  font-family: "jacquesfrancois-regular", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: "ariadnesans-condensed", "Palatino Linotype", "Book Antiqua", Palatino, serif;
   line-height: 1.5em;
-  color: #2c523c;
+  color: #4e686c;
   font-weight: normal;
 }
 h1,
@@ -8893,7 +8922,7 @@ h6 {
   text-align: center;
 }
 a {
-  color: #2c523c;
+  color: #4e686c;
   text-decoration: underline;
 }
 a:hover {
@@ -8904,12 +8933,14 @@ a:hover {
   margin-bottom: 0;
   border: 0;
   transition: box-shadow 3s ease;
+  font-size: 25px;
 }
 .navbar-fixed-top {
   transition: box-shadow 3s ease;
 }
 .navbar-inverse {
   z-index: 9999;
+  background-color: #e7bf56;
 }
 #navbar-brand-centered {
   padding-left: 0px;
@@ -8937,11 +8968,11 @@ a:hover {
   border: none;
 }
 .navbar-inverse .navbar-toggle .icon-bar {
-  background-color: #d5b06c;
+  background-color: #4e686c;
 }
 .navbar-inverse .navbar-nav > li > a {
   text-decoration: none;
-  color: #2c523c;
+  color: #4e686c;
   /*==========  Mobile First Method  ==========*/
   /* XXS */
   /* XS  */
@@ -8980,12 +9011,12 @@ a:hover {
   }
 }
 .navbar-inverse .navbar-nav > li > a:hover {
-  color: #2c523c;
+  color: #4e686c;
   text-decoration: underline;
   opacity: 0.7;
 }
 .navbar-inverse .navbar-nav > li > a:active {
-  color: #2c523c;
+  color: #4e686c;
   text-decoration: underline;
   opacity: 0.7;
 }
@@ -9013,7 +9044,7 @@ a:hover {
   padding-top: 15px;
   padding-bottom: 15px;
   margin-bottom: 0;
-  color: #2c523c;
+  color: #4e686c;
   text-decoration: none;
   /*==========  Mobile First Method  ==========*/
   /* XXS */
@@ -9032,13 +9063,9 @@ a:hover {
     text-align: center;
   }
 }
-.nav-justified > li > a > .secret {
-  color: #fbf6ef;
-  padding: 30px;
-}
 .nav > li > a:hover {
   background-color: inherit;
-  text-decoration: none;
+  text-decoration: underline dashed;
 }
 /* ========== ANIMATED HAMBURGER ========== */
 .navbar-toggle .icon-bar {
@@ -9073,12 +9100,12 @@ a:hover {
   transform: rotate(-45deg);
 }
 .beveled-corner-box {
-  background: #f7f0e3;
+  background: #fffaf0;
   /* fallback */
-  background: linear-gradient(135deg, transparent 10px, #f7f0e3 0) top left, linear-gradient(225deg, transparent 10px, #f7f0e3 0) top right, linear-gradient(315deg, transparent 10px, #f7f0e3 0) bottom right, linear-gradient(45deg, transparent 10px, #f7f0e3 0) bottom left;
+  background: linear-gradient(135deg, transparent 10px, #fffaf0 0) top left, linear-gradient(225deg, transparent 10px, #fffaf0 0) top right, linear-gradient(315deg, transparent 10px, #fffaf0 0) bottom right, linear-gradient(45deg, transparent 10px, #fffaf0 0) bottom left;
   background-size: 51% 51%;
   background-repeat: no-repeat;
-  background-image: radial-gradient(circle at 0 0, rgba(204, 0, 0, 0) 14px, #f7f0e3 15px), radial-gradient(circle at 100% 0, rgba(204, 0, 0, 0) 14px, #f7f0e3 15px), radial-gradient(circle at 100% 100%, rgba(204, 0, 0, 0) 14px, #f7f0e3 15px), radial-gradient(circle at 0 100%, rgba(204, 0, 0, 0) 14px, #f7f0e3 15px);
+  background-image: radial-gradient(circle at 0 0, rgba(204, 0, 0, 0) 14px, #fffaf0 15px), radial-gradient(circle at 100% 0, rgba(204, 0, 0, 0) 14px, #fffaf0 15px), radial-gradient(circle at 100% 100%, rgba(204, 0, 0, 0) 14px, #fffaf0 15px), radial-gradient(circle at 0 100%, rgba(204, 0, 0, 0) 14px, #fffaf0 15px);
 }
 .alert {
   border-radius: 0px;
@@ -9235,62 +9262,48 @@ body {
   background-color: #ffffff;
   background-image: url('../img/background-1.gif');
   background-repeat: repeat;
-  padding-top: 4em;
-}
-#details h1,
-#details h2,
-#details h3,
-#details h4,
-#details h5,
-#details h6,
-#details p,
-#details a {
-  white-space: nowrap;
+  padding-top: 3em;
 }
 #details p:last-child {
   margin-bottom: 4em;
 }
-#details .flowers-desktop-left {
-  position: absolute;
-  top: -4em;
-  left: 0;
-  height: 110%;
-  width: auto;
+#details .topimg {
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
 }
-#details .flowers-desktop-right {
-  position: absolute;
-  top: -4em;
-  right: 0;
-  height: 110%;
-  width: auto;
+@media only screen and (min-width: 320px) {
+  #details .topimg {
+    width: 200px;
+    padding-bottom: 10px;
+  }
 }
-#details .flowers-mobile-top-left {
-  position: absolute;
-  left: 0;
-  height: 20%;
-  width: auto;
-  top: -4em;
+@media only screen and (min-width: 480px) {
+  #details .topimg {
+    width: 250px;
+    padding-bottom: 20px;
+  }
 }
-#details .flowers-mobile-top-right {
-  position: absolute;
-  right: 0;
-  height: 20%;
-  width: auto;
-  top: -4em;
+@media only screen and (min-width: 768px) {
+  #details .topimg {
+    width: 250px;
+    padding-bottom: 20px;
+  }
 }
-#details .flowers-mobile-bottom-left {
-  position: absolute;
-  left: 0;
-  height: 20%;
-  width: auto;
-  bottom: -4em;
+@media only screen and (min-width: 992px) {
+  #details .topimg {
+    width: 250px;
+    padding-bottom: 20px;
+  }
 }
-#details .flowers-mobile-bottom-right {
-  position: absolute;
-  right: 0;
-  height: 20%;
-  width: auto;
-  bottom: -4em;
+@media only screen and (min-width: 1200px) {
+  #details .topimg {
+    width: 250px;
+    padding-bottom: 20px;
+  }
 }
 #details .details-intro {
   line-height: 1em;
@@ -9303,32 +9316,70 @@ body {
 }
 @media only screen and (min-width: 320px) {
   #details .details-intro {
-    font-size: 3.5vw;
+    font-size: 8vw;
   }
 }
 @media only screen and (min-width: 480px) {
   #details .details-intro {
-    font-size: 3.2vw;
+    font-size: 7vw;
   }
 }
 @media only screen and (min-width: 768px) {
   #details .details-intro {
-    font-size: 3vw;
+    font-size: 4.5vw;
   }
 }
 @media only screen and (min-width: 992px) {
   #details .details-intro {
-    font-size: 2.8vw;
+    font-size: 4vw;
   }
 }
 @media only screen and (min-width: 1200px) {
   #details .details-intro {
-    font-size: 2.4vw;
+    font-size: 3.5vw;
+  }
+}
+#details .icon-with-01:before {
+  content: "\e902";
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #details .icon-with-01:before {
+    font-size: 9vw;
+    vertical-align: -7px;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #details .icon-with-01:before {
+    font-size: 10vw;
+    vertical-align: -10px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #details .icon-with-01:before {
+    font-size: 6vw;
+    vertical-align: -12px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #details .icon-with-01:before {
+    font-size: 5vw;
+    vertical-align: -10px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #details .icon-with-01:before {
+    font-size: 4.5vw;
+    vertical-align: -15px;
   }
 }
 #details #the-couple {
-  margin-top: 0.2em;
-  margin-bottom: 0.2em;
+  color: #689079;
   /*==========  Mobile First Method  ==========*/
   /* XXS */
   /* XS  */
@@ -9338,34 +9389,103 @@ body {
 }
 @media only screen and (min-width: 320px) {
   #details #the-couple {
-    font-size: 4vw;
+    font-size: 10vw;
+    line-height: .9;
   }
 }
 @media only screen and (min-width: 480px) {
   #details #the-couple {
-    font-size: 3.7vw;
+    font-size: 10vw;
   }
 }
 @media only screen and (min-width: 768px) {
   #details #the-couple {
-    font-size: 3.5vw;
+    font-size: 5.5vw;
   }
 }
 @media only screen and (min-width: 992px) {
   #details #the-couple {
-    font-size: 3.3vw;
+    font-size: 5vw;
   }
 }
 @media only screen and (min-width: 1200px) {
   #details #the-couple {
-    font-size: 2.9vw;
+    font-size: 5vw;
   }
 }
-#details #wedding-date-long-form {
-  margin-top: 1.5em;
-  margin-bottom: 0.2em;
-  font-variant: small-caps;
-  font-weight: 100;
+#details .divider {
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #details .divider {
+    width: 150px;
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #details .divider {
+    width: 200px;
+    padding-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #details .divider {
+    width: 250px;
+    padding-bottom: 40px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #details .divider {
+    width: 250px;
+    padding-bottom: 40px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #details .divider {
+    width: 255px;
+    padding-bottom: 40px;
+  }
+}
+#details #wedding-date {
+  line-height: .2em;
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #details #wedding-date {
+    font-size: 7.5vw;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #details #wedding-date {
+    font-size: 6.5vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #details #wedding-date {
+    font-size: 4.5vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #details #wedding-date {
+    font-size: 4vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #details #wedding-date {
+    font-size: 3.5vw;
+  }
+}
+#details #occasion-start {
   line-height: 1em;
   /*==========  Mobile First Method  ==========*/
   /* XXS */
@@ -9375,33 +9495,70 @@ body {
   /* LG  */
 }
 @media only screen and (min-width: 320px) {
-  #details #wedding-date-long-form {
-    font-size: 3vw;
+  #details #occasion-start {
+    font-size: 6vw;
   }
 }
 @media only screen and (min-width: 480px) {
-  #details #wedding-date-long-form {
-    font-size: 2.7vw;
+  #details #occasion-start {
+    font-size: 5.5vw;
   }
 }
 @media only screen and (min-width: 768px) {
-  #details #wedding-date-long-form {
-    font-size: 2.5vw;
+  #details #occasion-start {
+    font-size: 4vw;
   }
 }
 @media only screen and (min-width: 992px) {
-  #details #wedding-date-long-form {
-    font-size: 2.3vw;
+  #details #occasion-start {
+    font-size: 3.5vw;
   }
 }
 @media only screen and (min-width: 1200px) {
-  #details #wedding-date-long-form {
-    font-size: 1.9vw;
+  #details #occasion-start {
+    font-size: 3vw;
+  }
+}
+#details .icon-at:before {
+  content: "\e900";
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #details .icon-at:before {
+    font-size: 8vw;
+    vertical-align: -5px;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #details .icon-at:before {
+    font-size: 7vw;
+    vertical-align: -5px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #details .icon-at:before {
+    font-size: 5vw;
+    vertical-align: -8px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #details .icon-at:before {
+    font-size: 4.5vw;
+    vertical-align: -12px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #details .icon-at:before {
+    font-size: 4vw;
+    vertical-align: -15px;
   }
 }
 #details #ceremony-venue {
-  font-variant: small-caps;
-  font-weight: 100;
   line-height: 1.1em;
   /*==========  Mobile First Method  ==========*/
   /* XXS */
@@ -9412,205 +9569,61 @@ body {
 }
 @media only screen and (min-width: 320px) {
   #details #ceremony-venue {
+    font-size: 7vw;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #details #ceremony-venue {
+    font-size: 6.5vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #details #ceremony-venue {
+    font-size: 4.5vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #details #ceremony-venue {
+    font-size: 4vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #details #ceremony-venue {
+    font-size: 3.5vw;
+  }
+}
+#details #ceremony-address {
+  line-height: 1em;
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #details #ceremony-address {
+    font-size: 6vw;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #details #ceremony-address {
+    font-size: 5.5vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #details #ceremony-address {
+    font-size: 4vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #details #ceremony-address {
+    font-size: 3.5vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #details #ceremony-address {
     font-size: 3vw;
-  }
-}
-@media only screen and (min-width: 480px) {
-  #details #ceremony-venue {
-    font-size: 2.7vw;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #details #ceremony-venue {
-    font-size: 2.5vw;
-  }
-}
-@media only screen and (min-width: 992px) {
-  #details #ceremony-venue {
-    font-size: 2.3vw;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #details #ceremony-venue {
-    font-size: 1.9vw;
-  }
-}
-#details #occasion-start {
-  margin-top: 0;
-  margin-bottom: 1.5em;
-  line-height: 1em;
-  /*==========  Mobile First Method  ==========*/
-  /* XXS */
-  /* XS  */
-  /* SM  */
-  /* MD  */
-  /* LG  */
-}
-@media only screen and (min-width: 320px) {
-  #details #occasion-start {
-    font-size: 2.7vw;
-  }
-}
-@media only screen and (min-width: 480px) {
-  #details #occasion-start {
-    font-size: 2.2vw;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #details #occasion-start {
-    font-size: 2.2vw;
-  }
-}
-@media only screen and (min-width: 992px) {
-  #details #occasion-start {
-    font-size: 1.9vw;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #details #occasion-start {
-    font-size: 1.5vw;
-  }
-}
-#details #details-heading {
-  margin-top: 1.5em;
-  margin-bottom: 1em;
-  text-transform: capitalize;
-  /*==========  Mobile First Method  ==========*/
-  /* XXS */
-  /* XS  */
-  /* SM  */
-  /* MD  */
-  /* LG  */
-}
-@media only screen and (min-width: 320px) {
-  #details #details-heading {
-    font-size: 3.4vw;
-  }
-}
-@media only screen and (min-width: 480px) {
-  #details #details-heading {
-    font-size: 3.1vw;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #details #details-heading {
-    font-size: 2.9vw;
-  }
-}
-@media only screen and (min-width: 992px) {
-  #details #details-heading {
-    font-size: 2.7vw;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #details #details-heading {
-    font-size: 2.3vw;
-  }
-}
-#details #ceremony-start {
-  font-variant: small-caps;
-  line-height: 1em;
-  /*==========  Mobile First Method  ==========*/
-  /* XXS */
-  /* XS  */
-  /* SM  */
-  /* MD  */
-  /* LG  */
-}
-@media only screen and (min-width: 320px) {
-  #details #ceremony-start {
-    font-size: 2.2vw;
-  }
-}
-@media only screen and (min-width: 480px) {
-  #details #ceremony-start {
-    font-size: 2.2vw;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #details #ceremony-start {
-    font-size: 2.2vw;
-  }
-}
-@media only screen and (min-width: 992px) {
-  #details #ceremony-start {
-    font-size: 1.8vw;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #details #ceremony-start {
-    font-size: 1.4vw;
-  }
-}
-#details #reception-start-time {
-  font-variant: small-caps;
-  line-height: 1em;
-  /*==========  Mobile First Method  ==========*/
-  /* XXS */
-  /* XS  */
-  /* SM  */
-  /* MD  */
-  /* LG  */
-}
-@media only screen and (min-width: 320px) {
-  #details #reception-start-time {
-    font-size: 2.2vw;
-  }
-}
-@media only screen and (min-width: 480px) {
-  #details #reception-start-time {
-    font-size: 2.2vw;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #details #reception-start-time {
-    font-size: 2.2vw;
-  }
-}
-@media only screen and (min-width: 992px) {
-  #details #reception-start-time {
-    font-size: 1.8vw;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #details #reception-start-time {
-    font-size: 1.4vw;
-  }
-}
-#details #reception-dinner-start-time {
-  font-variant: small-caps;
-  line-height: 1em;
-  margin-bottom: 1.5em;
-  /*==========  Mobile First Method  ==========*/
-  /* XXS */
-  /* XS  */
-  /* SM  */
-  /* MD  */
-  /* LG  */
-}
-@media only screen and (min-width: 320px) {
-  #details #reception-dinner-start-time {
-    font-size: 2.2vw;
-  }
-}
-@media only screen and (min-width: 480px) {
-  #details #reception-dinner-start-time {
-    font-size: 2.2vw;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #details #reception-dinner-start-time {
-    font-size: 2.2vw;
-  }
-}
-@media only screen and (min-width: 992px) {
-  #details #reception-dinner-start-time {
-    font-size: 1.8vw;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #details #reception-dinner-start-time {
-    font-size: 1.4vw;
   }
 }
 #details #details-outro {
@@ -9624,27 +9637,133 @@ body {
 }
 @media only screen and (min-width: 320px) {
   #details #details-outro {
-    font-size: 2vw;
+    font-size: 7vw;
   }
 }
 @media only screen and (min-width: 480px) {
   #details #details-outro {
-    font-size: 2vw;
+    font-size: 6vw;
   }
 }
 @media only screen and (min-width: 768px) {
   #details #details-outro {
-    font-size: 2vw;
+    font-size: 4.5vw;
   }
 }
 @media only screen and (min-width: 992px) {
   #details #details-outro {
-    font-size: 1.6vw;
+    font-size: 4vw;
   }
 }
 @media only screen and (min-width: 1200px) {
   #details #details-outro {
-    font-size: 1.2vw;
+    font-size: 3.5vw;
+  }
+}
+#details #secondary-text {
+  line-height: 1em;
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #details #secondary-text {
+    font-size: 6vw;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #details #secondary-text {
+    font-size: 5.5vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #details #secondary-text {
+    font-size: 4vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #details #secondary-text {
+    font-size: 3.5vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #details #secondary-text {
+    font-size: 3vw;
+  }
+}
+#details #secondary-info {
+  line-height: 1em;
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #details #secondary-info {
+    font-size: 5.5vw;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #details #secondary-info {
+    font-size: 5vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #details #secondary-info {
+    font-size: 3.5vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #details #secondary-info {
+    font-size: 3vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #details #secondary-info {
+    font-size: 2.5vw;
+  }
+}
+#details .btmimg {
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #details .btmimg {
+    width: 70px;
+    padding-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #details .btmimg {
+    width: 90px;
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #details .btmimg {
+    width: 100px;
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #details .btmimg {
+    width: 120px;
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #details .btmimg {
+    width: 120px;
+    padding-bottom: 20px;
   }
 }
 #info {
@@ -9653,12 +9772,11 @@ body {
 }
 #map-section #map {
   color: #ffffff;
-  height: 400px;
+  height: 500px;
+  width: 100%;
 }
 #directions {
   background-color: #ffffff;
-  background-image: url('../img/background-1.gif');
-  background-repeat: repeat;
   padding: 2em 0;
   text-align: left;
   font-size: 2vw;
@@ -9667,10 +9785,12 @@ body {
 #directions #row2 {
   margin-top: 1em;
 }
+#directions #row3 {
+  margin-top: 1em;
+}
 #directions #heading {
-  text-align: left!important;
+  text-align: center!important;
   line-height: 1em;
-  font-variant: small-caps;
   /*==========  Mobile First Method  ==========*/
   /* XXS */
   /* XS  */
@@ -9680,27 +9800,163 @@ body {
 }
 @media only screen and (min-width: 320px) {
   #directions #heading {
-    font-size: 3.5vw;
+    font-size: 10vw;
   }
 }
 @media only screen and (min-width: 480px) {
   #directions #heading {
-    font-size: 2.5vw;
+    font-size: 7vw;
   }
 }
 @media only screen and (min-width: 768px) {
   #directions #heading {
-    font-size: 2.5vw;
+    font-size: 5vw;
   }
 }
 @media only screen and (min-width: 992px) {
   #directions #heading {
-    font-size: 2.3vw;
+    font-size: 4vw;
   }
 }
 @media only screen and (min-width: 1200px) {
   #directions #heading {
+    font-size: 3vw;
+  }
+}
+#directions #heading-sm {
+  text-align: center!important;
+  line-height: 1em;
+  text-decoration: underline dashed;
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #directions #heading-sm {
+    font-size: 4.5vw;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #directions #heading-sm {
+    font-size: 3.5vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #directions #heading-sm {
+    font-size: 3vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #directions #heading-sm {
+    font-size: 2.5vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #directions #heading-sm {
     font-size: 2vw;
+  }
+}
+#directions .directions-intro {
+  text-align: center;
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #directions .directions-intro {
+    font-size: 5vw;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #directions .directions-intro {
+    font-size: 4vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #directions .directions-intro {
+    font-size: 3vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #directions .directions-intro {
+    font-size: 2vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #directions .directions-intro {
+    font-size: 1vw;
+  }
+}
+#directions .directions-outro {
+  text-align: center;
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #directions .directions-outro {
+    font-size: 4.5vw;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #directions .directions-outro {
+    font-size: 3.5vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #directions .directions-outro {
+    font-size: 2.5vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #directions .directions-outro {
+    font-size: 1.5vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #directions .directions-outro {
+    font-size: 1vw;
+  }
+}
+#directions .directions-notes {
+  text-align: center;
+  color: #689079;
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #directions .directions-notes {
+    font-size: 4vw;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #directions .directions-notes {
+    font-size: 3vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #directions .directions-notes {
+    font-size: 2vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #directions .directions-notes {
+    font-size: 1vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #directions .directions-notes {
+    font-size: 1vw;
   }
 }
 #directions p {
@@ -9715,17 +9971,18 @@ body {
 }
 @media only screen and (min-width: 320px) {
   #directions p {
-    font-size: 3vw;
+    font-size: 4vw;
+    line-height: .9;
   }
 }
 @media only screen and (min-width: 480px) {
   #directions p {
-    font-size: 2vw;
+    font-size: 3vw;
   }
 }
 @media only screen and (min-width: 768px) {
   #directions p {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -9735,25 +9992,164 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   #directions p {
+    font-size: 1vw;
+  }
+}
+#directions ul {
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #directions ul {
+    font-size: 4vw;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #directions ul {
+    font-size: 2vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #directions ul {
+    font-size: 2vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #directions ul {
+    font-size: 1.8vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #directions ul {
+    font-size: 1vw;
+  }
+}
+#accommodations {
+  background-color: #fffaf0;
+  padding: 2em 0;
+  text-align: left;
+  font-size: 2vw;
+  line-height: 1em;
+}
+#accommodations #row2 {
+  margin-top: 1em;
+}
+#accommodations #heading {
+  text-align: center!important;
+  line-height: 1em;
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #accommodations #heading {
+    font-size: 10vw;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #accommodations #heading {
+    font-size: 7vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #accommodations #heading {
+    font-size: 5vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #accommodations #heading {
+    font-size: 4vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #accommodations #heading {
+    font-size: 3vw;
+  }
+}
+#accommodations #heading-sm {
+  text-align: left!important;
+  line-height: 1em;
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #accommodations #heading-sm {
+    font-size: 8vw;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #accommodations #heading-sm {
+    font-size: 6vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #accommodations #heading-sm {
+    font-size: 4vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #accommodations #heading-sm {
+    font-size: 3vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #accommodations #heading-sm {
+    font-size: 3.5vw;
+  }
+}
+#accommodations p {
+  text-align: left;
+  line-height: 1.2em;
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #accommodations p {
+    font-size: 3vw;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #accommodations p {
+    font-size: 2vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #accommodations p {
+    font-size: 2vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #accommodations p {
+    font-size: 1.8vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #accommodations p {
     font-size: 1.5vw;
   }
 }
 #registries {
   background-color: #ffffff;
-  background-image: url('../img/background-1.gif');
-  background-repeat: repeat;
 }
 #registries .container {
   padding: 4em 0;
 }
-#registries .container #flowers {
-  width: 100%;
-  height: auto;
-}
-#registries .container .beveled-corner-box {
-  padding: 2em;
-}
-#registries .container .beveled-corner-box .registry-header {
+#registries .container .registry-header {
   text-align: center;
   line-height: 1.2em;
   /*==========  Mobile First Method  ==========*/
@@ -9764,31 +10160,31 @@ body {
   /* LG  */
 }
 @media only screen and (min-width: 320px) {
-  #registries .container .beveled-corner-box .registry-header {
+  #registries .container .registry-header {
     font-size: 3.4vw;
   }
 }
 @media only screen and (min-width: 480px) {
-  #registries .container .beveled-corner-box .registry-header {
+  #registries .container .registry-header {
     font-size: 2.4vw;
   }
 }
 @media only screen and (min-width: 768px) {
-  #registries .container .beveled-corner-box .registry-header {
+  #registries .container .registry-header {
     font-size: 2.4vw;
   }
 }
 @media only screen and (min-width: 992px) {
-  #registries .container .beveled-corner-box .registry-header {
+  #registries .container .registry-header {
     font-size: 2.2vw;
   }
 }
 @media only screen and (min-width: 1200px) {
-  #registries .container .beveled-corner-box .registry-header {
+  #registries .container .registry-header {
     font-size: 1.9vw;
   }
 }
-#registries .container .beveled-corner-box .registry-info {
+#registries .container .registry-info {
   font-size: 1em;
   text-align: center;
   line-height: 1.2em;
@@ -9800,35 +10196,33 @@ body {
   /* LG  */
 }
 @media only screen and (min-width: 320px) {
-  #registries .container .beveled-corner-box .registry-info {
+  #registries .container .registry-info {
     font-size: 2.9vw;
   }
 }
 @media only screen and (min-width: 480px) {
-  #registries .container .beveled-corner-box .registry-info {
+  #registries .container .registry-info {
     font-size: 1.9vw;
   }
 }
 @media only screen and (min-width: 768px) {
-  #registries .container .beveled-corner-box .registry-info {
+  #registries .container .registry-info {
     font-size: 1.8vw;
   }
 }
 @media only screen and (min-width: 992px) {
-  #registries .container .beveled-corner-box .registry-info {
+  #registries .container .registry-info {
     font-size: 1.7vw;
   }
 }
 @media only screen and (min-width: 1200px) {
-  #registries .container .beveled-corner-box .registry-info {
+  #registries .container .registry-info {
     font-size: 1.6vw;
   }
 }
 #rsvp {
   padding: 2em 0;
-  background-color: #ffffff;
-  background-image: url('../img/background-1.gif');
-  background-repeat: repeat;
+  background-color: #fffaf0;
   line-height: 1em;
   color: #2c523c;
 }
@@ -9926,7 +10320,7 @@ body {
   }
 }
 #rsvp .beveled-corner-box input {
-  font-family: "jacquesfrancois-regular", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: "ariadnesans-condensed", "Palatino Linotype", "Book Antiqua", Palatino, serif;
   margin-bottom: 5px;
 }
 #rsvp .beveled-corner-box .form-control {
@@ -9956,31 +10350,31 @@ body {
   height: 34px;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #2c523c;
+  color: #4e686c;
   background-color: #fff;
   background-image: none;
-  border: 1px solid #ecdbbb;
+  border: 1px solid #ffe9bd;
   border-radius: 0px;
   box-shadow: none;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 #rsvp .beveled-corner-box #rsvp-msg label,
 #rsvp .beveled-corner-box #rsvp-msg textarea {
-  font-family: "jacquesfrancois-regular", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: "ariadnesans-condensed", "Palatino Linotype", "Book Antiqua", Palatino, serif;
   margin-top: 15px;
 }
 #rsvp .beveled-corner-box .btn {
   padding: 1em 3em;
-  font-family: "jacquesfrancois-regular", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: "ariadnesans-condensed", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 #rsvp .beveled-corner-box .btn:hover {
-  background-color: #2c523c;
+  background-color: #4e686c;
   color: #ffffff;
 }
 #rsvp .beveled-corner-box .btn-primary:hover {
   color: #fff;
-  background-color: #2c523c;
-  border-color: #2c523c;
+  background-color: #4e686c;
+  border-color: #4e686c;
 }
 #rsvp p {
   line-height: 1.2em;
@@ -10118,11 +10512,124 @@ body {
 .timeline-body > p + p {
   margin-top: 5px;
 }
+#faq {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 2em 0;
+  text-align: left;
+  font-size: 2vw;
+  line-height: 1em;
+}
+#faq #row2 {
+  margin-top: 1em;
+}
+#faq #heading {
+  text-align: center!important;
+  line-height: 1em;
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #faq #heading {
+    font-size: 10vw;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #faq #heading {
+    font-size: 7vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #faq #heading {
+    font-size: 5vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #faq #heading {
+    font-size: 4vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #faq #heading {
+    font-size: 3vw;
+  }
+}
+#faq #heading-sm {
+  text-align: left!important;
+  line-height: 1em;
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #faq #heading-sm {
+    font-size: 8vw;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #faq #heading-sm {
+    font-size: 6vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #faq #heading-sm {
+    font-size: 4vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #faq #heading-sm {
+    font-size: 3vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #faq #heading-sm {
+    font-size: 3.5vw;
+  }
+}
+#faq p {
+  text-align: left;
+  line-height: 1.2em;
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #faq p {
+    font-size: 3vw;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #faq p {
+    font-size: 2vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #faq p {
+    font-size: 2vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #faq p {
+    font-size: 1.8vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #faq p {
+    font-size: 1.5vw;
+  }
+}
 #outro {
-  background: url('../img/outro.jpg') no-repeat;
-  background-position: right top;
-  background-size: cover;
-  height: 700px;
+  background-color: #fffaf0;
   width: 100%;
   overflow-y: hidden;
   /*==========  Non-Mobile First Method  ==========*/
@@ -10283,7 +10790,7 @@ body {
 }
 html,
 body {
-  background-color: #f7f0e3;
+  background-color: #fffaf0;
 }
 section {
   width: 100%;

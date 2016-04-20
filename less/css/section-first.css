@@ -1,0 +1,19 @@
+body {
+  height: 100% !important;
+}
+#first {
+  height: 100%;
+  height: 100vh;
+}
+#first #logo {
+  z-index: 999999;
+  position: absolute;
+  width: 15em;
+  left: 50vw;
+  margin-left: -77px;
+  top: 30vh;
+  position: fixed;
+}
+#first a img:hover {
+  opacity: 1;
+}

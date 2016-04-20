@@ -4,138 +4,150 @@
   background-image: url('../img/background-1.gif');
   background-repeat: repeat;
   // padding: 2em 0;
-  h1,h2,h3,h4,h5,h6,p,a {white-space: nowrap;}
+  // h1,h2,h3,h4,h5,h6,p,a {white-space: nowrap;}
   p {
       // &:nth-child(1) {margin-top: 30px;}
       &:last-child {margin-bottom: 4em;}
   }
-  padding-top: 4em;
-  .flowers-desktop-left  {position: absolute; top: -4em; left:0;  height:110%; width:auto;}
-  .flowers-desktop-right {position: absolute; top: -4em; right:0; height:110%; width:auto;}
-  
-  .flowers-mobile-top-left     {position: absolute; left:0;  height:20%; width:auto; top: -4em;}
-  .flowers-mobile-top-right    {position: absolute; right:0; height:20%; width:auto; top: -4em;}
-  .flowers-mobile-bottom-left  {position: absolute; left:0;  height:20%; width:auto; bottom: -4em;}
-  .flowers-mobile-bottom-right {position: absolute; right:0; height:20%; width:auto; bottom: -4em;}
+  padding-top: 3em;
+
+  .topimg {
+    /*==========  Mobile First Method  ==========*/
+    /* XXS */ @media only screen and (min-width : 320px)  {width: 200px; padding-bottom:10px;}
+    /* XS  */ @media only screen and (min-width : 480px)  {width: 250px; padding-bottom:20px;}
+    /* SM  */ @media only screen and (min-width : 768px)  {width: 250px; padding-bottom:20px;}
+    /* MD  */ @media only screen and (min-width : 992px)  {width: 250px; padding-bottom:20px;}
+    /* LG  */ @media only screen and (min-width : 1200px) {width: 250px; padding-bottom:20px;}
+  }
 
   .details-intro {
     // margin-top:2em;
      line-height: 1em;
     /*==========  Mobile First Method  ==========*/
-    /* XXS */ @media only screen and (min-width : 320px)  {font-size: 3.5vw;}
-    /* XS  */ @media only screen and (min-width : 480px)  {font-size: 3.2vw;}
-    /* SM  */ @media only screen and (min-width : 768px)  {font-size: 3vw;}
-    /* MD  */ @media only screen and (min-width : 992px)  {font-size: 2.8vw;}
-    /* LG  */ @media only screen and (min-width : 1200px) {font-size: 2.4vw;}
+    /* XXS */ @media only screen and (min-width : 320px)  {font-size: 8vw;}
+    /* XS  */ @media only screen and (min-width : 480px)  {font-size: 7vw;}
+    /* SM  */ @media only screen and (min-width : 768px)  {font-size: 4.5vw;}
+    /* MD  */ @media only screen and (min-width : 992px)  {font-size: 4vw;}
+    /* LG  */ @media only screen and (min-width : 1200px) {font-size: 3.5vw;}
   }
+
+  .icon-with-01:before {
+    content: "\e902";
+    /*==========  Mobile First Method  ==========*/
+    /* XXS */ @media only screen and (min-width : 320px)  {font-size: 9vw; vertical-align: -7px;}
+    /* XS  */ @media only screen and (min-width : 480px)  {font-size: 10vw; vertical-align: -10px;}
+    /* SM  */ @media only screen and (min-width : 768px)  {font-size: 6vw; vertical-align: -12px;}
+    /* MD  */ @media only screen and (min-width : 992px)  {font-size: 5vw; vertical-align: -10px;}
+    /* LG  */ @media only screen and (min-width : 1200px) {font-size: 4.5vw; vertical-align: -15px;}
+}
 
   #the-couple {
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
+    color: #689079;
     /*==========  Mobile First Method  ==========*/
-    /* XXS */ @media only screen and (min-width : 320px)  {font-size: 4vw;}
-    /* XS  */ @media only screen and (min-width : 480px)  {font-size: 3.7vw;}
-    /* SM  */ @media only screen and (min-width : 768px)  {font-size: 3.5vw;}
-    /* MD  */ @media only screen and (min-width : 992px)  {font-size: 3.3vw;}
-    /* LG  */ @media only screen and (min-width : 1200px) {font-size: 2.9vw;}
+    /* XXS */ @media only screen and (min-width : 320px)  {font-size:10vw; line-height: .9;}
+    /* XS  */ @media only screen and (min-width : 480px)  {font-size: 10vw;}
+    /* SM  */ @media only screen and (min-width : 768px)  {font-size: 5.5vw;}
+    /* MD  */ @media only screen and (min-width : 992px)  {font-size: 5vw;}
+    /* LG  */ @media only screen and (min-width : 1200px) {font-size: 5vw;}
   }
 
-  #wedding-date-long-form {
-    margin-top: 1.5em;
-    margin-bottom: 0.2em;
-    font-variant: small-caps;
-    font-weight: 100;
-    line-height: 1em;
+ .divider {
     /*==========  Mobile First Method  ==========*/
-    /* XXS */ @media only screen and (min-width : 320px)  {font-size: 3vw;}
-    /* XS  */ @media only screen and (min-width : 480px)  {font-size: 2.7vw;}
-    /* SM  */ @media only screen and (min-width : 768px)  {font-size: 2.5vw;}
-    /* MD  */ @media only screen and (min-width : 992px)  {font-size: 2.3vw;}
-    /* LG  */ @media only screen and (min-width : 1200px) {font-size: 1.9vw;}
-  }
+    /* XXS */ @media only screen and (min-width : 320px)  {width: 150px; padding-bottom:20px;}
+    /* XS  */ @media only screen and (min-width : 480px)  {width: 200px; padding-bottom:30px;}
+    /* SM  */ @media only screen and (min-width : 768px)  {width: 250px; padding-bottom:40px;}
+    /* MD  */ @media only screen and (min-width : 992px)  {width: 250px; padding-bottom:40px;}
+    /* LG  */ @media only screen and (min-width : 1200px) {width: 255px; padding-bottom:40px;}
+ }
 
-  #ceremony-venue {
-    font-variant: small-caps;
-    font-weight: 100;
-    line-height: 1.1em;
+  #wedding-date {
+    line-height: .2em;
     /*==========  Mobile First Method  ==========*/
-    /* XXS */ @media only screen and (min-width : 320px)  {font-size: 3vw;}
-    /* XS  */ @media only screen and (min-width : 480px)  {font-size: 2.7vw;}
-    /* SM  */ @media only screen and (min-width : 768px)  {font-size: 2.5vw;}
-    /* MD  */ @media only screen and (min-width : 992px)  {font-size: 2.3vw;}
-    /* LG  */ @media only screen and (min-width : 1200px) {font-size: 1.9vw;}
+    /* XXS */ @media only screen and (min-width : 320px)  {font-size: 7.5vw;}
+    /* XS  */ @media only screen and (min-width : 480px)  {font-size: 6.5vw;}
+    /* SM  */ @media only screen and (min-width : 768px)  {font-size: 4.5vw;}
+    /* MD  */ @media only screen and (min-width : 992px)  {font-size: 4vw;}
+    /* LG  */ @media only screen and (min-width : 1200px) {font-size: 3.5vw;}
   }
 
   #occasion-start {
-    margin-top: 0;
-    margin-bottom: 1.5em;
     line-height: 1em;
     /*==========  Mobile First Method  ==========*/
-    /* XXS */ @media only screen and (min-width : 320px)  {font-size: 2.7vw;}
-    /* XS  */ @media only screen and (min-width : 480px)  {font-size: 2.2vw;}
-    /* SM  */ @media only screen and (min-width : 768px)  {font-size: 2.2vw;}
-    /* MD  */ @media only screen and (min-width : 992px)  {font-size: 1.9vw;}
-    /* LG  */ @media only screen and (min-width : 1200px) {font-size: 1.5vw;}
+    /* XXS */ @media only screen and (min-width : 320px)  {font-size: 6vw;}
+    /* XS  */ @media only screen and (min-width : 480px)  {font-size: 5.5vw;}
+    /* SM  */ @media only screen and (min-width : 768px)  {font-size: 4vw;}
+    /* MD  */ @media only screen and (min-width : 992px)  {font-size: 3.5vw;}
+    /* LG  */ @media only screen and (min-width : 1200px) {font-size: 3vw;}
   }
 
-  #details-heading {
-    margin-top: 1.5em;
-    margin-bottom: 1em;
-    text-transform: capitalize;
+  .icon-at:before {
+    content: "\e900";
     /*==========  Mobile First Method  ==========*/
-    /* XXS */ @media only screen and (min-width : 320px)  {font-size: 3.4vw;}
-    /* XS  */ @media only screen and (min-width : 480px)  {font-size: 3.1vw;}
-    /* SM  */ @media only screen and (min-width : 768px)  {font-size: 2.9vw;}
-    /* MD  */ @media only screen and (min-width : 992px)  {font-size: 2.7vw;}
-    /* LG  */ @media only screen and (min-width : 1200px) {font-size: 2.3vw;}
+    /* XXS */ @media only screen and (min-width : 320px)  {font-size: 8vw; vertical-align: -5px;}
+    /* XS  */ @media only screen and (min-width : 480px)  {font-size: 7vw; vertical-align: -5px;}
+    /* SM  */ @media only screen and (min-width : 768px)  {font-size: 5vw; vertical-align: -8px;}
+    /* MD  */ @media only screen and (min-width : 992px)  {font-size: 4.5vw; vertical-align: -12px;}
+    /* LG  */ @media only screen and (min-width : 1200px) {font-size: 4vw; vertical-align: -15px;}
   }
-  #ceremony-start {
-    font-variant: small-caps;
+
+  #ceremony-venue {
+    line-height: 1.1em;
+    /*==========  Mobile First Method  ==========*/
+    /* XXS */ @media only screen and (min-width : 320px)  {font-size: 7vw;}
+    /* XS  */ @media only screen and (min-width : 480px)  {font-size: 6.5vw;}
+    /* SM  */ @media only screen and (min-width : 768px)  {font-size: 4.5vw;}
+    /* MD  */ @media only screen and (min-width : 992px)  {font-size: 4vw;}
+    /* LG  */ @media only screen and (min-width : 1200px) {font-size: 3.5vw;}
+  }
+
+  #ceremony-address {
     line-height: 1em;
     /*==========  Mobile First Method  ==========*/
-    /* XXS */ @media only screen and (min-width : 320px)  {font-size: 2.2vw;}
-    /* XS  */ @media only screen and (min-width : 480px)  {font-size: 2.2vw;}
-    /* SM  */ @media only screen and (min-width : 768px)  {font-size: 2.2vw;}
-    /* MD  */ @media only screen and (min-width : 992px)  {font-size: 1.8vw;}
-    /* LG  */ @media only screen and (min-width : 1200px) {font-size: 1.4vw;}
+    /* XXS */ @media only screen and (min-width : 320px)  {font-size: 6vw;}
+    /* XS  */ @media only screen and (min-width : 480px)  {font-size: 5.5vw;}
+    /* SM  */ @media only screen and (min-width : 768px)  {font-size: 4vw;}
+    /* MD  */ @media only screen and (min-width : 992px)  {font-size: 3.5vw;}
+    /* LG  */ @media only screen and (min-width : 1200px) {font-size: 3vw;}
   }
-  #reception-start-time {
-    font-variant: small-caps;
-    line-height: 1em;
-    /*==========  Mobile First Method  ==========*/
-    /* XXS */ @media only screen and (min-width : 320px)  {font-size: 2.2vw;}
-    /* XS  */ @media only screen and (min-width : 480px)  {font-size: 2.2vw;}
-    /* SM  */ @media only screen and (min-width : 768px)  {font-size: 2.2vw;}
-    /* MD  */ @media only screen and (min-width : 992px)  {font-size: 1.8vw;}
-    /* LG  */ @media only screen and (min-width : 1200px) {font-size: 1.4vw;}
-  }
-  #reception-dinner-start-time {
-    font-variant: small-caps;
-    line-height: 1em;
-    margin-bottom: 1.5em;
-    /*==========  Mobile First Method  ==========*/
-    /* XXS */ @media only screen and (min-width : 320px)  {font-size: 2.2vw;}
-    /* XS  */ @media only screen and (min-width : 480px)  {font-size: 2.2vw;}
-    /* SM  */ @media only screen and (min-width : 768px)  {font-size: 2.2vw;}
-    /* MD  */ @media only screen and (min-width : 992px)  {font-size: 1.8vw;}
-    /* LG  */ @media only screen and (min-width : 1200px) {font-size: 1.4vw;}
-  }
+
   #details-outro {
     line-height: 1.3em;
     /*==========  Mobile First Method  ==========*/
-    /* XXS */ @media only screen and (min-width : 320px)  {font-size: 2vw;}
-    /* XS  */ @media only screen and (min-width : 480px)  {font-size: 2vw;}
-    /* SM  */ @media only screen and (min-width : 768px)  {font-size: 2vw;}
-    /* MD  */ @media only screen and (min-width : 992px)  {font-size: 1.6vw;}
-    /* LG  */ @media only screen and (min-width : 1200px) {font-size: 1.2vw;}
+    /* XXS */ @media only screen and (min-width : 320px)  {font-size: 7vw;}
+    /* XS  */ @media only screen and (min-width : 480px)  {font-size: 6vw;}
+    /* SM  */ @media only screen and (min-width : 768px)  {font-size: 4.5vw;}
+    /* MD  */ @media only screen and (min-width : 992px)  {font-size: 4vw;}
+    /* LG  */ @media only screen and (min-width : 1200px) {font-size: 3.5vw;}
   }
 
+  #secondary-text {
+     line-height: 1em;
+    /*==========  Mobile First Method  ==========*/
+    /* XXS */ @media only screen and (min-width : 320px)  {font-size: 6vw;}
+    /* XS  */ @media only screen and (min-width : 480px)  {font-size: 5.5vw;}
+    /* SM  */ @media only screen and (min-width : 768px)  {font-size: 4vw;}
+    /* MD  */ @media only screen and (min-width : 992px)  {font-size: 3.5vw;}
+    /* LG  */ @media only screen and (min-width : 1200px) {font-size: 3vw;}
+  }
 
+  #secondary-info {
+     line-height: 1em;
+    /*==========  Mobile First Method  ==========*/
+    /* XXS */ @media only screen and (min-width : 320px)  {font-size: 5.5vw;}
+    /* XS  */ @media only screen and (min-width : 480px)  {font-size: 5vw;}
+    /* SM  */ @media only screen and (min-width : 768px)  {font-size: 3.5vw;}
+    /* MD  */ @media only screen and (min-width : 992px)  {font-size: 3vw;}
+    /* LG  */ @media only screen and (min-width : 1200px) {font-size: 2.5vw;}
+  }
 
-
-
-
-
+  .btmimg {
+    /*==========  Mobile First Method  ==========*/
+    /* XXS */ @media only screen and (min-width : 320px)  {width: 70px; padding-bottom:10px;}
+    /* XS  */ @media only screen and (min-width : 480px)  {width: 90px; padding-bottom:20px;}
+    /* SM  */ @media only screen and (min-width : 768px)  {width: 100px; padding-bottom:20px;}
+    /* MD  */ @media only screen and (min-width : 992px)  {width: 120px; padding-bottom:20px;}
+    /* LG  */ @media only screen and (min-width : 1200px) {width: 120px; padding-bottom:20px;}
+  }
 
 
 

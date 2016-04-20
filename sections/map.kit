@@ -1,6 +1,5 @@
 <section id="map-section">
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzuo78SYYb2nLunYVodCY-nt7Lc_2ljc8&sensor=false"></script>
-
+ 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzuo78SYYb2nLunYVodCY-nt7Lc_2ljc8&sensor=false"></script>
 	<script type="text/javascript">
 	  // When the window has finished loading create our google map below
 	  google.maps.event.addDomListener(window, 'load', init);
@@ -10,13 +9,13 @@
 	      // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
 	      var mapOptions = {
 	          // How zoomed in you want the map to start at (always required)
-	          zoom: 17,
+	          zoom: 13,
 	          scrollwheel: false,
 	          mapTypeControl: false,
 	          streetViewControl: false,
 
 	          // The latitude and longitude to center the map (always required)
-	          center: new google.maps.LatLng(43.654621, -79.365441),
+	          center: new google.maps.LatLng(45.299842, -122.773706),
 
 	          // How you would like to style the map. 
 	          styles:[
@@ -25,7 +24,7 @@
 	          	"elementType": "labels.text",
 	          	"stylers": [
 	          	{
-	          		"hue": "#820ef5"
+	          		"hue": "#31464b"
 	          	}
 	          	]
 	          },
@@ -34,7 +33,7 @@
 	          	"elementType": "all",
 	          	"stylers": [
 	          	{
-	          		"color": "#dea5a0"
+	          		"color": "#f7a41b"
 	          	},
 	          	{
 	          		"saturation": -50
@@ -49,7 +48,7 @@
 	          	"elementType": "geometry",
 	          	"stylers": [
 	          	{
-	          		"color": "#b1bb95"
+	          		"color": "#b4b97e"
 	          	}
 	          	]
 	          },
@@ -58,7 +57,7 @@
 	          	"elementType": "geometry",
 	          	"stylers": [
 	          	{
-	          		"color": "#c65771"
+	          		"color": "#fdbe10"
 	          	}
 	          	]
 	          },
@@ -67,7 +66,7 @@
 	          	"elementType": "geometry",
 	          	"stylers": [
 	          	{
-	          		"color": "#f2f0ee"
+	          		"color": "#000"
 	          	}
 	          	]
 	          },
@@ -85,10 +84,21 @@
 	          	"elementType": "all",
 	          	"stylers": [
 	          	{
-	          		"color": "#c7e3e2"
+	          		"color": "#9db6b6"
 	          	}
 	          	]
-	          }
+	          },
+
+			  {
+			  	"featureType":"poi.business",
+			  	"elementType":"geometry.fill",
+			  	"stylers":[
+			  	{
+			  		"color":"#b4b97e"
+			  	}
+			  	]
+			  }
+
 	          ]
 	        };
 
@@ -97,20 +107,15 @@
 	        var map = new google.maps.Map(mapElement, mapOptions);
 
 	      // map marker
-	      var image = 'img/marker2.png';
+	      var image = 'img/barn.png';
 	      var marker = new google.maps.Marker({
-	      	position: {lat: 43.655094, lng: -79.366137},
+	      	position: {lat: 45.279798, lng: -122.85549},
 	      	map: map,
 	      	icon: image,
-	      	title: 'The Berkley Fieldhouse'
+	      	title: 'Baypony Farm'
 	      });
 	    }
 	</script>
 
 	<div id="map"></div>
-
-<!-- <div class="legend beveled-corner-box" style="position:relative; bottom: -10px; z-index: 999999">
-    <h3>Legend</h3>
-  </div> -->
-
 </section>

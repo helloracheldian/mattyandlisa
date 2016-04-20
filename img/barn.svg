@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="217.629px" height="337.947px" viewBox="0 0 217.629 337.947" enable-background="new 0 0 217.629 337.947"
+	 xml:space="preserve">
+<g>
+	<g>
+		<polygon fill="#965C35" points="208.642,333.851 213.769,158.536 6.859,157.04 3,330.572 		"/>
+		<path fill="#B17247" d="M217.627,159.818c0.57-5.509-110.367-116.654-114.529-116.246C98.933,43.981,3.524,153.297,3,158.536
+			L217.627,159.818z"/>
+		<polygon fill="#B17247" points="177.493,332.532 177.114,246.523 47.091,246.523 38.838,329.609 		"/>
+		<polygon fill="#965C35" points="33.222,120.649 33.222,63.574 57.065,61.547 55.548,94.821 		"/>
+		<polygon fill="#B17247" points="61.204,55.863 61.204,59.923 57.065,61.547 33.222,63.574 29.005,63.574 29.005,59.718 		"/>
+		<g>
+			<polyline fill="none" stroke="#FCD5B9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				111.468,245.445 177.114,331.923 109.572,330.987 			"/>
+			<polyline fill="none" stroke="#FCD5B9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				109.572,330.987 177.114,246.523 111.468,245.445 			"/>
+			<polyline fill="none" stroke="#FCD5B9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				111.468,245.445 38.838,329.609 47.835,246.523 			"/>
+			<polyline fill="none" stroke="#FCD5B9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				38.838,329.609 109.572,330.987 111.468,245.445 47.835,246.523 109.572,330.987 			"/>
+		</g>
+		
+			<line fill="none" stroke="#FCD5B9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="177.114" y1="246.523" x2="177.114" y2="331.923"/>
+		<polygon fill="#B17247" points="145.869,221.22 145.678,177.111 78.991,177.111 74.76,219.72 		"/>
+		<g>
+			<polyline fill="none" stroke="#FCD5B9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				112.008,176.557 145.678,220.907 111.035,220.429 			"/>
+			<polyline fill="none" stroke="#FCD5B9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				111.035,220.429 145.678,177.111 112.008,176.557 			"/>
+			<polyline fill="none" stroke="#FCD5B9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				112.008,176.557 74.76,219.72 79.375,177.111 			"/>
+			<polyline fill="none" stroke="#FCD5B9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				74.76,219.72 111.035,220.429 112.008,176.557 79.375,177.111 111.035,220.429 			"/>
+		</g>
+		
+			<line fill="none" stroke="#FCD5B9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="145.678" y1="177.111" x2="145.678" y2="220.907"/>
+	</g>
+	<path fill="#FCD5B9" d="M38.611,16.526c0,0,14.528-28.078,16.719-8.716c2.188,19.362-18.024,29.37-18.024,29.37
+		S7.991,16.42,16.504,7.919C25.02-0.579,32.854,8.67,38.611,16.526z"/>
+</g>
+</svg>
