@@ -13,54 +13,56 @@
 		text-align: center!important;
 		line-height: 1em;
 		/*==========  Mobile First Method  ==========*/
-		/* XXS */ @media only screen and (min-width : 320px)  {font-size: 10vw;}
-		/* XS  */ @media only screen and (min-width : 480px)  {font-size: 7vw;}
-		/* SM  */ @media only screen and (min-width : 768px)  {font-size: 5vw;}
-		/* MD  */ @media only screen and (min-width : 992px)  {font-size: 4vw;}
-		/* LG  */ @media only screen and (min-width : 1200px) {font-size: 3vw;}
+		/* XXS */ @media only screen and (min-width : 320px)  {font-size: 4.5em;}
+		/* XS  */ @media only screen and (min-width : 480px)  {font-size: 3em;}
+		/* SM  */ @media only screen and (min-width : 768px)  {font-size: 2.5em;}
+		/* MD  */ @media only screen and (min-width : 992px)  {font-size: 2em;}
+		/* LG  */ @media only screen and (min-width : 1200px) {font-size: 1.5em;}
 	}
 	#heading-sm {
 		text-align: left!important;
 		line-height: 1em;
 		/*==========  Mobile First Method  ==========*/
-		/* XXS */ @media only screen and (min-width : 320px)  {font-size: 8vw;}
-		/* XS  */ @media only screen and (min-width : 480px)  {font-size: 6vw;}
-		/* SM  */ @media only screen and (min-width : 768px)  {font-size: 4vw;}
-		/* MD  */ @media only screen and (min-width : 992px)  {font-size: 3vw;}
-		/* LG  */ @media only screen and (min-width : 1200px) {font-size: 3.5vw;}
+		/* XXS */ @media only screen and (min-width : 320px)  {font-size: 3em;}
+		/* XS  */ @media only screen and (min-width : 480px)  {font-size: 1.8em;}
+		/* SM  */ @media only screen and (min-width : 768px)  {font-size: 1.5em;}
+		/* MD  */ @media only screen and (min-width : 992px)  {font-size: 1.2em;}
+		/* LG  */ @media only screen and (min-width : 1200px) {font-size: 1em;}
 	}
 	p {
 		text-align: left;
 		line-height: 1.2em;
 		/*==========  Mobile First Method  ==========*/
-		/* XXS */ @media only screen and (min-width : 320px)  {font-size: 3vw;}
-		/* XS  */ @media only screen and (min-width : 480px)  {font-size: 2vw;}
-		/* SM  */ @media only screen and (min-width : 768px)  {font-size: 2vw;}
-		/* MD  */ @media only screen and (min-width : 992px)  {font-size: 1.8vw;}
-		/* LG  */ @media only screen and (min-width : 1200px) {font-size: 1.5vw;}
+		/* XXS */ @media only screen and (min-width : 320px)  {font-size: 2.5em;}
+		/* XS  */ @media only screen and (min-width : 480px)  {font-size: 1.8em;}
+		/* SM  */ @media only screen and (min-width : 768px)  {font-size: 1.25em;}
+		/* MD  */ @media only screen and (min-width : 992px)  {font-size: 1em;}
+		/* LG  */ @media only screen and (min-width : 1200px) {font-size: .85em;}
 	}
 	
 	#accordion {
 		.panel+.panel {
-			margin-top:25px; //This is the spacing in between the collapsed accordians
+			margin-top:0px; //This is the spacing in between the collapsed accordians
 		}
 		.panel-default {
-			color: red;
-			background-color: blue;
-			border-color: cyan;
+			// color: red;
+			background-color: #fffffe;
+			// border-color: cyan;
 			font-weight: inherit;
 			font-size: 1em;
 			line-height: 1em;
 			border-radius: 10px;
+			border: none;
 			.panel-heading {
-				color: yellow;
-				background-color: green;
-				border-color: green;
-				padding: 10px 15px;
+				// color: yellow;
+				background-color: #fffaf0;
+				// border-color: green;
+				padding:5px 15px;
 				border-top-right-radius: 10px;
 				border-top-left-radius: 10px;
 				.panel-title {
-					text-align: right; // Or whatever
+					text-align: center;
+					font-size: 1.2em; 
 					a {
 						text-decoration: none;
 						display: block; // This is needed so the whole bar is clickable.
@@ -72,7 +74,7 @@
 				}
 			}
 			.panel-body {
-				border-top: 2px solid chartreuse;
+				border-top: none;
 			}
 		}
 	}

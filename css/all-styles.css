@@ -8918,7 +8918,7 @@ h3:before,
 h4:before,
 h5:before,
 h6:before {
-  content: url('img/left_flourish.png');
+  content: url('../img/left_flourish.png');
   margin-right: 10px;
 }
 h1:after,
@@ -8927,7 +8927,7 @@ h3:after,
 h4:after,
 h5:after,
 h6:after {
-  content: url('img/right_flourish.png');
+  content: url('../img/right_flourish.png');
   margin-left: 10px;
 }
 p,
@@ -10656,27 +10656,27 @@ body {
 }
 @media only screen and (min-width: 320px) {
   #faq #heading {
-    font-size: 10vw;
+    font-size: 4.5em;
   }
 }
 @media only screen and (min-width: 480px) {
   #faq #heading {
-    font-size: 7vw;
+    font-size: 3em;
   }
 }
 @media only screen and (min-width: 768px) {
   #faq #heading {
-    font-size: 5vw;
+    font-size: 2.5em;
   }
 }
 @media only screen and (min-width: 992px) {
   #faq #heading {
-    font-size: 4vw;
+    font-size: 2em;
   }
 }
 @media only screen and (min-width: 1200px) {
   #faq #heading {
-    font-size: 3vw;
+    font-size: 1.5em;
   }
 }
 #faq #heading-sm {
@@ -10691,27 +10691,27 @@ body {
 }
 @media only screen and (min-width: 320px) {
   #faq #heading-sm {
-    font-size: 8vw;
+    font-size: 3em;
   }
 }
 @media only screen and (min-width: 480px) {
   #faq #heading-sm {
-    font-size: 6vw;
+    font-size: 1.8em;
   }
 }
 @media only screen and (min-width: 768px) {
   #faq #heading-sm {
-    font-size: 4vw;
+    font-size: 1.5em;
   }
 }
 @media only screen and (min-width: 992px) {
   #faq #heading-sm {
-    font-size: 3vw;
+    font-size: 1.2em;
   }
 }
 @media only screen and (min-width: 1200px) {
   #faq #heading-sm {
-    font-size: 3.5vw;
+    font-size: 1em;
   }
 }
 #faq p {
@@ -10726,51 +10726,49 @@ body {
 }
 @media only screen and (min-width: 320px) {
   #faq p {
-    font-size: 3vw;
+    font-size: 2.5em;
   }
 }
 @media only screen and (min-width: 480px) {
   #faq p {
-    font-size: 2vw;
+    font-size: 1.8em;
   }
 }
 @media only screen and (min-width: 768px) {
   #faq p {
-    font-size: 2vw;
+    font-size: 1.25em;
   }
 }
 @media only screen and (min-width: 992px) {
   #faq p {
-    font-size: 1.8vw;
+    font-size: 1em;
   }
 }
 @media only screen and (min-width: 1200px) {
   #faq p {
-    font-size: 1.5vw;
+    font-size: .85em;
   }
 }
 #faq #accordion .panel + .panel {
-  margin-top: 25px;
+  margin-top: 0px;
 }
 #faq #accordion .panel-default {
-  color: red;
-  background-color: blue;
-  border-color: cyan;
+  background-color: #fffffe;
   font-weight: inherit;
   font-size: 1em;
   line-height: 1em;
   border-radius: 10px;
+  border: none;
 }
 #faq #accordion .panel-default .panel-heading {
-  color: yellow;
-  background-color: green;
-  border-color: green;
-  padding: 10px 15px;
+  background-color: #fffaf0;
+  padding: 5px 15px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 }
 #faq #accordion .panel-default .panel-heading .panel-title {
-  text-align: right;
+  text-align: center;
+  font-size: 1.2em;
 }
 #faq #accordion .panel-default .panel-heading .panel-title a {
   text-decoration: none;
@@ -10781,7 +10779,7 @@ body {
   line-height: 1em;
 }
 #faq #accordion .panel-default .panel-body {
-  border-top: 2px solid chartreuse;
+  border-top: none;
 }
 #outro {
   background-color: #ffffff;
