@@ -8854,6 +8854,24 @@ h6 {
   font-family: "ariadnesans-regular", Arial, Helvetica, sans-serif;
   color: #4e686c;
 }
+h1:before,
+h2:before,
+h3:before,
+h4:before,
+h5:before,
+h6:before {
+  content: url('http://placehold.it/32');
+  margin-right: 10px;
+}
+h1:after,
+h2:after,
+h3:after,
+h4:after,
+h5:after,
+h6:after {
+  content: url('http://placehold.it/32');
+  margin-left: 10px;
+}
 p,
 label {
   font-family: "ariadnesans-condensed", "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -9334,7 +9352,7 @@ body {
     vertical-align: -15px;
   }
 }
-#details #the-couple {
+#details .the-couple {
   color: #689079;
   /*==========  Mobile First Method  ==========*/
   /* XXS */
@@ -9344,28 +9362,28 @@ body {
   /* LG  */
 }
 @media only screen and (min-width: 320px) {
-  #details #the-couple {
+  #details .the-couple {
     font-size: 10vw;
     line-height: .9;
   }
 }
 @media only screen and (min-width: 480px) {
-  #details #the-couple {
+  #details .the-couple {
     font-size: 10vw;
   }
 }
 @media only screen and (min-width: 768px) {
-  #details #the-couple {
+  #details .the-couple {
     font-size: 5.5vw;
   }
 }
 @media only screen and (min-width: 992px) {
-  #details #the-couple {
+  #details .the-couple {
     font-size: 5vw;
   }
 }
 @media only screen and (min-width: 1200px) {
-  #details #the-couple {
+  #details .the-couple {
     font-size: 5vw;
   }
 }
