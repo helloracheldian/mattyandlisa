@@ -13,13 +13,28 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: @heading-font-family;
 	color: @primary-color-text;
 	&:before {
-		content: @left-heading-flourish;
+		content: '';
+		display: inline-block;
+		position: relative;
+		background-image: @left-heading-flourish;
 		margin-right: @heading-flourish-distance;
+		height:28px;
+		width:32px;
+		top: 0px;
+  		left: 0px;
+		background-size:contain;
 	}
 	&:after {
-		content: @right-heading-flourish;
+		content: '';
+		display: inline-block;
+		position: relative;
+		background-image: @right-heading-flourish;
 		margin-left: @heading-flourish-distance;
-		
+		height:28px;
+		width:32px;
+		top: 0px;
+  		right: 0px;
+		background-size:contain;
 	}
 }
 
