@@ -10077,17 +10077,17 @@ body {
 }
 @media only screen and (min-width: 320px) {
   #accommodations #heading {
-    font-size: 2em;
+    font-size: 4.5em;
   }
 }
 @media only screen and (min-width: 480px) {
   #accommodations #heading {
-    font-size: 6em;
+    font-size: 3em;
   }
 }
 @media only screen and (min-width: 768px) {
   #accommodations #heading {
-    font-size: 4em;
+    font-size: 2.5em;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -10100,8 +10100,76 @@ body {
     font-size: 1.5em;
   }
 }
+#accommodations .accommodations-intro {
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #accommodations .accommodations-intro {
+    font-size: 3.5em;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #accommodations .accommodations-intro {
+    font-size: 1.8em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #accommodations .accommodations-intro {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #accommodations .accommodations-intro {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #accommodations .accommodations-intro {
+    font-size: .8em;
+  }
+}
 #accommodations #heading-sm {
   text-align: center!important;
+  line-height: .8em;
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #accommodations #heading-sm {
+    font-size: 3em;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #accommodations #heading-sm {
+    font-size: 1.8em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #accommodations #heading-sm {
+    font-size: 1.25em;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #accommodations #heading-sm {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #accommodations #heading-sm {
+    font-size: .7em;
+  }
+}
+#accommodations p {
+  text-align: center;
   line-height: 1em;
   /*==========  Mobile First Method  ==========*/
   /* XXS */
@@ -10111,63 +10179,28 @@ body {
   /* LG  */
 }
 @media only screen and (min-width: 320px) {
-  #accommodations #heading-sm {
-    font-size: 8vw;
-  }
-}
-@media only screen and (min-width: 480px) {
-  #accommodations #heading-sm {
-    font-size: 6vw;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #accommodations #heading-sm {
-    font-size: 4vw;
-  }
-}
-@media only screen and (min-width: 992px) {
-  #accommodations #heading-sm {
-    font-size: 2vw;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #accommodations #heading-sm {
-    font-size: 2vw;
-  }
-}
-#accommodations p {
-  text-align: center;
-  line-height: 1.2em;
-  /*==========  Mobile First Method  ==========*/
-  /* XXS */
-  /* XS  */
-  /* SM  */
-  /* MD  */
-  /* LG  */
-}
-@media only screen and (min-width: 320px) {
   #accommodations p {
-    font-size: 3vw;
+    font-size: 2.5em;
   }
 }
 @media only screen and (min-width: 480px) {
   #accommodations p {
-    font-size: 2vw;
+    font-size: 1.8em;
   }
 }
 @media only screen and (min-width: 768px) {
   #accommodations p {
-    font-size: 2vw;
+    font-size: 1.25em;
   }
 }
 @media only screen and (min-width: 992px) {
   #accommodations p {
-    font-size: 1.8vw;
+    font-size: 1em;
   }
 }
 @media only screen and (min-width: 1200px) {
   #accommodations p {
-    font-size: 1.5vw;
+    font-size: .5em;
   }
 }
 #registries {
