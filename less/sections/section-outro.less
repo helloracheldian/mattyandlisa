@@ -1,16 +1,48 @@
 #outro {
-	background-color: @primary-color;
+	background-color: @white;
 	width:100%;
-	overflow-y: hidden;
-	/*==========  Non-Mobile First Method  ==========*/
-	/* LG  */ @media only screen and (max-width : 1200px) {height:500px;}
-	/* MD  */ @media only screen and (max-width : 992px) {height:500px;}
-	/* SM  */ @media only screen and (max-width : 768px) {height:500px;}
-	/* XS  */ @media only screen and (max-width : 480px) {height:500px;}
-	/* XXS */ @media only screen and (max-width : 320px) {height:550px;}
-	.beveled-corner-box {
-		margin-top: 35%;
-		padding: 30px;
+	padding: 2em 0;
+
+	#container {
+		width: 80%;
+	}
+
+	#outro-head {
+		text-align: center!important;
+		line-height: 1em;
+		/*==========  Mobile First Method  ==========*/
+		/* XXS */ @media only screen and (min-width : 320px)  {font-size: 6vw;}
+		/* XS  */ @media only screen and (min-width : 480px)  {font-size: 5vw;}
+		/* SM  */ @media only screen and (min-width : 768px)  {font-size: 4vw;}
+		/* MD  */ @media only screen and (min-width : 992px)  {font-size: 3vw;}
+		/* LG  */ @media only screen and (min-width : 1200px) {font-size: 2vw;}
+	}
+
+	#outro-p {
+		font-size: 1em;
 		text-align: center;
+		line-height: 1em;
+		/*==========  Mobile First Method  ==========*/
+		/* XXS */ @media only screen and (min-width : 320px)  {font-size: 6vw;}
+		/* XS  */ @media only screen and (min-width : 480px)  {font-size: 5vw;}
+		/* SM  */ @media only screen and (min-width : 768px)  {font-size: 3vw;}
+		/* MD  */ @media only screen and (min-width : 992px)  {font-size: 3vw;}
+		/* LG  */ @media only screen and (min-width : 1200px) {font-size: 2vw;}
+	}
+
+	#outro-p2 {
+		font-size: 1em;
+		text-align: center;
+		line-height: 1em;
+		/*==========  Mobile First Method  ==========*/
+		/* XXS */ @media only screen and (min-width : 320px)  {font-size: 6vw;}
+		/* XS  */ @media only screen and (min-width : 480px)  {font-size: 5vw;}
+		/* SM  */ @media only screen and (min-width : 768px)  {font-size: 3vw;}
+		/* MD  */ @media only screen and (min-width : 992px)  {font-size: 2.5vw;}
+		/* LG  */ @media only screen and (min-width : 1200px) {font-size: 1.5vw;}
+	}
+
+	a {
+		text-decoration: none;
 	}
 }

@@ -9661,6 +9661,7 @@ body {
   }
 }
 #details #secondary-text {
+  color: #689079;
   line-height: 1em;
   /*==========  Mobile First Method  ==========*/
   /* XXS */
@@ -9861,6 +9862,7 @@ body {
 }
 #directions .directions-intro {
   text-align: center;
+  color: #689079;
   /* XXS */
   /* XS  */
   /* SM  */
@@ -9889,7 +9891,7 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   #directions .directions-intro {
-    font-size: 1vw;
+    font-size: 1.9vw;
   }
 }
 #directions .directions-outro {
@@ -9917,12 +9919,12 @@ body {
 }
 @media only screen and (min-width: 992px) {
   #directions .directions-outro {
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
 }
 @media only screen and (min-width: 1200px) {
   #directions .directions-outro {
-    font-size: 1vw;
+    font-size: 1.9vw;
   }
 }
 #directions .directions-notes {
@@ -9951,12 +9953,12 @@ body {
 }
 @media only screen and (min-width: 992px) {
   #directions .directions-notes {
-    font-size: 1vw;
+    font-size: 2vw;
   }
 }
 @media only screen and (min-width: 1200px) {
   #directions .directions-notes {
-    font-size: 1vw;
+    font-size: 1.7vw;
   }
 }
 #directions p {
@@ -9992,7 +9994,7 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   #directions p {
-    font-size: 1vw;
+    font-size: 1.6vw;
   }
 }
 #directions ul {
@@ -10146,12 +10148,9 @@ body {
 #registries {
   background-color: #ffffff;
 }
-#registries .container {
-  padding: 4em 0;
-}
 #registries .container .registry-header {
-  text-align: center;
-  line-height: 1.2em;
+  text-align: center!important;
+  line-height: 1em;
   /*==========  Mobile First Method  ==========*/
   /* XXS */
   /* XS  */
@@ -10161,27 +10160,27 @@ body {
 }
 @media only screen and (min-width: 320px) {
   #registries .container .registry-header {
-    font-size: 3.4vw;
+    font-size: 10vw;
   }
 }
 @media only screen and (min-width: 480px) {
   #registries .container .registry-header {
-    font-size: 2.4vw;
+    font-size: 7vw;
   }
 }
 @media only screen and (min-width: 768px) {
   #registries .container .registry-header {
-    font-size: 2.4vw;
+    font-size: 5vw;
   }
 }
 @media only screen and (min-width: 992px) {
   #registries .container .registry-header {
-    font-size: 2.2vw;
+    font-size: 4vw;
   }
 }
 @media only screen and (min-width: 1200px) {
   #registries .container .registry-header {
-    font-size: 1.9vw;
+    font-size: 3vw;
   }
 }
 #registries .container .registry-info {
@@ -10197,27 +10196,27 @@ body {
 }
 @media only screen and (min-width: 320px) {
   #registries .container .registry-info {
-    font-size: 2.9vw;
+    font-size: 6vw;
   }
 }
 @media only screen and (min-width: 480px) {
   #registries .container .registry-info {
-    font-size: 1.9vw;
+    font-size: 5vw;
   }
 }
 @media only screen and (min-width: 768px) {
   #registries .container .registry-info {
-    font-size: 1.8vw;
+    font-size: 3vw;
   }
 }
 @media only screen and (min-width: 992px) {
   #registries .container .registry-info {
-    font-size: 1.7vw;
+    font-size: 3vw;
   }
 }
 @media only screen and (min-width: 1200px) {
   #registries .container .registry-info {
-    font-size: 1.6vw;
+    font-size: 2vw;
   }
 }
 #rsvp {
@@ -10226,9 +10225,76 @@ body {
   line-height: 1em;
   color: #2c523c;
 }
+#rsvp #heading {
+  text-align: center!important;
+  line-height: 1em;
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #rsvp #heading {
+    font-size: 10vw;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #rsvp #heading {
+    font-size: 7vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #rsvp #heading {
+    font-size: 5vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #rsvp #heading {
+    font-size: 4vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #rsvp #heading {
+    font-size: 3vw;
+  }
+}
+#rsvp p {
+  line-height: 1.2em;
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #rsvp p {
+    font-size: 5vw;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #rsvp p {
+    font-size: 4vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #rsvp p {
+    font-size: 3.5vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #rsvp p {
+    font-size: 2.5vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #rsvp p {
+    font-size: 1.5vw;
+  }
+}
 #rsvp .beveled-corner-box {
   padding: 30px;
-  margin-bottom: 30px;
   /*==========  Mobile First Method  ==========*/
   /* XXS */
   /* XS  */
@@ -10376,10 +10442,6 @@ body {
   background-color: #4e686c;
   border-color: #4e686c;
 }
-#rsvp p {
-  line-height: 1.2em;
-  margin-bottom: 1.5em;
-}
 #rsvp .rsvp-img {
   margin: 0 auto;
   padding-bottom: 30px;
@@ -10513,7 +10575,7 @@ body {
   margin-top: 5px;
 }
 #faq {
-  background-color: #ffffff;
+  background-color: #fffaf0;
   width: 100%;
   padding: 2em 0;
   text-align: left;
@@ -10629,45 +10691,122 @@ body {
   }
 }
 #outro {
-  background-color: #fffaf0;
+  background-color: #ffffff;
   width: 100%;
-  overflow-y: hidden;
-  /*==========  Non-Mobile First Method  ==========*/
-  /* LG  */
-  /* MD  */
-  /* SM  */
-  /* XS  */
+  padding: 2em 0;
+}
+#outro #container {
+  width: 80%;
+}
+#outro #outro-head {
+  text-align: center!important;
+  line-height: 1em;
+  /*==========  Mobile First Method  ==========*/
   /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
 }
-@media only screen and (max-width: 1200px) {
-  #outro {
-    height: 500px;
+@media only screen and (min-width: 320px) {
+  #outro #outro-head {
+    font-size: 6vw;
   }
 }
-@media only screen and (max-width: 992px) {
-  #outro {
-    height: 500px;
+@media only screen and (min-width: 480px) {
+  #outro #outro-head {
+    font-size: 5vw;
   }
 }
-@media only screen and (max-width: 768px) {
-  #outro {
-    height: 500px;
+@media only screen and (min-width: 768px) {
+  #outro #outro-head {
+    font-size: 4vw;
   }
 }
-@media only screen and (max-width: 480px) {
-  #outro {
-    height: 500px;
+@media only screen and (min-width: 992px) {
+  #outro #outro-head {
+    font-size: 3vw;
   }
 }
-@media only screen and (max-width: 320px) {
-  #outro {
-    height: 550px;
+@media only screen and (min-width: 1200px) {
+  #outro #outro-head {
+    font-size: 2vw;
   }
 }
-#outro .beveled-corner-box {
-  margin-top: 35%;
-  padding: 30px;
+#outro #outro-p {
+  font-size: 1em;
   text-align: center;
+  line-height: 1em;
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #outro #outro-p {
+    font-size: 6vw;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #outro #outro-p {
+    font-size: 5vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #outro #outro-p {
+    font-size: 3vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #outro #outro-p {
+    font-size: 3vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #outro #outro-p {
+    font-size: 2vw;
+  }
+}
+#outro #outro-p2 {
+  font-size: 1em;
+  text-align: center;
+  line-height: 1em;
+  /*==========  Mobile First Method  ==========*/
+  /* XXS */
+  /* XS  */
+  /* SM  */
+  /* MD  */
+  /* LG  */
+}
+@media only screen and (min-width: 320px) {
+  #outro #outro-p2 {
+    font-size: 6vw;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #outro #outro-p2 {
+    font-size: 5vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #outro #outro-p2 {
+    font-size: 3vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #outro #outro-p2 {
+    font-size: 2.5vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #outro #outro-p2 {
+    font-size: 1.5vw;
+  }
+}
+#outro a {
+  text-decoration: none;
 }
 #photo-bg-1 {
   background: url('../img/photo1.jpg') no-repeat;
