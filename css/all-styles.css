@@ -8918,7 +8918,7 @@ h3:before,
 h4:before,
 h5:before,
 h6:before {
-  content: url('http://placehold.it/32');
+  content: url('img/left_flourish.png');
   margin-right: 10px;
 }
 h1:after,
@@ -8927,7 +8927,7 @@ h3:after,
 h4:after,
 h5:after,
 h6:after {
-  content: url('http://placehold.it/32');
+  content: url('img/right_flourish.png');
   margin-left: 10px;
 }
 p,
@@ -9826,34 +9826,33 @@ body {
 }
 @media only screen and (min-width: 320px) {
   #directions #heading {
-    font-size: 10vw;
+    font-size: 4.5em;
   }
 }
 @media only screen and (min-width: 480px) {
   #directions #heading {
-    font-size: 7vw;
+    font-size: 3em;
   }
 }
 @media only screen and (min-width: 768px) {
   #directions #heading {
-    font-size: 5vw;
+    font-size: 2.5em;
   }
 }
 @media only screen and (min-width: 992px) {
   #directions #heading {
-    font-size: 4vw;
+    font-size: 2em;
   }
 }
 @media only screen and (min-width: 1200px) {
   #directions #heading {
-    font-size: 3vw;
+    font-size: 1.5em;
   }
 }
 #directions #heading-sm {
   text-align: center!important;
   line-height: 1em;
   text-decoration: underline dashed;
-  /*==========  Mobile First Method  ==========*/
   /* XXS */
   /* XS  */
   /* SM  */
@@ -9862,27 +9861,27 @@ body {
 }
 @media only screen and (min-width: 320px) {
   #directions #heading-sm {
-    font-size: 4.5vw;
+    font-size: 3.5em;
   }
 }
 @media only screen and (min-width: 480px) {
   #directions #heading-sm {
-    font-size: 3.5vw;
+    font-size: 2.5em;
   }
 }
 @media only screen and (min-width: 768px) {
   #directions #heading-sm {
-    font-size: 3vw;
+    font-size: 1.25em;
   }
 }
 @media only screen and (min-width: 992px) {
   #directions #heading-sm {
-    font-size: 2.5vw;
+    font-size: 1em;
   }
 }
 @media only screen and (min-width: 1200px) {
   #directions #heading-sm {
-    font-size: 2vw;
+    font-size: 1em;
   }
 }
 #directions .directions-intro {
@@ -9896,27 +9895,27 @@ body {
 }
 @media only screen and (min-width: 320px) {
   #directions .directions-intro {
-    font-size: 5vw;
+    font-size: 3.5em;
   }
 }
 @media only screen and (min-width: 480px) {
   #directions .directions-intro {
-    font-size: 4vw;
+    font-size: 1.8em;
   }
 }
 @media only screen and (min-width: 768px) {
   #directions .directions-intro {
-    font-size: 3vw;
+    font-size: 1.5em;
   }
 }
 @media only screen and (min-width: 992px) {
   #directions .directions-intro {
-    font-size: 2vw;
+    font-size: 1em;
   }
 }
 @media only screen and (min-width: 1200px) {
   #directions .directions-intro {
-    font-size: 1.9vw;
+    font-size: 1em;
   }
 }
 #directions .directions-outro {
@@ -9929,27 +9928,27 @@ body {
 }
 @media only screen and (min-width: 320px) {
   #directions .directions-outro {
-    font-size: 4.5vw;
+    font-size: 3.5em;
   }
 }
 @media only screen and (min-width: 480px) {
   #directions .directions-outro {
-    font-size: 3.5vw;
+    font-size: 1.8em;
   }
 }
 @media only screen and (min-width: 768px) {
   #directions .directions-outro {
-    font-size: 2.5vw;
+    font-size: 1.25em;
   }
 }
 @media only screen and (min-width: 992px) {
   #directions .directions-outro {
-    font-size: 2vw;
+    font-size: 1em;
   }
 }
 @media only screen and (min-width: 1200px) {
   #directions .directions-outro {
-    font-size: 1.9vw;
+    font-size: 1em;
   }
 }
 #directions .directions-notes {
@@ -9963,27 +9962,27 @@ body {
 }
 @media only screen and (min-width: 320px) {
   #directions .directions-notes {
-    font-size: 4vw;
+    font-size: 3.5em;
   }
 }
 @media only screen and (min-width: 480px) {
   #directions .directions-notes {
-    font-size: 3vw;
+    font-size: 1.8em;
   }
 }
 @media only screen and (min-width: 768px) {
   #directions .directions-notes {
-    font-size: 2vw;
+    font-size: 1.25em;
   }
 }
 @media only screen and (min-width: 992px) {
   #directions .directions-notes {
-    font-size: 2vw;
+    font-size: 1em;
   }
 }
 @media only screen and (min-width: 1200px) {
   #directions .directions-notes {
-    font-size: 1.7vw;
+    font-size: .85em;
   }
 }
 #directions p {
@@ -9998,28 +9997,27 @@ body {
 }
 @media only screen and (min-width: 320px) {
   #directions p {
-    font-size: 4vw;
-    line-height: .9;
+    font-size: 1em;
   }
 }
 @media only screen and (min-width: 480px) {
   #directions p {
-    font-size: 3vw;
+    font-size: 1em;
   }
 }
 @media only screen and (min-width: 768px) {
   #directions p {
-    font-size: 2.5vw;
+    font-size: 1em;
   }
 }
 @media only screen and (min-width: 992px) {
   #directions p {
-    font-size: 1.8vw;
+    font-size: 1em;
   }
 }
 @media only screen and (min-width: 1200px) {
   #directions p {
-    font-size: 1.6vw;
+    font-size: 1.5em;
   }
 }
 #directions ul {
@@ -10032,27 +10030,27 @@ body {
 }
 @media only screen and (min-width: 320px) {
   #directions ul {
-    font-size: 4vw;
+    font-size: 2.5em;
   }
 }
 @media only screen and (min-width: 480px) {
   #directions ul {
-    font-size: 2vw;
+    font-size: 1.8em;
   }
 }
 @media only screen and (min-width: 768px) {
   #directions ul {
-    font-size: 2vw;
+    font-size: 1.25em;
   }
 }
 @media only screen and (min-width: 992px) {
   #directions ul {
-    font-size: 1.8vw;
+    font-size: 1em;
   }
 }
 @media only screen and (min-width: 1200px) {
   #directions ul {
-    font-size: 1vw;
+    font-size: .5em;
   }
 }
 #accommodations {
@@ -10130,7 +10128,7 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   #accommodations .accommodations-intro {
-    font-size: .8em;
+    font-size: 1em;
   }
 }
 #accommodations #heading-sm {
@@ -10155,17 +10153,17 @@ body {
 }
 @media only screen and (min-width: 768px) {
   #accommodations #heading-sm {
-    font-size: 1.25em;
+    font-size: 1.5em;
   }
 }
 @media only screen and (min-width: 992px) {
   #accommodations #heading-sm {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 }
 @media only screen and (min-width: 1200px) {
   #accommodations #heading-sm {
-    font-size: .7em;
+    font-size: 1em;
   }
 }
 #accommodations p {
@@ -10200,16 +10198,19 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   #accommodations p {
-    font-size: .5em;
+    font-size: .85em;
   }
 }
 #registries {
   background-color: #ffffff;
+  font-size: 2vw;
 }
-#registries .container .registry-header {
+#registries .container {
+  padding: 4em 0;
+}
+#registries .container #heading {
   text-align: center!important;
   line-height: 1em;
-  /*==========  Mobile First Method  ==========*/
   /* XXS */
   /* XS  */
   /* SM  */
@@ -10217,28 +10218,28 @@ body {
   /* LG  */
 }
 @media only screen and (min-width: 320px) {
-  #registries .container .registry-header {
-    font-size: 10vw;
+  #registries .container #heading {
+    font-size: 4.5em;
   }
 }
 @media only screen and (min-width: 480px) {
-  #registries .container .registry-header {
-    font-size: 7vw;
+  #registries .container #heading {
+    font-size: 3em;
   }
 }
 @media only screen and (min-width: 768px) {
-  #registries .container .registry-header {
-    font-size: 5vw;
+  #registries .container #heading {
+    font-size: 2.5em;
   }
 }
 @media only screen and (min-width: 992px) {
-  #registries .container .registry-header {
-    font-size: 4vw;
+  #registries .container #heading {
+    font-size: 2em;
   }
 }
 @media only screen and (min-width: 1200px) {
-  #registries .container .registry-header {
-    font-size: 3vw;
+  #registries .container #heading {
+    font-size: 1.5em;
   }
 }
 #registries .container .registry-info {
@@ -10254,27 +10255,27 @@ body {
 }
 @media only screen and (min-width: 320px) {
   #registries .container .registry-info {
-    font-size: 6vw;
+    font-size: 3.5em;
   }
 }
 @media only screen and (min-width: 480px) {
   #registries .container .registry-info {
-    font-size: 5vw;
+    font-size: 1.8em;
   }
 }
 @media only screen and (min-width: 768px) {
   #registries .container .registry-info {
-    font-size: 3vw;
+    font-size: 1.5em;
   }
 }
 @media only screen and (min-width: 992px) {
   #registries .container .registry-info {
-    font-size: 3vw;
+    font-size: 1em;
   }
 }
 @media only screen and (min-width: 1200px) {
   #registries .container .registry-info {
-    font-size: 2vw;
+    font-size: 1em;
   }
 }
 #rsvp {
