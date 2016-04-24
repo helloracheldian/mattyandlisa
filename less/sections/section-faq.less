@@ -39,4 +39,44 @@
 		/* MD  */ @media only screen and (min-width : 992px)  {font-size: 1.8vw;}
 		/* LG  */ @media only screen and (min-width : 1200px) {font-size: 1.5vw;}
 	}
+	
+	#accordion {
+		.panel+.panel {
+			margin-top:25px; //This is the spacing in between the collapsed accordians
+		}
+		.panel-default {
+			color: red;
+			background-color: blue;
+			border-color: cyan;
+			font-weight: inherit;
+			font-size: 1em;
+			line-height: 1em;
+			border-radius: 10px;
+			.panel-heading {
+				color: yellow;
+				background-color: green;
+				border-color: green;
+				padding: 10px 15px;
+				border-top-right-radius: 10px;
+				border-top-left-radius: 10px;
+				.panel-title {
+					text-align: right; // Or whatever
+					a {
+						text-decoration: none;
+						display: block; // This is needed so the whole bar is clickable.
+						width: 100%; // This is needed so the whole bar is clickable.
+						font-weight: inherit;
+						font-size: 1em;
+						line-height: 1em;
+					}
+				}
+			}
+			.panel-body {
+				border-top: 2px solid chartreuse;
+			}
+		}
+	}
+
+
+
 }

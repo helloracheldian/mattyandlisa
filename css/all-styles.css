@@ -10646,6 +10646,40 @@ body {
     font-size: 1.5vw;
   }
 }
+#faq #accordion .panel + .panel {
+  margin-top: 25px;
+}
+#faq #accordion .panel-default {
+  color: red;
+  background-color: blue;
+  border-color: cyan;
+  font-weight: inherit;
+  font-size: 1em;
+  line-height: 1em;
+  border-radius: 10px;
+}
+#faq #accordion .panel-default .panel-heading {
+  color: yellow;
+  background-color: green;
+  border-color: green;
+  padding: 10px 15px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+#faq #accordion .panel-default .panel-heading .panel-title {
+  text-align: right;
+}
+#faq #accordion .panel-default .panel-heading .panel-title a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  font-weight: inherit;
+  font-size: 1em;
+  line-height: 1em;
+}
+#faq #accordion .panel-default .panel-body {
+  border-top: 2px solid chartreuse;
+}
 #outro {
   background-color: #ffffff;
   width: 100%;
