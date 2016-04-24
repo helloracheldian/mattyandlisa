@@ -12,14 +12,14 @@ h6 {font-size: 1em;}
 h1,h2,h3,h4,h5,h6 {
 	font-family: @heading-font-family;
 	color: @primary-color-text;
-	// &:before {
-	// 	content: @left-heading-flourish;
-	// 	margin-right: @heading-flourish-distance;
-	// }
-	// &:after {
-	// 	content: @right-heading-flourish;
-	// 	margin-left: @heading-flourish-distance;
-	// }
+	&:before {
+		content: @left-heading-flourish;
+		margin-right: @heading-flourish-distance;
+	}
+	&:after {
+		content: @right-heading-flourish;
+		margin-left: @heading-flourish-distance;
+	}
 }
 
 p, label {
