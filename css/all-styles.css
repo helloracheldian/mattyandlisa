@@ -9421,6 +9421,7 @@ body {
 }
 #details .the-couple {
   color: #689079;
+  margin-bottom: -5px;
   /*==========  Mobile First Method  ==========*/
   /* XXS */
   /* XS  */
@@ -10864,9 +10865,6 @@ body {
   width: 100%;
   padding: 2em 0;
 }
-#outro #container {
-  width: 80%;
-}
 #outro #outro-head {
   text-align: center!important;
   line-height: 1em;
@@ -11020,7 +11018,6 @@ a {
 }
 a:hover {
   text-decoration: underline dashed;
-  cursor: crosshair;
 }
 #photo-bg-1 {
   background: url('../img/photo1.jpg') no-repeat;

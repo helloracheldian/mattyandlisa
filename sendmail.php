@@ -123,7 +123,7 @@ if(empty($_POST) === false) {
 						<body>
 							<div class='main'>
 								<h4>RSVP from $name:</h4>
-								<h4>Group One</h4>
+								<h4>Guest 1</h4>
 								<table style='min-width:300px'>
 									<tr>
 										<th>Name</th>
@@ -138,7 +138,7 @@ if(empty($_POST) === false) {
 										<td>$rsvp2</td>
 									</tr>
 								</table>
-								<h4>Group Two</h4>
+								<h4>Guest 2</h4>
 								<table style='min-width:300px'>
 									<tr>
 										<th>Name</th>
@@ -153,11 +153,11 @@ if(empty($_POST) === false) {
 										<td>$g2rsvp2</td>
 									</tr>
 									<tr>
-										<th>Music</th>
+										<th>Music Requests</th>
 										<td>$music</td>
 									</tr>
 									<tr>
-										<th>Diet</th>
+										<th>Dietary Restrictions</th>
 										<td>$diet</td>
 									</tr>
 									<tr>
