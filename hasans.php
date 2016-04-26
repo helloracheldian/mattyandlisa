@@ -321,7 +321,49 @@ catch(e){window.attachEvent("onload", $buo_f)}
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1 col-lg-6 col-lg-offset-3">
 	    		<h2 id="heading">RSVP</h2>
-					<p class="text-center">please RSVP by June 15th, 2016</p>
+					<p class="text-center" id="form">please RSVP by June 15th, 2016</p>
+
+							<!-- Form Notification Start -->
+
+
+							<style>
+								.alert {
+									position: relative;
+								}
+
+								.btn22 {
+									position: absolute;
+									top: 0;
+									right: 0;
+									font-size: 35px;
+								}
+
+							</style>
+
+
+                            <?php if(isset($_SESSION['success'])) : ?>
+                            	<div class="success alert alert-success" role="alert">
+                            		<button class="btn22">×</button>
+                            		<strong>Thank you!</strong>
+                            		Your RSVP was successful.
+                            		<?php unset($fields); ?>
+                            	</div>
+                            <?php elseif(!empty($errors)) : ?>
+								<div class="error alert alert-danger" role="alert">
+									<button class="btn22">×</button>
+									<ul style="list-style:outside none none;padding:10px;"><li><?php echo implode("</li><li>", $errors) ?></li></ul>
+								</div>
+                            <?php endif ;?>
+
+							<script>
+								$(document).ready(function(){
+									$("button").click(function(){
+										$(".alert").hide();
+									});
+								});
+							</script>
+                            
+                            <!-- Form Notification End -->
 
 					<form class="" name="sentMessage" action="sendmail.php" method="post">
 						<div id="flower-row" class="row">
@@ -329,19 +371,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 						</div>
 
 						<div class="row">
-							<!-- Form Notification Start -->
-                            <?php if(isset($_SESSION['success'])) : ?>
-                            	<div class="success alert alert-success" role="alert">
-                            		<strong>Thank you!</strong>
-                            		Your RSVP was successful.
-                            		<?php unset($fields); ?>
-                            	</div>
-                            <?php elseif(!empty($errors)) : ?>
-								<div class="error alert alert-danger" role="alert">
-									<ul style="list-style:outside none none;padding:10px;"><li><?php echo implode("</li><li>", $errors) ?></li></ul>
-								</div>
-                            <?php endif ;?>
-                            <!-- Form Notification End -->
+
 						</div>
 						
 						<div class="row">
@@ -355,7 +385,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="rsvp" class="col-xs-2 control-label">RSVP</label>
+								<label for="rsvp-ceremony" class="col-xs-2 control-label">Ceremony</label>
 								<div class="col-xs-5">
 									<label>
 										<input type="radio" name="rsvp" value="Yes" required>
@@ -369,18 +399,16 @@ catch(e){window.attachEvent("onload", $buo_f)}
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="meal" class="col-xs-2 control-label">
-									Meal								</label>
-								<div class="col-xs-10">
+								<label for="rsvp-brunch" class="col-xs-2 control-label">Brunch</label>
+								<div class="col-xs-5">
 									<label>
-										<input type="radio" name="meal" value="Salmon">
-										OPTION 1									</label>
+										<input type="radio" name="rsvp2" value="Yes" required>
+										Happily Accept									</label>
+								</div>
+								<div class="col-xs-5">
 									<label>
-										<input type="radio" name="meal" value="Steak">
-										OPTION 2									</label>
-									<label>
-										<input type="radio" name="meal" value="Vegetarian">
-										OPTION 3									</label>
+										<input type="radio" name="rsvp2" value="No" required> 
+										Regretfully decline									</label>
 									<p class="help-block text-danger"></p>
 								</div>
 							</div>
@@ -405,39 +433,57 @@ catch(e){window.attachEvent("onload", $buo_f)}
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="rsvp2" class="col-xs-2 control-label">RSVP</label>
+								<label for="rsvp-ceremony" class="col-xs-2 control-label">Ceremony</label>
 								<div class="col-xs-5">
 									<label>
-										<input type="radio" name="rsvp2" value="Yes">
+										<input type="radio" name="g2rsvp" value="Yes" >
 										Happily Accept									</label>
 								</div>
 								<div class="col-xs-5">
 									<label>
-										<input type="radio" name="rsvp2" value="No"> 
+										<input type="radio" name="g2rsvp" value="No"> 
 										Regretfully decline									</label>
-
 									<p class="help-block text-danger"></p>
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="meal2" class="col-sm-2 control-label">
-									Meal								</label>
+								<label for="rsvp-brunch" class="col-xs-2 control-label">Brunch</label>
+								<div class="col-xs-5">
+									<label>
+										<input type="radio" name="g2rsvp2" value="Yes" >
+										Happily Accept									</label>
+								</div>
+								<div class="col-xs-5">
+									<label>
+										<input type="radio" name="g2rsvp2" value="No"> 
+										Regretfully decline									</label>
+									<p class="help-block text-danger"></p>
+								</div>
+							</div>
+
+
+							<div id="rsvp-music" class="form-group">
+								<label for="music" class="col-sm-2 control-label">
+									Music
+								</label>
 								<div class="col-sm-10">
-									<label>
-										<input type="radio" name="meal2" value="Salmon">
-										OPTION 1									</label>
-									<label>
-										<input type="radio" name="meal2" value="Steak">
-										OPTION 2									</label>
-									<label>
-										<input type="radio" name="meal2" value="Vegetarian">
-										OPTION 3									</label>
+									<textarea class="form-control" name="music" placeholder="George Michael" id="music"></textarea>
+								</div>
+							</div>
+
+							<div id="rsvp-diet" class="form-group">
+								<label for="diet" class="col-sm-2 control-label">
+									Diet
+								</label>
+								<div class="col-sm-10">
+									<textarea class="form-control" name="diet" placeholder="I cannot eat seafood" id="diet"></textarea>
 								</div>
 							</div>
 
 							<div id="rsvp-msg" class="form-group">
 								<label for="message" class="col-sm-2 control-label">
-									Message								</label>
+									Message
+								</label>
 								<div class="col-sm-10">
 									<textarea class="form-control" name="message" placeholder="Anything else you'd like to add?" id="message"></textarea>
 								</div>
@@ -903,7 +949,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 									</div>
 
 								</div>
-								<div class="row">
+								<div class="row faq-margin">
 
 									<div class="col-xs-12 col-sm-6">
 										<ul class="list-unstyled">

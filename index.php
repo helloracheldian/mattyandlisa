@@ -10,19 +10,21 @@ $fields = isset($_SESSION['fields']) ? $_SESSION['fields'] : '';
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- ============ LOCATIONS INVOLVED ============ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -139,6 +141,10 @@ $fields = isset($_SESSION['fields']) ? $_SESSION['fields'] : '';
 
 <!-- ============ OUTRO SECTION ============ -->
 
+
+
+<!-- ============ FOOTER ============ -->
+
 <!-- ============ SPLASH-PHOTO ============ -->
 
 <!-- ============ SLIDE 1 ============ -->
@@ -154,7 +160,7 @@ $fields = isset($_SESSION['fields']) ? $_SESSION['fields'] : '';
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bri & Adam are getting married</title>
+  <title>Lisa &amp; Matty | 07.31.16</title>
 
   <!-- Custom styles -->
 <link rel="stylesheet" href="css/all-styles.css">
@@ -212,23 +218,22 @@ catch(e){window.attachEvent("onload", $buo_f)}
 
 </head>    <body>
 
-
-
         <!-- import "sections/slider.kit" -->
 
         <!-- import "sections/splash-photo.kit" -->
-
+        
         <!-- import "sections/experiment.kit" -->
-        <section id="experiment2">
-  <div class="wrap">
-    <div id="logo">
-      <a href="#details" class="smoothscroll">
-        <img class="center-block img-responsive" src="img/logo-600w.png">
-      </a>
-    </div>
+
+        <!-- import "sections/experiment2.kit" -->
+
+    <section id="first">
+
+  <div id="logo" style="padding: 50px 0">
+    <a href="#details" class="smoothscroll" style="opacity:1; cursor: crosshair;"><img class="center-block img-responsive" src="img/invite_front.png"></a>
   </div>
+
 </section>
-        <div class="nav-wrapper" style="height:51px;">
+    <div class="nav-wrapper" style="height:51px;">
   <nav id="nav" class="navbar navbar-inverse" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -238,22 +243,16 @@ catch(e){window.attachEvent("onload", $buo_f)}
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <!-- <a class="navbar-brand-centered" href="#">
-          <img src="http://placehold.it/200x50&text=@1x" srcset="http://placehold.it/200x50&text=@1x 1x, http://placehold.it/400x100&text=@2x 2x" alt="image" width="200" height="50">  
-        </a> -->
+        
       </div>
       <div class="collapse navbar-collapse" id="navbar-brand-centered">
         <ul class="nav nav-justified">
-        <!-- <ul class="nav navbar-nav"> -->
-          <li><a class="smoothscroll" href="#details">Details</a></li>
-          <li><a class="smoothscroll" href="#directions">Directions</a></li>
-          <li><a class="smoothscroll hidden-xs" href="#"><span class="secret">hidden</span></a></li>          
-          
-       <!--  </ul> -->
-        <!--  <ul class="nav navbar-nav navbar-right"> -->
-          
-          <li><a class="smoothscroll" href="#registries">Registry</a></li>
-          <li><a class="smoothscroll" href="#rsvp">RSVP</a></li>           
+          <li><a class="smoothscroll" href="#details">details</a></li>
+          <li><a class="smoothscroll" href="#rsvp">rsvp</a></li>
+          <li><a class="smoothscroll" href="#directions">directions</a></li>
+          <li><a class="smoothscroll" href="#accommodations">accommodations</a></li>   
+          <li><a class="smoothscroll" href="#registries">registry</a></li> 
+          <li><a class="smoothscroll" href="#faq">faq</a></li>           
         </ul>
       </div>
     </div>
@@ -266,85 +265,249 @@ catch(e){window.attachEvent("onload", $buo_f)}
 <script>
   // init controller
   var controller = new ScrollMagic.Controller();
-</script>        
+</script>      
 
-        
+        <!-- import "sections/home.kit" -->
 
-            <!-- import "sections/home.kit" -->
+        <!-- import "sections/about.kit" -->
 
-            <!-- import "sections/about.kit" -->
-
-        <section id="details" class="section full_width">
-	<div class="container-fluid">
+    <section id="details" class="section full_width">
+	<div class="container">
 		<div class="row">
 
-			<!-- <span class="flowers-left"></span><span class="flowers-right"></span> -->
-
-
-
 			<div class="col-md-12">
-
-				<!-- Desktop Flowers -->
-				<div class="hidden-xs">
-					<img class="flowers-desktop-left" src="img/2left.svg">
-					<img class="flowers-desktop-right" src="img/2right.svg">
-				</div>
-
-				<!-- Mobile Flowers -->
-				<div class="visible-xs">
-					<img class="flowers-mobile-top-left" src="img/mobile_2_topleft.svg">
-					<img class="flowers-mobile-top-right" src="img/mobile_2_topright.svg">
-					<img class="flowers-mobile-bottom-left" src="img/mobile_2_bottomleft.svg">
-					<img class="flowers-mobile-bottom-right" src="img/mobile_2_bottomright.svg">
-				</div>
-
+				<img class="center-block img-responsive topimg" src="img/flowerbunch.png">
 				<p class="details-intro">
-					Together with their families,				</p>
-				<h4 id="the-couple">
-					Brianne Tulk &amp; Adam Owen				</h4>
+					Together <span class="icon-with-01"></span> their families,				</p>
+				<p class="the-couple">
+					Lisa Rosenberg &amp; Matthew Jeronimo				</h4>
 				<p class="details-intro">
-					happily invite you to celebrate their marriage				</p>
-				<p id="wedding-date-long-form" class="text-smallcaps">
-					Saturday, the Thirtieth of April, Two Thousand and Sixteen              
+					happily invite you to celebrate their marriage!				</p>
+				<img class="center-block img-responsive divider" src="img/divider.png">
+				<p id="wedding-date">
+					July 31, 2016              
 				</p>
-				<p id="occasion-start" class="text-uppercase">
-				At four thirty in the Afternoon				</p>
+				<p id="occasion-start">
+				at five o'clock in the evening				</p>
 
 				<p id="ceremony-venue">
-					The Berkeley Fieldhouse<br>
-					311 Queen Street East <br/> Toronto, Ontario	   
+					<span class="icon-at"></span>
+					Baypony Farm</p>
+				<p id="ceremony-address">	
+					33140 SW Ladd Hill Road <br/> Wilsonville, Oregon	   
 				</p>
-				<p id="details-heading">
-					The details
-				</p>
-				<p id="ceremony-start">
-					5:00pm Vows
-				</p>
-				<p id="reception-start-time">
-					5:30pm Cocktail Hour
-				</p>
-				<p id="reception-dinner-start-time">
-					6:30pm Dinner &amp; Dancing
-				</p>
-
+				
 				<p id="details-outro">
-					We’d love to welcome children to our ceremony, <br/> though we kindly advise that the reception will be adults-only.				</p>
+					dinner &amp; dancing to follow				</p>
+				<img class="center-block img-responsive divider" src="img/divider2.png">
 
+				<p id="secondary-text">
+					the celebration continues on<br/>
+					monday, august 1st				</p>
+				<p id="secondary-info">
+					at the portland city grill<br/>
+					111 SW 5th avenue, 30th floor<br/> portland, oregon<br/>
 
+					<br/>
+					please join us for a brunch beginning at 11am				</p>
+				<img class="center-block img-responsive btmimg" src="img/flower.png">
 			</div>
 
 		</div>
 	</div>
-</section>           
+</section>   
+    <section id="rsvp">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1 col-lg-6 col-lg-offset-3">
+				<h2 id="heading">RSVP</h2>
+				<p class="text-center" id="form">please RSVP by June 15th, 2016</p>
+
+				<!-- Form Notification Start -->
+
+
+				<style>
+					.alert {
+						position: relative;
+					}
+
+					.btn22 {
+						position: absolute;
+						top: 0;
+						right: 0;
+						font-size: 35px;
+					}
+
+				</style>
+
+
+				<?php if(isset($_SESSION['success'])) : ?>
+					<div class="success alert alert-success" role="alert">
+						<button class="btn22">×</button>
+						<strong>Thank you!</strong>
+						Your RSVP was successful.
+						<?php unset($fields); ?>
+					</div>
+				<?php elseif(!empty($errors)) : ?>
+					<div class="error alert alert-danger" role="alert">
+						<button class="btn22">×</button>
+						<ul style="list-style:outside none none;padding:10px;"><li><?php echo implode("</li><li>", $errors) ?></li></ul>
+					</div>
+				<?php endif ;?>
+
+				<script>
+					$(document).ready(function(){
+						$("button").click(function(){
+							$(".alert").hide();
+						});
+					});
+				</script>
+				
+				<!-- Form Notification End -->
+
+				<form class="" name="sentMessage" action="sendmail.php" method="post">
+					<div id="flower-row" class="row">
+						<div class="col-xs-6 col-xs-offset-3 col-sm-8 col-sm-offset-2"></div>
+					</div>
+
+					<div class="row">
+
+					</div>
+					
+					<div class="row">
+
+						<!-- ======= GUEST 1 ======= -->
+
+						<div class="form-group">
+							<label for="name" class="col-xs-2 control-label white-space-nowrap">Guest 1</label>
+							<div class="col-xs-10">
+								<input type="text" name="name" class="form-control" placeholder="Please use full name" id="name" required>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="rsvp-ceremony" class="col-xs-2 control-label">Ceremony</label>
+							<div class="col-xs-5">
+								<label>
+									<input type="radio" name="rsvp" value="Yes" required>
+									Happily Accept									</label>
+								</div>
+								<div class="col-xs-5">
+									<label>
+										<input type="radio" name="rsvp" value="No" required> 
+										Regretfully decline									</label>
+										<p class="help-block text-danger"></p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="rsvp-brunch" class="col-xs-2 control-label">Brunch</label>
+									<div class="col-xs-5">
+										<label>
+											<input type="radio" name="rsvp2" value="Yes" required>
+											Happily Accept									</label>
+										</div>
+										<div class="col-xs-5">
+											<label>
+												<input type="radio" name="rsvp2" value="No" required> 
+												Regretfully decline									</label>
+												<p class="help-block text-danger"></p>
+											</div>
+										</div>
+
+										
+									</div>
+									<div class="row">
+
+										<img class="img-responsive rsvp-img" src="img/marker.png">
+
+									</div>
+									<div class="row">
+
+
+										<!-- ======= GUEST 2 ======= -->
+
+										<div class="form-group">
+											<label for="name2" class="col-xs-2 control-label white-space-nowrap">Guest 2</label>
+											<div class="col-xs-10">
+												<input type="text" name="name2" class="form-control" placeholder="Please use full name" id="name2" data-validation-required-message="Please enter your name.">
+												<p class="help-block text-danger"></p>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="rsvp-ceremony" class="col-xs-2 control-label">Ceremony</label>
+											<div class="col-xs-5">
+												<label>
+													<input type="radio" name="g2rsvp" value="Yes" >
+													Happily Accept									</label>
+												</div>
+												<div class="col-xs-5">
+													<label>
+														<input type="radio" name="g2rsvp" value="No"> 
+														Regretfully decline									</label>
+														<p class="help-block text-danger"></p>
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="rsvp-brunch" class="col-xs-2 control-label">Brunch</label>
+													<div class="col-xs-5">
+														<label>
+															<input type="radio" name="g2rsvp2" value="Yes" >
+															Happily Accept									</label>
+														</div>
+														<div class="col-xs-5">
+															<label>
+																<input type="radio" name="g2rsvp2" value="No"> 
+																Regretfully decline									</label>
+																<p class="help-block text-danger"></p>
+															</div>
+														</div>
+
+
+														<div id="rsvp-music" class="form-group">
+															<label for="music" class="col-sm-2 control-label">
+																Music
+															</label>
+															<div class="col-sm-10">
+																<textarea class="form-control" name="music" placeholder="George Michael" id="music"></textarea>
+															</div>
+														</div>
+
+														<div id="rsvp-diet" class="form-group">
+															<label for="diet" class="col-sm-2 control-label">
+																Diet
+															</label>
+															<div class="col-sm-10">
+																<textarea class="form-control" name="diet" placeholder="I cannot eat seafood" id="diet"></textarea>
+															</div>
+														</div>
+
+														<div id="rsvp-msg" class="form-group">
+															<label for="message" class="col-sm-2 control-label">
+																Message
+															</label>
+															<div class="col-sm-10">
+																<textarea class="form-control" name="message" placeholder="Anything else you'd like to add?" id="message"></textarea>
+															</div>
+														</div>
+
+														<div class="clearfix"></div>
+														<div class="col-lg-12 text-center">
+															<div id="success"></div>
+															<button type="submit" class="btn btn-primary">
+																Submit								</button>
+															</div>
+														</div>
+													</form>
+
+												</div>
+											</div>
+										</div>
+									</section>        
         <!-- import "sections/photo-bg-1.kit" -->
         
-        
-        
-            <!-- import "sections/info.kit" -->
+        <!-- import "sections/info.kit" -->
 
-        <section id="map-section">
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzuo78SYYb2nLunYVodCY-nt7Lc_2ljc8&sensor=false"></script>
-
+    <section id="map-section">
+ 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzuo78SYYb2nLunYVodCY-nt7Lc_2ljc8&sensor=false"></script>
 	<script type="text/javascript">
 	  // When the window has finished loading create our google map below
 	  google.maps.event.addDomListener(window, 'load', init);
@@ -354,13 +517,13 @@ catch(e){window.attachEvent("onload", $buo_f)}
 	      // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
 	      var mapOptions = {
 	          // How zoomed in you want the map to start at (always required)
-	          zoom: 17,
+	          zoom: 13,
 	          scrollwheel: false,
 	          mapTypeControl: false,
 	          streetViewControl: false,
 
 	          // The latitude and longitude to center the map (always required)
-	          center: new google.maps.LatLng(43.654621, -79.365441),
+	          center: new google.maps.LatLng(45.292255, -122.803288),
 
 	          // How you would like to style the map. 
 	          styles:[
@@ -369,7 +532,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 	          	"elementType": "labels.text",
 	          	"stylers": [
 	          	{
-	          		"hue": "#820ef5"
+	          		"hue": "#31464b"
 	          	}
 	          	]
 	          },
@@ -378,7 +541,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 	          	"elementType": "all",
 	          	"stylers": [
 	          	{
-	          		"color": "#dea5a0"
+	          		"color": "#f7a41b"
 	          	},
 	          	{
 	          		"saturation": -50
@@ -393,7 +556,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 	          	"elementType": "geometry",
 	          	"stylers": [
 	          	{
-	          		"color": "#b1bb95"
+	          		"color": "#b4b97e"
 	          	}
 	          	]
 	          },
@@ -402,7 +565,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 	          	"elementType": "geometry",
 	          	"stylers": [
 	          	{
-	          		"color": "#c65771"
+	          		"color": "#fdbe10"
 	          	}
 	          	]
 	          },
@@ -411,7 +574,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 	          	"elementType": "geometry",
 	          	"stylers": [
 	          	{
-	          		"color": "#f2f0ee"
+	          		"color": "#000"
 	          	}
 	          	]
 	          },
@@ -429,10 +592,21 @@ catch(e){window.attachEvent("onload", $buo_f)}
 	          	"elementType": "all",
 	          	"stylers": [
 	          	{
-	          		"color": "#c7e3e2"
+	          		"color": "#9db6b6"
 	          	}
 	          	]
-	          }
+	          },
+
+			  {
+			  	"featureType":"poi.business",
+			  	"elementType":"geometry.fill",
+			  	"stylers":[
+			  	{
+			  		"color":"#b4b97e"
+			  	}
+			  	]
+			  }
+
 	          ]
 	        };
 
@@ -441,264 +615,400 @@ catch(e){window.attachEvent("onload", $buo_f)}
 	        var map = new google.maps.Map(mapElement, mapOptions);
 
 	      // map marker
-	      var image = 'img/marker2.png';
+	      var image = 'img/barn.png';
 	      var marker = new google.maps.Marker({
-	      	position: {lat: 43.655094, lng: -79.366137},
+	      	position: {lat: 45.279798, lng: -122.85549},
 	      	map: map,
 	      	icon: image,
-	      	title: 'The Berkley Fieldhouse'
+	      	title: 'Baypony Farm'
 	      });
 	    }
 	</script>
 
 	<div id="map"></div>
-
-<!-- <div class="legend beveled-corner-box" style="position:relative; bottom: -10px; z-index: 999999">
-    <h3>Legend</h3>
-  </div> -->
-
-</section>        <section id="directions">
+</section>        
+    <section id="directions">
 	<div class="container">
 	    <div class="row">
-	        <div class="col-sm-6">
-	            <p id="heading">Transit</p>
-	            <p>The Berkeley Fieldhouse is easily accessible by public transit. If you're coming from the East End, take the 501 Streetcar Westbound towards Humber, and disembark at Ontario Street. If you're coming from the West End, take the 501 Streetcar Eastbound towards Neville Park, and disembark at Ontario Street. The Fieldhouse is only a few steps away! </p>
+	    	<div class="col-xs-12">
+	    		<h2 id="heading">directions</h2>
+			</div>
+	        <div class="col-xs-12">
+	            <p class="directions-intro">Wilsonville is about 19 miles (30 km) South of Portland, OR and 29 miles North of Salem, OR.  The wedding will be at 33140 SW Ladd Hill Road, Wilsonville, OR. </p>
+	            <hr>
 	        </div>
-	        <div class="col-sm-6">
-	            <p id="heading">Driving</p>
-	            <p>We encourage you take public transit or a cab, since there is (A) an open bar and (B) we'll be dancing the night away. However, if you choose to drive, the Berkeley Fieldhouse is on the corner of Queen Street and Berkeley Street, just west of Parliament Street. Consult Google Maps for your best route on the day - you have lots of options! Street parking is available and there is a pay lot on Richmond and Berkeley, south of the venue.</p>
+	    </div>    
+	    <div id="row2" class="row">
+	        <div class="col-sm-4">
+	            <p id="heading-sm">From I-5, heading south, from Portland:</p>
+	            <ul>
+					<li>
+						<p>Exit the freeway at the Wilsonville exit #283</p>
+					</li>
+					<li>
+						<p>Turn right onto Wilsonville Road</p>
+					</li>
+					<li>
+						<p>Go about 5.5 miles (8.8 km) to Ladd Hill Road</p>
+					</li>
+					<li>
+						<p>Turn right on to Ladd Hill Road</p>
+					</li>
+					<li>
+						<p>Go about one mile (1.6 km) up the hill and the house will be on the right</p>
+					</li>
+				</ul>
+	        </div>
+	        <div class="col-sm-4">
+	            <p id="heading-sm">From I-5, heading north, from Salem:</p>
+	        	<ul>
+	        		<li>
+	        			<p>Exit the freeway at the Wilsonville exit #283</p>
+	        		</li>
+	        		<li>
+	        			<p>Turn left onto Wilsonville Road</p>
+	        		</li>
+	        		<li>
+	        			<p>Go about 5.5 miles (8.8 km) to Ladd Hill Road</p>
+	        		</li>
+	        		<li>
+	        			<p>Turn right on to Ladd Hill Road</p>
+	        		</li>
+	        		<li>
+	        			<p>Go about one mile (1.6 km) up the hill and the house will be on the right</p>
+	        		</li>
+	        	</ul>
+	        </div>
+	        <div class="col-sm-4">
+	            <p id="heading-sm">From downtown Newberg:</p>
+	           	<ul>
+	        		<li>
+	        			<p>Head east on 1st St</p>
+	        		</li>
+	        		<li>
+	        			<p>Stay right and continue on to OR-219 South; the road will bend to the right</p>
+	        		</li>
+	        		<li>
+	        			<p>Turn left on Springbrook</p>
+	        		</li>
+	        		<li>
+	        			<p>Turn at the first right, which will be Wilsonville Road</p>
+	        		</li>
+	        		<li>
+	        			<p> Head about 7.5 miles down Wilsonville Road and turn left at Ladd Hill Road</p>
+	        		</li>
+	        		<li>
+	        			<p>Go about one mile (1.6 km) up the hill and the house will be on the right</p>
+	        		</li>  		
+	        	</ul>
 	        </div>
 	    </div>
-		<!--<div id="row2" class="row">
-	        <div class="col-xs-12">
-	            <p id="heading">Parking</p>
-	            <p></p>
+		<div id="row3" class="row">
+			<div class="col-xs-12">
+	            <p class="directions-outro">The mailbox, with the house number, is on the left side of the street and the house is directly across. There will be decorations and signs to help you find the place and people to assist with parking once you get there.</p>
+	            <hr>
+	            <p class="directions-notes">NOTE: If you’re using a GPS and it directs you to turn on Edminston Road, please follow the above directions instead. Edminston intersects Ladd Hill Road at point where Ladd Hill Road makes a 90 degree angle and many people get confused and take the wrong turn when going this way.</p>
 	        </div>
-	    </div>-->
+		</div>
 	</div>
-</section>         
-            <!-- import "sections/accomodations.kit" -->
+</section> 
 
-        <section id="photo-bg-2" class="section full_width">
+        
+    <section id="accommodations" class="section container">
+<div class="container">
+	    <div class="row">
+	    	<div class="col-md-12">
+	    		<h2 id="heading">accommodations</h2>
+			</div>
+			<div class="col-md-12">
+	            <p class="accommodations-intro">Some suggested accommodations in Wilsonville and the surrounding areas.</p>
+	            <hr>
+	        </div>
+	        <div class="col-md-6">
+	            <p id="heading-sm">Best Western Wilsonville Inn & Suites</p>
+	            <p>29769 SW Boones Ferry Rd, Wilsonville, OR</p>
+	            <p><a href="#" target="_blank">Website Link</a></p>
+	            <hr>
+	        </div>
+	        <div class="col-md-6">
+	            <p id="heading-sm">La Quinta Inn Wilsonville</p>
+	            <p>8815 SW Sun Pl, Wilsonville, OR</p>
+	            <p><a href="#" target="_blank">Website Link</a></p>
+	            <hr>
+	        </div>
+	        <div class="col-md-6">
+	            <p id="heading-sm">Ace Hotel Portland</p>
+	            <p>1022 SW Stark St, Portland, OR</p>
+	            <p><a href="#" target="_blank">Website Link</a></p>
+	            <hr>
+	        </div>
+	        <div class="col-md-6">
+	            <p id="heading-sm">Jupiter Hotel</p>
+	            <p>800 E Burnside St, Portland, OR</p>
+	            <p><a href="#" target="_blank">Website Link</a></p>
+	            <hr>
+	        </div>
+	        <div class="col-md-6">
+	            <p id="heading-sm">Dreamgivers Inn</p>
+	            <p>Address Here</p>
+	            <p><a href="http://dreamgiversinn.com" target="_blank">Website Link</a></p>
+	            <hr>
+	        </div>
+	        <div class="col-md-6">
+	            <p id="heading-sm">Feller House B & B</p>
+	            <p>Address Here</p>
+	            <p><a href="http://thefellerhouse.com/" target="_blank">Website Link</a></p>
+	            <hr>
+	        </div>
+	        <div class="col-md-6">
+	            <p id="heading-sm">The Allison</p>
+	            <p>Address Here</p>
+	            <p><a href="http://www.theallison.com" target="_blank">Website Link</a></p>
+	            <hr>
+	        </div>
+	        <div class="col-md-6">
+	            <p id="heading-sm">Chehalem Ridge B & B</p>
+	            <p>Address Here</p>
+	            <p><a href="http://chehalemridge.com/" target="_blank">Website Link</a></p>
+	            <hr>
+	        </div>
+	        <div class="col-md-6">
+	            <p id="heading-sm">VX Vineyard Guest House</p>
+	            <p>Address Here</p>
+	            <p><a href="https://www.vrbo.com/341063" target="_blank">Website Link</a></p>
+	            <hr>
+	        </div>	    
+	        <div class="col-md-6">
+	            <p id="heading-sm">AirBnB Option</p>
+	            <p>Nice small suite in wine country, about a 30 minute drive from the wedding.</p>
+	            <p><a href="www.airbnb.ca/rooms/8498072" target="_blank">Website Link</a></p>
+	            <hr>
+	        </div>
+	        <div class="col-md-6">
+	            <p id="heading-sm">AirBnB Option</p>
+	            <p>1 or 2 bedrooms in a house in a nice neighborhood in Sherwood, about a 15 minute drive from the wedding.</p>
+	            <p><a href="www.airbnb.ca/rooms/2198799" target="_blank">Website Link</a></p>
+	            <hr>
+	        </div>
+	        <div class="col-md-6">
+	            <p id="heading-sm">AirBnB Option</p>
+	            <p>1 room in a nearby house. Very nice views on Parrett Mountain, and a couple minute drive from the wedding (or a longer walk).</p>
+	            <p><a href="http://www.airbnb.ca/rooms/5392865" target="_blank">Website Link</a></p>
+	            <hr>
+	        </div>
+	        <div class="col-md-6">
+	            <p id="heading-sm">AirBnB Option</p>
+	            <p>A room in a very nice house on a farm nearby. A 5 minute drive from the wedding, or a long walk.</p>
+	            <p><a href="http://www.airbnb.ca/rooms/67424" target="_blank">Website Link</a></p>
+	            <hr>
+	        </div>
+	        <div class="col-md-6">
+	            <p id="heading-sm">Camping</p>
+	            <p>Wilsonville Campground</p>
+	            <p><a href="#" target="_blank">Website Link</a></p>
+	            <hr>
+	        </div>
+	        <div class="col-md-12">
+	            <p id="heading-sm">Camping</p>
+	            <p>Champoeg State Park</p>
+	            <p><a href="http://oregonstateparks.org/index.cfm?do=parkPage.dsp_parkPage&parkId=79" target="_blank">Website Link</a></p>
+	            <p>Champoeg state park is close by, but there aren’t that many spots available . It books up quickly because it’s so nice there. If you want to camp, you should reserve a spot for Sunday night ASAP!</p>
+	            <hr>
+	        </div>
+
+
+	    </div>
+	</div>
 </section>
-        <section id="registries">
+        <!-- import "sections/photo-bg-2.kit" -->
+
+    <section id="registries" class="section full-width">
 	<div class="container">
-		<div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 ">
-				<img id="flowers" class="center-block" src="img/4center_fo.svg">
-					
-				<div class="beveled-corner-box">
-					<p class="registry-header">Your presence at our wedding <br/> is the only gift we need!</p>
+		<div class="row">
+			<div class="col-md-12">
+				<img class="center-block img-responsive topimg" src="img/flowerbunch.png">
+
+					<h2 id="heading">gift registry</h2>
 					<p class="registry-info">
-						However, should you wish to help us celebrate, <br/>
-						we are registered at
-						<a href="http://giftregistry.hbc.com" target="_blank">The Bay</a>. 
-						<br/>Our registry number is 400122596366.
-
-
-
-						<a href="" target="_blank"></a><a href="" target="_blank"></a>
+						while your presence is the only gift we need, if you'd like to help us celebrate, we are registered at						<a href="" target="_blank">place one</a>,
+						<a href="" target="_blank">place two</a>, and 
+						<a href="" target="_blank">place three</a>.
 					</p>
-				</div>
+				
 			
 			</div>
 		</div>
 	</div>
 </section>        
-            <!-- import "sections/quote.kit" -->
+        <!-- import "sections/quote.kit" -->
 
-            <!-- import "sections/countdown.kit" -->
+        <!-- import "sections/countdown.kit" -->
 
-            <!-- import "sections/timeline.kit" -->
+        <!-- import "sections/timeline.kit" -->
 
-            <!-- import "sections/gallery.kit" -->
+        <!-- import "sections/gallery.kit" -->
 
-            <!-- import "sections/agenda.kit" -->
+        <!-- import "sections/agenda.kit" -->
 
-            <!-- import "sections/faq.kit" -->
-
-            <!-- import "sections/music.kit" -->
+        <!-- import "sections/music.kit" -->
         
-        <section id="photo-bg-3" class="section full_width">
-</section>
-        <section id="rsvp">
+        <!-- import "sections/photo-bg-3.kit" -->
+    
+        <!-- import "sections/rsvp-alt.kit" -->
+
+    <section id="faq" class="section container">
 	<div class="container">
 		<div class="row">
-
-			<div class="col-sm-10 col-sm-offset-1 col-lg-6 col-lg-offset-3">
-
-				<div class="beveled-corner-box">
-
-					<form class="" name="sentMessage" action="sendmail.php" method="post">
-						<div id="flower-row" class="row">
-							<div class="col-xs-6 col-xs-offset-3 col-sm-8 col-sm-offset-2">
-								<img class="img-responsive" id="don" src="img/rsvp.svg">
+			<div class="col-md-12">
+				<h2 id="heading">FAQ</h2>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingOne">
+							<p class="panel-title">
+								<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									Transportation - Getting to Portland
+								</a>
+							</p>
+						</div>
+						<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+							<div class="panel-body text-center">
+								PDX is the closest airport.
+								<br/>
+								If reserved early, BoltBus is a quite inexpensive way to get to Portland. Other trains/bus combinations can be found through Amtrak. 
+								<br/>
+								Driving from Vancouver along I-5 can take anywhere from 5.5 hours to 8 hours, depending on Traffic.
 							</div>
 						</div>
-
-						<p class="text-center">
-							Fill in the information below to RSVP.						</p>
-
-						<div class="row">
-
-
-
-
-
-							<!-- Form Notification Start -->
-                            <?php if(isset($_SESSION['success'])) : ?>
-                            	<div class="success alert alert-success" role="alert">
-                            		<strong>Thank you!</strong>
-                            		Your RSVP was successful.
-                            		<?php unset($fields); ?>
-                            	</div>
-                            <?php elseif(!empty($errors)) : ?>
-								<div class="error alert alert-danger" role="alert">
-									<ul style="list-style:outside none none;padding:10px;"><li><?php echo implode("</li><li>", $errors) ?></li></ul>
-								</div>
-                            <?php endif ;?>
-                            <!-- Form Notification End -->
-
-
-
-
-</div>
-<div class="row">
-
-
-
-							<!-- ======= GUEST 1 ======= -->
-
-							<div class="form-group">
-								<label for="name" class="col-xs-2 control-label white-space-nowrap">Guest 1</label>
-								<div class="col-xs-10">
-									<input type="text" name="name" class="form-control" placeholder="Please use full name" id="name" required>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="rsvp" class="col-xs-2 control-label">RSVP</label>
-								<div class="col-xs-5">
-									<label>
-										<input type="radio" name="rsvp" value="Yes" required>
-										Happily Accept									</label>
-								</div>
-								<div class="col-xs-5">
-									<label>
-										<input type="radio" name="rsvp" value="No" required> 
-										Regretfully decline									</label>
-									<p class="help-block text-danger"></p>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="meal" class="col-xs-2 control-label">
-									Meal								</label>
-								<div class="col-xs-10">
-									<label>
-										<input type="radio" name="meal" value="Salmon">
-										Butter poached Atlantic salmon with sweet pea and fava bean risotto									</label>
-									<label>
-										<input type="radio" name="meal" value="Steak">
-										Angus 8oz.  flat iron steak, forest mushrooms, whipped potato witha Marsala reduction									</label>
-									<label>
-										<input type="radio" name="meal" value="Vegetarian">
-										Braised portobello mushroom with smoked eggplant tapenade, salsa verde and ricotta cheese (vegetarian)									</label>
-									<p class="help-block text-danger"></p>
-								</div>
-							</div>
-
-							
-</div>
-<div class="row">
-
-							<img class="img-responsive rsvp-img" src="img/marker.png">
-
-</div>
-<div class="row">
-
-
-							<!-- ======= GUEST 2 ======= -->
-
-							<div class="form-group">
-								<label for="name2" class="col-xs-2 control-label white-space-nowrap">Guest 2</label>
-								<div class="col-xs-10">
-									<input type="text" name="name2" class="form-control" placeholder="Please use full name" id="name2" data-validation-required-message="Please enter your name.">
-									<p class="help-block text-danger"></p>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="rsvp2" class="col-xs-2 control-label">RSVP</label>
-								<div class="col-xs-5">
-									<label>
-										<input type="radio" name="rsvp2" value="Yes">
-										Happily Accept									</label>
-								</div>
-								<div class="col-xs-5">
-									<label>
-										<input type="radio" name="rsvp2" value="No"> 
-										Regretfully decline									</label>
-
-									<p class="help-block text-danger"></p>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="meal2" class="col-sm-2 control-label">
-									Meal								</label>
-								<div class="col-sm-10">
-									<label>
-										<input type="radio" name="meal2" value="Salmon">
-										Butter poached Atlantic salmon with sweet pea and fava bean risotto									</label>
-									<label>
-										<input type="radio" name="meal2" value="Steak">
-										Angus 8oz.  flat iron steak, forest mushrooms, whipped potato witha Marsala reduction									</label>
-									<label>
-										<input type="radio" name="meal2" value="Vegetarian">
-										Braised portobello mushroom with smoked eggplant tapenade, salsa verde and ricotta cheese (vegetarian)									</label>
-								</div>
-							</div>
-
-							<div id="rsvp-msg" class="form-group">
-								<label for="message" class="col-sm-2 control-label">
-									Message								</label>
-								<div class="col-sm-10">
-									<textarea class="form-control" name="message" placeholder="Anything else you'd like to add?" id="message"></textarea>
-								</div>
-							</div>
-
-							<div class="clearfix"></div>
-							<div class="col-lg-12 text-center">
-								<div id="success"></div>
-								<button type="submit" class="btn btn-primary">
-									Submit								</button>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingTwo">
+							<p class="panel-title">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+									Weather in Oregon - What should I wear? 
+								</a>
+							</p>
+						</div>
+						<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+							<div class="panel-body text-center">
+								Oregon is generally quite warm in late July, so dress accordingly. The wedding ceremony and reception will be outdoors on grass and gravel, so wedges or flats instead of heels are recommended. 
 							</div>
 						</div>
-					</form>
-				</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingThree">
+							<p class="panel-title">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+									What should I do in Portland?
+								</a>
+							</p>
+						</div>
+						<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+							<div class="panel-body text-center">
+								A visit to Powell’s Books is essential to every Portland trip! It’s an entire city block long.<br/> We also recommend the following:<br/><br/>
+								<div class="row">
+									<div class="col-xs-12 col-sm-4">
+										<ul class="list-unstyled">
+											<li>Coffee:</li>
+											<li>Heart Coffee Roasters</li>
+											<li>Roseline</li>
+											<li>Coava</li>
+											<li>Stumptown Coffee</li>
+											<li>Good Coffee on Division</li>
+										</ul>
+									</div>
+									<div class="col-xs-12 col-sm-4">
+										<ul class="list-unstyled">
+											<li>Food:</li>
+											<li>Waffle Window</li>
+											<li>Pok Pok</li>
+											<li>Food Carts</li>
+										</ul>
+									</div>
+
+									
+
+									<div class="col-xs-12 col-sm-4">
+										<ul class="list-unstyled">
+											<li>Breweries &amp; Distilleries:</li>
+											<li>Upright</li>
+											<li>Hopworks</li>
+											<li>Deschutes</li>
+											<li>McMenamins</li>
+										</ul>
+									</div>
+
+								</div>
+								<div class="row faq-margin">
+
+									<div class="col-xs-12 col-sm-6">
+										<ul class="list-unstyled">
+											<li>Neighbourhoods:</li>
+											<li>Southeast Portland</li>
+											<li>Hawthorne (and parts of Belmont)</li>
+											<li>Division Street</li>
+										</ul>
+									</div>
+									<div class="col-xs-12 col-sm-6">
+										<ul class="list-unstyled">
+											<li>The Rose Garden</li>
+											<li>Museums/Galleries</li>
+											<li>Portland Art Museum</li>
+											<li>Kingfisher Gallery</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingFour">
+							<p class="panel-title">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+									What is there to do in Wilsonville and surrounding area? 
+								</a>
+							</p>
+						</div>
+						<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+							<div class="panel-body text-center">
+								There is a lot of wine tasting to do in Wilsonville (Near the Wedding) and the Willamette Valley<br/> <br/>
+								Evergreen Aviation and Space Museum(group tour time)
+							</div>
+						</div>
+					</div>
+
+
 			</div>
 		</div>
 	</div>
 </section>
 
+    <section id="outro" class="section container">
+  <div class="col-md-12">
 
-
-
-
-
-        
-            <!-- import "sections/rsvp-alt.kit" -->
-
-        <section id="outro" class="section container">
-  <div class="col-md-4 col-sm-6">
-
-	<div class="beveled-corner-box">
-		<h5>We can't wait to share our special day with you!</h5>
-		<p>Feel free to contact us at</p>
-		<p><a href="mailto:hello@adamandbri.ca">hello@adamandbri.ca</a></p>
-		<p>with any questions, well wishes, or dietary restrictions we ought to know about.</p>  		
+	<div class="row">
+		<p id="outro-head">we're so excited to celebrate with you!</p>
+		<p id="outro-p">feel free to contact us at </p>
+		<p id="outro-p"><a href="mailto:mattyandlisa@gmail.com">mattyandlisa@gmail.com</a></p>
+		<p id="outro-p2">with any questions, well wishes, or dietary restrictions we ought to know about.</p>  		
 	</div>
 
   </div>
 </section>
-
-        <!-- SKROLLR -->
+    <footer>
+	<div class="container">
+		<div class="row">
+	  			<div class="col-md-12 text-center">
+	  				<p class="footer-text">designed with Love by <a href="http://foxandfancy.com" target="_blank">Fox &amp; Fancy</a> &copy;2016</p>
+	  			</div>
+		</div>
+	</div>
+</footer>
+    <!-- SKROLLR -->
 <!-- <script src="https://prinzhorn.github.io/skrollr/dist/skrollr.min.js"></script> -->
 <script type="text/javascript">
     // var s = skrollr.init();
