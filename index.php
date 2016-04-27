@@ -327,47 +327,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 				<h2 id="heading">RSVP</h2>
 				<p class="text-center" id="form">please RSVP by June 5th, 2016</p>
 
-				<!-- Form Notification Start -->
-
-
-				<style>
-				.alert {
-					position: relative;
-				}
-
-				.btn22 {
-					position: absolute;
-					top: 0;
-					right: 0;
-					font-size: 35px;
-				}
-
-				</style>
-
-
-				<?php if(isset($_SESSION['success'])) : ?>
-				<div class="success alert alert-success" role="alert">
-					<button class="btn22">×</button>
-					<strong>Thank you!</strong>
-					Your RSVP was successful.
-					<?php unset($fields); ?>
-				</div>
-			<?php elseif(!empty($errors)) : ?>
-			<div class="error alert alert-danger" role="alert">
-				<button class="btn22">×</button>
-				<ul style="list-style:outside none none;padding:10px;"><li><?php echo implode("</li><li>", $errors) ?></li></ul>
-			</div>
-		<?php endif ;?>
-
-		<script>
-		$(document).ready(function(){
-			$("button").click(function(){
-				$(".alert").hide();
-			});
-		});
-		</script>
-
-		<!-- Form Notification End -->
+				
 
 		<form class="" name="sentMessage" action="sendmail.php" method="post">
 			<div id="flower-row" class="row">
@@ -385,7 +345,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 				<div class="form-group">
 					<label for="name" class="col-xs-3 control-label white-space-nowrap">Guest 1</label>
 					<div class="col-xs-9">
-						<input type="text" name="name" class="form-control" placeholder="Please use full name" id="name" required>
+						<input type="text" name="name" class="form-control" placeholder="Please use full name" id="name" style="margin-bottom:15px;" required>
 					</div>
 				</div>
 				<div class="form-group">
@@ -419,11 +379,10 @@ catch(e){window.attachEvent("onload", $buo_f)}
 
 
 				</div>
-							<div class="row">
-
-								<img class="img-responsive rsvp-img" src="img/marker.png">
-
-							</div>
+				
+				<!-- <div class="row">
+					<img class="img-responsive rsvp-img" src="img/marker.png">
+				</div> -->
 				
 				<div class="row">
 
@@ -472,7 +431,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 														Requests
 													</label>
 													<div class="col-sm-9">
-														<input type="text" class="form-control" name="music" placeholder="We'll dance if you play..." id="music"></input>
+														<input type="text" class="form-control" name="music" placeholder="We'll dance if you play..." id="music" style="margin-bottom:15px;"></input>
 													</div>
 												</div>
 
@@ -481,7 +440,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 														Preferences
 													</label>
 													<div class="col-sm-9">
-														<input type="text" class="form-control" name="diet" placeholder="Any dietary restrictions we should know about?" id="diet"></input>
+														<input type="text" class="form-control" name="diet" placeholder="Any dietary restrictions we should know about?" id="diet" style="margin-bottom:15px;"></input>
 													</div>
 												</div>
 
@@ -490,7 +449,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 														Message
 													</label>
 													<div class="col-sm-9">
-														<textarea class="form-control" name="message" placeholder="Anything else you'd like to add?" id="message"></textarea>
+														<textarea class="form-control" name="message" placeholder="Anything else you'd like to add?" id="message" style="margin-bottom:15px;"></textarea>
 													</div>
 												</div>
 
@@ -502,6 +461,49 @@ catch(e){window.attachEvent("onload", $buo_f)}
 													</div>
 												</div>
 											</form>
+
+											<!-- Form Notification Start -->
+
+
+				<style>
+				.alert {
+					position: relative;
+					margin-top:15px;
+				}
+
+				.btn22 {
+					position: absolute;
+					top: 0;
+					right: 0;
+					font-size: 35px;
+				}
+
+				</style>
+
+
+				<?php if(isset($_SESSION['success'])) : ?>
+				<div class="success alert alert-success" role="alert">
+					<button class="btn22">×</button>
+					<strong>Thank you!</strong>
+					Your RSVP was successful.
+					<?php unset($fields); ?>
+				</div>
+			<?php elseif(!empty($errors)) : ?>
+			<div class="error alert alert-danger" role="alert">
+				<button class="btn22">×</button>
+				<ul style="list-style:outside none none;padding:10px;"><li><?php echo implode("</li><li>", $errors) ?></li></ul>
+			</div>
+		<?php endif ;?>
+
+		<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				$(".alert").hide();
+			});
+		});
+		</script>
+
+		<!-- Form Notification End -->
 
 										</div>
 									</div>
